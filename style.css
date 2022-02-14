@@ -860,3 +860,31 @@ button, a {
     top: 10px;
   }
 }
+
+/* cascading stylesheet  */
+
+.nav-links li {
+  list-style-type: none;
+  font-size: larger;
+  font-weight: bolder;
+  padding: 10px;
+  background-color: #dfd3d35e;
+  color: #2f3142;
+  border: 2px solid #c3cff4;
+  border-radius: 15px;
+}
+.nav-links li a{
+  color-adjust: rgb(24, 24, 24);
+  text-decoration: none;
+}
+.nav-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.body_content {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
