@@ -394,14 +394,7 @@
         </div>
       </div>
       <!-- end calendar section  -->
-      <div class="text">
-        <h1>Lorem ipsum dolor sit amet consectetur minus dolor veritatis corporis eveniet, quae cupiditate.</h1>
-      </div>
-      <div class="section-gantt">
-        <div class="body_content" ng-app="KendoDemo" ng-controller="MyCtrl">
-          <div kendo-gantt k-options="ganttOptions"></div>
-        </div>
-      </div>
+      
       <!--  -->
     </div>
   </div>
@@ -505,12 +498,24 @@
         </div>
       </div>
     </div>
+    
 
     <!-- end asise od client messages -->
   </div>
   <!-- end section messages  -->
   </div>
   <!-- end body content  -->
+
+  <!-- start gantt -->
+  <div class="app-container">
+   <div class="app-content">
+    <div class="section-gantt">
+      <div class="body_content" id="gantt-content" ng-app="KendoDemo" ng-controller="MyCtrl">
+        <div kendo-gantt k-options="ganttOptions" ></div>
+      </div>
+    </div>
+  </div>
+   </div>
 </div>
 
   
