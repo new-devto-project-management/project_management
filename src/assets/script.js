@@ -39,8 +39,8 @@ document.addEventListener('DOMContentLoaded', function () {
 angular.module("KendoDemo", ["kendo.directives"]);
 
 function MyCtrl($scope) {
-  var serviceRoot = "//demos.telerik.com/kendo-ui/service";
-  var tasksDataSource = new kendo.data.GanttDataSource({
+  let serviceRoot = "//demos.telerik.com/kendo-ui/service";
+  let tasksDataSource = new kendo.data.GanttDataSource({
     batch: false,
     transport: {
       read: {
