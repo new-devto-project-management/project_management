@@ -883,7 +883,7 @@ button, a {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  /* color: #111827; */
+  color: #111827;
 }
 
 .body_content {
