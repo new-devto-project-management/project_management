@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/new-devto-project-management/project_management/issues"
   },
-  "homepage": "https://github.com/new-devto-project-management/project_management#readme"
+  "homepage": "https://github.com/new-devto-project-management/project_management#readme",
+  "dependencies": {
+    "create-react-app": "^5.0.0"
+  }
 }
