@@ -1,5 +1,12 @@
 
-console.log('hello world');
-$(".nav-links").css("color", "yellow").css("display", "flex");
+//  header tools configs
+document.addEventListener('DOMContentLoaded', function () {
+document.querySelector('.files-btn').addEventListener('click', function () {
+    document.querySelector('.btn-section').classList.add('show');
+  });
 
-// $("#nav-link").css('color', black)
+  document.querySelector('.btn-close').addEventListener('click', function() {
+    document.querySelector('.btn-section').classList.remove('show');
+  });
+
+});

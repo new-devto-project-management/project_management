@@ -19,3 +19,7 @@ Help ! : pour vous aidez a comprendre les fonctionnalitésde de notre logiciel, 
 
 Dans ce projet, volontairement simplifié, nous analyserons l'ensemble des tâches
 d'industrialisation d'un article.
+
+[HOW TO CLONE THIS REPOSITORY]
+ 
+ git clone https://github.com/new-devto-project-management/project_management.git

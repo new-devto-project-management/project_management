@@ -4,7 +4,8 @@
   "description": "project-management graphical party",
   "main": "script.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": " nodemon server ./index.html  ",
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/new-devto-project-management/project_management#readme",
   "dependencies": {
-    "create-react-app": "^5.0.0"
+    "create-react-app": "^5.0.0",
+    "nodemon": "^2.0.15"
   }
 }

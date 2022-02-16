@@ -17,12 +17,17 @@
 </head>
 <body>
 
+ <div class="page-wrapper">
   <div class="app-container">
     <!-- start header -->
     <div class="app-header">
       <div class="app-header-left">
-        <span class="app-icon"></span>
+        <!-- /* logo -->
+        <a href="http://127.0.0.1:5000/index.html" target="_blank" rel="noopener noreferrer" aria-placeholder="GANTT PERT SRS SDP " placeholder="GPS"
+          <span class="app-icon"></span>
+        </a>
         <p class="app-name">Project Management</p>
+        <!-- search button -->
         <div class="search-wrapper">
           <input class="search-input" type="text" placeholder="Search">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-search" viewBox="0 0 24 24">
@@ -31,31 +36,37 @@
             <path d="M21 21l-4.35-4.35"></path>
           </svg>
         </div>
+        <!-- end search button -->
       </div>
+      <!-- dark and light mode   swicht theme-->
       <div class="app-header-right">
+        <!-- dark mode -->
         <button class="mode-switch" title="Switch Theme">
           <svg class="moon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="24" height="24" viewBox="0 0 24 24">
             <defs></defs>
             <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
           </svg>
         </button>
+        <!-- light mode -->
         <button class="add-btn" title="Add New Project">
           <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
             <line x1="12" y1="5" x2="12" y2="19" />
             <line x1="5" y1="12" x2="19" y2="12" /></svg>
         </button>
+        <!-- btn notification -->
         <button class="notification-btn">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell">
             <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
             <path d="M13.73 21a2 2 0 0 1-3.46 0" /></svg>
         </button>
+        <!-- user profiles -->
         <button class="profile-btn">
-          <img src="https://assets.codepen.io/3306515/IMG_2025.jpg" />
-          <span>CHEICK</span>
+          <a href="http://" target="_blank" rel="noopener noreferrer"><img src="https://assets.codepen.io/3306515/IMG_2025.jpg" />
+            <span>CHEICK</span></a>
         </button>
       </div>
 
-   
+   <!-- btn message -->
       <button class="messages-btn">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle">
           <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" /></svg>
@@ -68,22 +79,99 @@
       <div class="container-fluid">
         <div class="nav">
           <ul class="nav-links" id="nav-links">
-            <li><a href="http://" target="_blank" rel="noopener noreferrer">Files</a></li>
-            <li><a href="http://" target="_blank" rel="noopener noreferrer">Tâches</a></li>
-            <li><a href="http://" target="_blank" rel="noopener noreferrer">Ressources </a></li>
-            <li><a href="http://" target="_blank" rel="noopener noreferrer">Tools</a></li>
-            <li><a href="http://" target="_blank" rel="noopener noreferrer">Settings</a></li>
-            <li><a href="http://" target="_blank" rel="noopener noreferrer">Help !</a></li>
+            <li><a href="http://" class="files-btn " target="_blank" rel="noopener noreferrer">Files</a></li>
+            <li><a href="http://" class="tâches-btn" target="_blank" rel="noopener noreferrer">Tâches</a></li>
+            <li><a href="http://" class="ressources-btn" target="_blank" rel="noopener noreferrer">Ressources </a></li>
+            <li><a href="http://" class="tools-btn" target="_blank" rel="noopener noreferrer">Tools</a></li>
+            <li><a href="http://" class="settings-btn" target="_blank" rel="noopener noreferrer">Settings</a></li>
+            <li><a href="http://" class="helps-btn" target="_blank" rel="noopener noreferrer">Help !</a></li>
           </ul>
         </div>
       </div>
     </div>
+
+    <!-- header burger section -->
+    <div class="btn-section burger-section">
+      <!-- btn burger  -->
+      <button class="btn-close burger-close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="15" y1="9" x2="9" y2="15" />
+          <line x1="9" y1="9" x2="15" y2="15" /></svg>
+        </button>
+  
+      <!-- start aside od client messages  -->
+      <div class="projects-section-header ">
+        <!-- <p>Files</p> -->
+        <div class="messages btn-functions">
+          <div class="message-box function-content">
+            <div class="gantt">
+              <a href="http://" class=" btn btn-gantt">Diagramme de Gantt</a>
+             <div class="bottom-view"> <h5 class="vue" style="bottom: 0;"> Vue </h5></div>
+            </div>
+          </div>
+          <div class="message-box function-content">
+            <div class="coller">
+              <a href="http://" class=" btn btn-coller">Coller</a>
+            </div>
+            <div class="cooper">
+              <a href="http://" class=" btn btn-couper">Couper</a>
+            </div>
+            <div class="copier">
+              <a href="http://" class=" btn btn-couper">Copier</a>
+            </div>
+            <div class="bottom-view"> <h5 class="vue" style="bottom: 0;"> Presse-papiers </h5></div>
+          </div>
+        </div>
+        <div class="project-boxes jsGridView">
+          <div class="project-box-wrapper">
+            <div class="project-box" style="background-color: #fee4cb;">
+              <div class="project-box-header">
+                <span>files</span>
+                <div class="more-wrapper">
+                  <button class="project-btn-more">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                      <circle cx="12" cy="12" r="1" />
+                      <circle cx="12" cy="5" r="1" />
+                      <circle cx="12" cy="19" r="1" /></svg>
+                  </button>
+            </div>
+          </div>
+          <div class="project-box-content-header">
+            <p>coller</p>
+          </div>
+          <div class="box-progress-wrapper">
+            <p>copier</p>
+          </div>
+          <div class="box-progress-wrapper">
+            <p>couper</p>
+          </div>
+          <div class="project-box-footer">
+            <!-- <div class="participants">
+             
+            </div> -->
+            <div class="days-left" style="color: #ff942e;">
+              Presses-papiers
+            </div>
+          </div>
+        </div>
+      </div>
+     
+      <!--  -->
+    </div>
+        
+      </div>
+  
+      <!-- end asise od client messages -->
+    </div>
+    <!-- end section messages  -->
        <!-- LOREM  -->
 <!-- <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolor nisi cumque, deleniti distinctio facere aliquam at sapiente quo corporis atque dolorem aliquid nam minima obcaecati dolorum porro quia quas!</P> -->
 
 <!-- start body content  -->
     <div class="app-content">
       <div class="app-sidebar">
+        
         <a href="" class="app-sidebar-link active">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
@@ -401,6 +489,7 @@
   <!-- end project section  -->
   <!-- start section messages -->
   <div class="messages-section">
+    <!-- btn burger  -->
     <button class="messages-close">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle">
         <circle cx="12" cy="12" r="10" />
@@ -518,6 +607,7 @@
    </div>
 </div>
 
+ </div>
   
 
   <script src="./src/assets/jquerie.js" ></script>
