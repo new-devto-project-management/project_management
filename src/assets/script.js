@@ -1,22 +1,27 @@
+console.log('hello world !')
+
+let viewer =  document.querySelector('.view-action');
+let hidden =  document.querySelector('.hide-action');
+
 document.addEventListener('DOMContentLoaded', function () {
   let modeSwitch = document.querySelector('.mode-switch');
 
-  modeSwitch.addEventListener('click', function () {                     
+  modeSwitch.addEventListener('click', function () {
     document.documentElement.classList.toggle('dark');
     modeSwitch.classList.toggle('active');
   });
-  
+
   let listView = document.querySelector('.list-view');
   let gridView = document.querySelector('.grid-view');
   let projectsList = document.querySelector('.project-boxes');
-  
+
   listView.addEventListener('click', function () {
     gridView.classList.remove('active');
     listView.classList.add('active');
     projectsList.classList.remove('jsGridView');
     projectsList.classList.add('jsListView');
   });
-  
+
   gridView.addEventListener('click', function () {
     gridView.classList.add('active');
     listView.classList.remove('active');
@@ -31,19 +36,24 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelector('.messages-close').addEventListener('click', function() {
     document.querySelector('.messages-section').classList.remove('show');
   });
+  // header function
   document.querySelector('.burger-btn').addEventListener('click', function () {
     document.querySelector('.burger-section').classList.add('show');
+    
   });
   
   document.querySelector('.burger-close').addEventListener('click', function() {
     document.querySelector('.burger-section').classList.remove('show');
-  });
-
+    console.log('fermer le header burger');
+    alert("fermer le burger header !")
+});
+// setting
   document.querySelector('.setting').addEventListener('click', function(){
-    document.querySelector('.section-setting').classList.add('show');
+    document.querySelector('.section-setting').classList.add('viewer');
+    console.log('btn setting est cliquer !');
   });
-  document.querySelector('#close-setting').addEventListener('click', function(){
-    document.querySelector('.section-setting').classList.remove('show')
+  document.querySelector('.setting-close').addEventListener('click', function(){
+    document.querySelector('.section-setting').classList.remove('viewer')
   });
 });
 
