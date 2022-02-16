@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
   let modeSwitch = document.querySelector('.mode-switch');
 
-  modeSwitch.addEventListener('click', function () {                     document.documentElement.classList.toggle('dark');
+  modeSwitch.addEventListener('click', function () {                     
+    document.documentElement.classList.toggle('dark');
     modeSwitch.classList.toggle('active');
   });
   
@@ -29,6 +30,20 @@ document.addEventListener('DOMContentLoaded', function () {
   
   document.querySelector('.messages-close').addEventListener('click', function() {
     document.querySelector('.messages-section').classList.remove('show');
+  });
+  document.querySelector('.burger-btn').addEventListener('click', function () {
+    document.querySelector('.burger-section').classList.add('show');
+  });
+  
+  document.querySelector('.burger-close').addEventListener('click', function() {
+    document.querySelector('.burger-section').classList.remove('show');
+  });
+
+  document.querySelector('.setting').addEventListener('click', function(){
+    document.querySelector('.section-setting').classList.add('show');
+  });
+  document.querySelector('#close-setting').addEventListener('click', function(){
+    document.querySelector('.section-setting').classList.remove('show')
   });
 });
 

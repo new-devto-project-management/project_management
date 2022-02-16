@@ -915,3 +915,54 @@ button, a {
   border-radius: 15px;
   border:none;
 }
+
+.btn-functions{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.function-content {
+  display: block;
+}
+.messages .function-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0px;
+  color: var(--main-color);
+}
+.vue{
+  margin: 0;
+  padding: 0;
+  top: 30px;
+  bottom: 0px;
+  background-color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  border-radius: 20px;
+  flex-shrink: 0;
+  padding: 6px 16px;
+  font-weight: 700;
+}
+.function-content .vue{
+  top: 4rem;
+
+  
+}
+.project-box{
+    color: #dbf6fd;
+    border-radius: 30px;
+    min-height: 140px;
+    max-width: 100%;
+    padding: 9px;
+    margin: 0px;
+    background-color: var(--main-color-card);
+    box-shadow: 1px 1px 1px 0px #ccc;
+}
+
+.section-setting{
+  height: 100vh;
+  min-width: 90;
+  background-color: #4A4A4A;
+  box-shadow:1x 3px 2px 1px rgb(24, 24, 24);
+}

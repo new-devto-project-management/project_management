@@ -73,98 +73,67 @@
       </button>
     </div>
     <!-- end header -->
-
-    <!-- BEGIN HEAER nav-bar -->
-    <div class="container">
-      <div class="container-fluid">
-        <div class="nav">
-          <ul class="nav-links" id="nav-links">
-            <li><a href="http://" class="files-btn " target="_blank" rel="noopener noreferrer">Files</a></li>
-            <li><a href="http://" class="tâches-btn" target="_blank" rel="noopener noreferrer">Tâches</a></li>
-            <li><a href="http://" class="ressources-btn" target="_blank" rel="noopener noreferrer">Ressources </a></li>
-            <li><a href="http://" class="tools-btn" target="_blank" rel="noopener noreferrer">Tools</a></li>
-            <li><a href="http://" class="settings-btn" target="_blank" rel="noopener noreferrer">Settings</a></li>
-            <li><a href="http://" class="helps-btn" target="_blank" rel="noopener noreferrer">Help !</a></li>
-          </ul>
+    <div class="jsGridView">
+      <!-- BEGIN HEAER nav-bar -->
+      <div class="container">
+        <div class="container-fluid">
+          <div class="nav">
+            <ul class="nav-links" id="nav-links">
+              <li><a href="http://" class="files-btn active" target="_blank" rel="noopener noreferrer">Files</a></li>
+              <li><a href="http://" class="tâches-btn" target="_blank" rel="noopener noreferrer">Tâches</a></li>
+              <li><a href="http://" class="ressources-btn" target="_blank" rel="noopener noreferrer">Ressources </a></li>
+              <li><a href="http://" class="tools-btn" target="_blank" rel="noopener noreferrer">Tools</a></li>
+              <li><a href="http://" class="settings-btn" target="_blank" rel="noopener noreferrer">Settings</a></li>
+              <li><a href="http://" class="helps-btn" target="_blank" rel="noopener noreferrer">Help !</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-
-    <!-- header burger section -->
-    <div class="btn-section burger-section">
-      <!-- btn burger  -->
-      <button class="btn-close burger-close">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle">
-          <circle cx="12" cy="12" r="10" />
-          <line x1="15" y1="9" x2="9" y2="15" />
-          <line x1="9" y1="9" x2="15" y2="15" /></svg>
-        </button>
   
-      <!-- start aside od client messages  -->
-      <div class="projects-section-header ">
-        <!-- <p>Files</p> -->
-        <div class="messages btn-functions">
-          <div class="message-box function-content">
-            <div class="gantt">
-              <a href="http://" class=" btn btn-gantt">Diagramme de Gantt</a>
-             <div class="bottom-view"> <h5 class="vue" style="bottom: 0;"> Vue </h5></div>
+      <!-- header burger section -->
+      <div class="btn-section burger-section project-box-wrapper">
+        <!-- btn burger  -->
+        <button class="btn-close burger-close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="15" y1="9" x2="9" y2="15" />
+            <line x1="9" y1="9" x2="15" y2="15" /></svg>
+          </button>
+    
+        <!-- start aside od client messages  -->
+        <div class="projects-section-header project-box " style="background-color: #fee4cb;">
+          <!-- <p>Files</p> -->
+          <div class="messages btn-functions">
+            <div class="message-box function-content">
+              <div class="gantt">
+                <a href="http://" class=" btn btn-gantt project-btn-more">Diagramme de Gantt</a>
+               <div  class="vue" style="color: #ff942e; height: 23px;justify-content: center; align-items: center; margin: 0;padding: 0;display: flex;"><h4>Vue</h4></div>
+              </div>
+            </div>
+            <div class="message-box function-content">
+             <div class="files-composants project-box-content-header">
+              <div class="coller">
+                <a href="http://" class="project-btn-more btn btn-coller">Coller</a>
+              </div>
+              <div class="couper">
+                <a href="http://" class="project-btn-more btn btn-couper">Couper</a>
+              </div>
+              <div class="copier">
+                <a href="http://" class="project-btn-more btn btn-couper">Copier</a>
+              </div>
+              <div  class="vue" style="color: #ff942e; height: 23px;justify-content: center; align-items: center; margin: 0;padding: 0;display: flex;min-width: 210px;"><h4>Presses-papiers</h4></div>
+             </div>
             </div>
           </div>
-          <div class="message-box function-content">
-            <div class="coller">
-              <a href="http://" class=" btn btn-coller">Coller</a>
-            </div>
-            <div class="cooper">
-              <a href="http://" class=" btn btn-couper">Couper</a>
-            </div>
-            <div class="copier">
-              <a href="http://" class=" btn btn-couper">Copier</a>
-            </div>
-            <div class="bottom-view"> <h5 class="vue" style="bottom: 0;"> Presse-papiers </h5></div>
-          </div>
-        </div>
-        <div class="project-boxes jsGridView">
-          <div class="project-box-wrapper">
-            <div class="project-box" style="background-color: #fee4cb;">
-              <div class="project-box-header">
-                <span>files</span>
-                <div class="more-wrapper">
-                  <button class="project-btn-more">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
-                      <circle cx="12" cy="12" r="1" />
-                      <circle cx="12" cy="5" r="1" />
-                      <circle cx="12" cy="19" r="1" /></svg>
-                  </button>
-            </div>
-          </div>
-          <div class="project-box-content-header">
-            <p>coller</p>
-          </div>
-          <div class="box-progress-wrapper">
-            <p>copier</p>
-          </div>
-          <div class="box-progress-wrapper">
-            <p>couper</p>
-          </div>
-          <div class="project-box-footer">
-            <!-- <div class="participants">
-             
-            </div> -->
-            <div class="days-left" style="color: #ff942e;">
-              Presses-papiers
-            </div>
-          </div>
-        </div>
-      </div>
-     
-      <!--  -->
-    </div>
+          <!-- interface -->
         
+          <!-- end interface -->
+        </div>
+    
+        <!-- end asise od client messages -->
       </div>
-  
-      <!-- end asise od client messages -->
+      <!-- end section messages  -->
     </div>
-    <!-- end section messages  -->
        <!-- LOREM  -->
 <!-- <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolor nisi cumque, deleniti distinctio facere aliquam at sapiente quo corporis atque dolorem aliquid nam minima obcaecati dolorum porro quia quas!</P> -->
 
@@ -172,31 +141,34 @@
     <div class="app-content">
       <div class="app-sidebar">
         
-        <a href="" class="app-sidebar-link active">
+        <a href="" class="app-sidebar-link  active" id="home">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
             <polyline points="9 22 9 12 15 12 15 22" /></svg>
         </a>
-        <a href="" class="app-sidebar-link">
+        <a href="" class="app-sidebar-link " id="diagram">
           <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-pie-chart" viewBox="0 0 24 24">
             <defs />
             <path d="M21.21 15.89A10 10 0 118 2.83M22 12A10 10 0 0012 2v10z" />
           </svg>
         </a>
-        <a href="" class="app-sidebar-link">
+        <a href="" class="app-sidebar-link" id="planning">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
             <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
             <line x1="16" y1="2" x2="16" y2="6" />
             <line x1="8" y1="2" x2="8" y2="6" />
             <line x1="3" y1="10" x2="21" y2="10" /></svg>
         </a>
-        <a href="" class="app-sidebar-link">
+        <button class="app-sidebar-link setting" id="setting">
           <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-settings" viewBox="0 0 24 24">
             <defs />
             <circle cx="12" cy="12" r="3" />
             <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z" />
           </svg>
-        </a>
+        </button>
+      </div>
+      <div class="section-setting " style="display: none;">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In accusamus reprehenderit error explicabo. Magni labore voluptates quia inventore, optio natus dolores, architecto minima, iusto porro sunt? Beatae possimus sapiente atque.
       </div>
       <!-- project-section team tâches calendar -->
       <div class="projects-section">
