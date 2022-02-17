@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // header function
   document.querySelector('.burger-btn').addEventListener('click', function () {
     document.querySelector('.burger-section').classList.add('show');
-    
+  
   });
   
   document.querySelector('.burger-close').addEventListener('click', function() {
@@ -171,4 +171,14 @@ function MyCtrl($scope) {
     showWorkHours: false,
     showWorkDays: false
   };
+}
+
+
+// toolbar
+
+angular.module("textAngularTest", ["textAngular"]);
+function wysiwygeditor($scope) {
+  $scope.orightml ='';
+  $scope.htmlcontent = $scope.orightml;
+  $scope.disabled = false;
 }
