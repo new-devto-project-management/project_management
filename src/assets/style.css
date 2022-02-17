@@ -79,6 +79,7 @@ button, a {
 .app-content {
   display: flex;
   height: 100%;
+  min-height: 120vh;
   overflow: hidden;
   padding: 16px 24px 24px 0;
 }
@@ -404,7 +405,14 @@ button, a {
 .message-box:hover {
   background-color: var(--message-box-hover);
   border-top-color: var(--link-color-hover);
+  box-shadow: 1px 2px 3px 2px #111827;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
 }
+
 .message-box:hover + .message-box {
   border-top-color: var(--link-color-hover);
 }
@@ -923,20 +931,57 @@ button, a {
 }
 
 .btn-functions{
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 12% 12% 76%;
+  /* justify-content: center; */
   align-items: center;
-  gap: 10px;
+  gap: 45px;
+}
+.project-box{
+  border: 2px solid black;
+  justify-content: center;
+  display: grid;
+}
+.project-box .function-content{
+  justify-content: space-between;
+  /* border: 3px solid greenyellow; */
+
+}
+.project-box .function-content .files-composants {
+  width: 100%;
+  /* border: 4px solid red; */
+}
+.project-box .function-content .gantt , .project-box .function-content .menu-ccc .vue{
+  width: 100%;
+  /* border: 4px solid red; */
 }
 .function-content {
   display: block;
+  /* border: 1px solid red; */
+}
+.messages{
+  display: grid;
+  grid-template-columns: 10% 10% 80%;
+  
+}
+.messages .message-box{
+  min-width: 100px;
 }
 .messages .function-content{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-bottom: 0px;
   color: var(--main-color);
+  padding: 3px;
+  margin: 1px;
+}
+.function-content .gantt{
+  min-width: 40px;
+
+}
+.gantt{
+  width: 15%;
 }
 .vue{
   margin: 0;
@@ -949,10 +994,24 @@ button, a {
   flex-shrink: 0;
   padding: 6px 16px;
   font-weight: 700;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
 .function-content .vue{
   top: 4rem;
 
+  
+}
+.files-composants{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 3px solid #111827; */
+  display: inline-block;
+}
+.files-composants {
   
 }
 .project-box{
@@ -964,6 +1023,10 @@ button, a {
     margin: 0px;
     background-color: var(--main-color-card);
     box-shadow: 1px 1px 1px 0px #ccc;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
 }
 
 .section-setting{
@@ -1000,11 +1063,43 @@ button, a {
 .ng-binding{
   color:#111827;
   height: 20px;
-  border: 1px solid #111827;
+  border: 1px solid #b0a2c7;
 }
-
-.files-composants .coller{
-  min-width: 5%;
-  min-height: 10vh;
-  border: 2px solid #1f1c24;
+.btn-gantt{
+  height: 10px;
+  display: inline-block;
+  position: inherit;
+  color: blue;
+  font-weight: bold;
+}
+.menu-ccc:hover{
+  background-color: #0000001c;
+  border-radius: 15px;
+  font-size: 1rem;
+  transition: 0.8s in-ease;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  -webkit-transition: 0.8s in-ease;
+  -moz-transition: 0.8s in-ease;
+  -ms-transition: 0.8s in-ease;
+  -o-transition: 0.8s in-ease;
+}
+.files-composants .coller , .gantt .gantt-svg{
+  min-width: 6px;
+  min-height:8vh;
+  border: 2px solid #b0a2c7;
+  border-radius: 15px;
+  align-items:center;
+  justify-content: center;
+  /*display: block;
+  */
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.files-composants .copier-coller{
+  display: block;
 }
