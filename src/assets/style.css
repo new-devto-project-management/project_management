@@ -1072,20 +1072,6 @@ button, a {
   color: blue;
   font-weight: bold;
 }
-.menu-ccc:hover{
-  background-color: #0000001c;
-  border-radius: 15px;
-  font-size: 1rem;
-  transition: 0.8s in-ease;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
-  -webkit-transition: 0.8s in-ease;
-  -moz-transition: 0.8s in-ease;
-  -ms-transition: 0.8s in-ease;
-  -o-transition: 0.8s in-ease;
-}
 .files-composants .coller , .gantt .gantt-svg{
   min-width: 6px;
   min-height:8vh;
@@ -1102,4 +1088,16 @@ button, a {
 }
 .files-composants .copier-coller{
   display: block;
+}
+.gantt-svg svg{
+  width: 100%;
+  height: 100%;
+}
+.coller svg{
+  width: 100%;
+  height: 100%;
+}
+.couper svg , .copier svg{
+  width: 60%;
+  height: 60%
 }
