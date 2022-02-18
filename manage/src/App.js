@@ -1,14 +1,15 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Home from "./components/Home";
-import Files from "./components/Files";
-import Taches from "./components/Taches";
-import Ressource from "./components/Ressource";
-import Tool from "./components/Tool";
-import Settings from "./components/Settings";
-import Help from "./components/Help";
-import NotFound from "./pages/NotFound";
+import { Switch } from "switch";
+import { BrowserRouter, Route } from "react-router-dom";
+import Home from "./components/functions/Home";
+import Files from "./components/functions/Files";
+import Taches from "./components/functions/Taches";
+import Ressource from "./components/functions/Ressource";
+import Tool from "./components/functions/Tool";
+import Settings from "./components/functions/Settings";
+import Help from "./components/functions/Help";
+import NotFound from "./components/functions/NotFound";
 
 
 const App = () => {
@@ -23,7 +24,7 @@ const App = () => {
           <Route path="/tool" component={Tool} />
           <Route path="/settings" component={Settings} />
           <Route path="/help" component={Help} />
-        
+
           <Route component={NotFound} />
         </Switch>
       </BrowserRouter>
