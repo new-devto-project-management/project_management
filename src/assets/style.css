@@ -1080,11 +1080,11 @@ button, a {
   align-items:center;
   justify-content: center;
   /*display: block;
-  */
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
+  */-webkit-border-radius: 15px;
+  -moz-border-radius:;
+  -ms-border-radius:;
+  -o-border-radius:;
+  -webkit-border-radius:;
 }
 .files-composants .copier-coller{
   display: block;

@@ -1,0 +1,22 @@
+{
+	"buildPath": "build/",
+	"styles": {
+		"prerequisites": [
+			"testcase/css/libs/somelib.css"
+		],
+		"app": [
+			"testcase/css/app/someapp.css"
+		],
+		"output": "app.min.css"
+	},
+	"scripts": {
+		"prerequisites": [
+			"testcase/js/libs/somelib.js",
+			"testcase/js/libs/someotherlib.js"
+		],
+		"app": [
+			"testcase/js/app/someapp.js"
+		],
+		"output": "app.min.js"
+	}
+}

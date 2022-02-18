@@ -178,7 +178,7 @@ function MyCtrl($scope) {
 
 angular.module("textAngularTest", ["textAngular"]);
 function wysiwygeditor($scope) {
-  $scope.orightml ='';
+  $scope.orightml = "<p></p>";
   $scope.htmlcontent = $scope.orightml;
   $scope.disabled = false;
 }
