@@ -110,8 +110,10 @@
     "pump": "^3.0.0",
     "pupa": "^2.1.1",
     "rc": "^1.2.8",
+    "react-redux": "^7.2.6",
     "readable-stream": "^1.1.14",
     "readdirp": "^3.6.0",
+    "redux": "^4.1.2",
     "registry-auth-token": "^4.2.1",
     "registry-url": "^5.1.0",
     "responselike": "^1.0.2",
@@ -167,5 +169,8 @@
   "bugs": {
     "url": "https://github.com/new-devto-project-management/project_management/issues"
   },
-  "homepage": "https://github.com/new-devto-project-management/project_management#readme"
+  "homepage": "https://github.com/new-devto-project-management/project_management#readme",
+  "devDependencies": {
+    "redux-devtools": "^3.7.0"
+  }
 }
