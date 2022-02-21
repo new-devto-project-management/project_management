@@ -66,7 +66,22 @@ modelisation objet :
             but : permettre de creer des objets sans savoir leur type precis....
 
 
+    \\ 21/02/2K22
+        les design pattern...
+        le pattern observer....
+        Type:
+         injecttion d'interface (type1)
+         injection par mutateur (type2)
+         injection par constructeur
+        inverion de contrôler (IoC)
 
+
+// Test logiciel ( test en boite blanche )
+  /// test fonctionnels (test en boite noir )
+  /// test structurels ( tes en boite noir )
+      test en boîte blanche : ....
+
+END GENIE LOGICIEL $$$$$
 
 
             <!-- gantt generate by kendo -->

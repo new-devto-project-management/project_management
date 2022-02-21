@@ -1,6 +1,6 @@
 import React from "react";
 // import "./App.css";
-import { BrowserRouter as Router, Route , Routes, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route , Redirect, Switch } from "react-router-dom";
 import Home from "./components/functions/Home";
 import Files from "./components/functions/Files";
 import Taches from "./components/functions/Taches";
@@ -18,7 +18,7 @@ const App = () => {
     <>
         
       <Router>
-          <Home />
+          {/* <Home /> */}
           
           <Switch>
           {/* permet de matcher les éléments function */}
@@ -29,7 +29,8 @@ const App = () => {
             <Route path="/tools" component={Tools} />
             <Route path="/settings" component={Settings} />
             <Route path="/help" component={Help} />
-        
+
+            <Redirect to='/'/>
        
         </Switch>          
       </Router>
