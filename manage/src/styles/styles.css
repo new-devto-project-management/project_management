@@ -1,9 +1,11 @@
 *{
     margin: 0;
     padding: 0;
-    background: rgba(10, 155, 180, 0.466);
     box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
 }
+
 .hello{
     font-size: 1rem;
     color: black;

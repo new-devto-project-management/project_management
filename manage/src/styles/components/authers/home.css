@@ -1,6 +1,20 @@
 .home{
-    height: 100%;
+    margin-top: 1rem;
 }
 .homeContent{
-
+    border: 4px solid #ccc;
+    height: 200vh;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    background-color: azure;
+}
+.content .home-section{
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    color: rgb(7, 53, 53);
+    
 }

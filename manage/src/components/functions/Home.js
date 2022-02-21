@@ -7,13 +7,19 @@ import "../../styles/components/authers/home.css";
 const Home = () => {
   return (
     <main>
-      <Navigation />
       <div className="home">
+          <Navigation />
         <div className="homeContent">
           <div className="content">
+            {/* menu */}
 
-            <p>hello SECTION HOME</p>
+            <div className="home-section">
+            <h6>hello SECTION HOME</h6>
+            </div>
           </div>
+          
+
+
         </div>
       </div>
     </main>
