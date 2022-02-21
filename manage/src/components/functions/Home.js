@@ -7,20 +7,15 @@ import "../../styles/components/authers/home.css";
 const Home = () => {
   return (
     <main>  
-      <div className="home">
         <Navigation />
+      <div className="home">
         <div className="homeContent">
           <div className="content">
             <h1>Traore cheick oumar tidiane</h1>
             <h2>Développeur Full-Stact</h2>
-            <div className="pdf">
-              <a href="./media/CV.pdf" target="_blank">
-                Télécharger CV
-              </a>
-            </div>
           </div>
+            <p>hello SECTION HOME</p>
         </div>
-        <p>hello home menu</p>
       </div>
     </main>
   );
