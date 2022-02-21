@@ -1,6 +1,258 @@
 *{
     margin: 0;
     padding: 0;
-    background: rgb(78, 0, 0);
+    background: rgba(10, 155, 180, 0.466);
     box-sizing: border-box;
+}
+
+
+a {
+  color: inherit;
+  background-color: red;
+}
+
+#container {
+  width: 100%;
+  height: 100%;
+  margin: 5px auto;
+}
+
+.icon {
+  font-family: FontAwesome;
+  display: block;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  border-radius: 5% 5% 0 0;
+  height: 120px;
+  line-height: 2em;
+  font-size: 4em;
+  transition: color 0.4s;
+  background-color: #fff;
+}
+
+.fa-q:before {
+  content: "";
+}
+
+.row {
+  display: block;
+  margin: 30px auto;
+}
+
+.container_wrapper {
+  margin: 0 auto;
+  width: 820px;
+}
+
+.container_wrapper:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.tile {
+  margin-right: 2em;
+  border: 3px solid #444F5A;
+  background-color: #ad1457;
+  border-radius: 6%;
+  float: left;
+  display: block;
+  width: 240px;
+  height: 180px;
+  position: relative;
+  box-shadow: 2px 2px 3px rgba(100, 100, 100, 0.7);
+  transition: all 0.4s;
+}
+.tile:hover {
+  box-shadow: 5px 5px 5px #646464;
+}
+.tile:hover .flip-icon {
+  transform: rotateY(180deg) scale(1);
+}
+.tile:hover .flip-icon a {
+  color: black;
+}
+.tile:hover .flip-icon a:hover {
+  color: pink;
+}
+.tile:hover .icon {
+  color: #A7D82E;
+}
+.tile:hover .icon + p {
+  border-radius: 0 0 19% 19%;
+  color: #A7D82E;
+}
+.tile p {
+  display: block;
+  position: absolute;
+  height: 30px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: center;
+  line-height: 0.5em;
+  color: #fff;
+  transition: all 0.4s;
+}
+
+.flip-icon {
+  transition-duration: 0.4s;
+  transform-style: preserve-3d;
+}
+
+.front-flip {
+  z-index: 2;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transform: rotateY(0deg);
+}
+
+.back-flip {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.back-flip a {
+  display: block;
+  position: relative;
+  width: 110px;
+  top: 20px;
+  left: 40px;
+  line-height: 25px;
+  text-align: left;
+  text-decoration: none;
+  font-size: 15px;
+  background-color: inherit;
+}@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  background-color: red;
+}
+
+#container {
+  width: 100%;
+  height: 100%;
+  margin: 5px auto;
+}
+
+.icon {
+  font-family: FontAwesome;
+  display: block;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  border-radius: 5% 5% 0 0;
+  height: 120px;
+  line-height: 2em;
+  font-size: 4em;
+  transition: color 0.4s;
+  background-color: #fff;
+}
+
+.fa-q:before {
+  content: "";
+}
+
+.row {
+  display: block;
+  margin: 30px auto;
+}
+
+.container_wrapper {
+  margin: 0 auto;
+  width: 820px;
+}
+
+.container_wrapper:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.tile {
+  margin-right: 2em;
+  border: 3px solid #444F5A;
+  background-color: #ad1457;
+  border-radius: 6%;
+  float: left;
+  display: block;
+  width: 240px;
+  height: 180px;
+  position: relative;
+  box-shadow: 2px 2px 3px rgba(100, 100, 100, 0.7);
+  transition: all 0.4s;
+}
+.tile:hover {
+  box-shadow: 5px 5px 5px #646464;
+}
+.tile:hover .flip-icon {
+  transform: rotateY(180deg) scale(1);
+}
+.tile:hover .flip-icon a {
+  color: black;
+}
+.tile:hover .flip-icon a:hover {
+  color: pink;
+}
+.tile:hover .icon {
+  color: #A7D82E;
+}
+.tile:hover .icon + p {
+  border-radius: 0 0 19% 19%;
+  color: #A7D82E;
+}
+.tile p {
+  display: block;
+  position: absolute;
+  height: 30px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: center;
+  line-height: 0.5em;
+  color: #fff;
+  transition: all 0.4s;
+}
+
+.flip-icon {
+  transition-duration: 0.4s;
+  transform-style: preserve-3d;
+}
+
+.front-flip {
+  z-index: 2;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transform: rotateY(0deg);
+}
+
+.back-flip {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.back-flip a {
+  display: block;
+  position: relative;
+  width: 110px;
+  top: 20px;
+  left: 40px;
+  line-height: 25px;
+  text-align: left;
+  text-decoration: none;
+  font-size: 15px;
+  background-color: inherit;
 }
