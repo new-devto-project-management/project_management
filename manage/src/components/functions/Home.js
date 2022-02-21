@@ -3,6 +3,7 @@ import React from "react";
 //  de mon home je vais chercher les autres elements composants
 import Navigation from "../Navigation";
 import "../../styles/components/authers/home.css";
+import Files from "./Files";
 
 const Home = () => {
   return (
@@ -12,12 +13,16 @@ const Home = () => {
         <div className="homeContent">
           <div className="content">
             {/* menu */}
+            <Files/>
 
             <div className="home-section">
             <h6>hello SECTION HOME</h6>
             </div>
           </div>
-          
+
+          {/* creat login interface */}
+
+
 
 
         </div>
