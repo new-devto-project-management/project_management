@@ -16,10 +16,8 @@ import "./styles/styles.css";
 const App = () => {
   return (
     <>
-        
       <Router>
           {/* <Home /> */}
-          
           <Switch>
           {/* permet de matcher les éléments function */}
             <Route path="/" exact component={Home} />
@@ -31,11 +29,11 @@ const App = () => {
             <Route path="/help" component={Help} />
 
             <Redirect to='/'/>
-       
-        </Switch>          
+
+        </Switch>
       </Router>
 
-      
+
 
     </>
   );

@@ -1,13 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,100;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,300;0,400;0,500;1,100;1,300;1,400&display=swap');
 *{
     margin: 0;
     padding: 0;
+    /* font-family: 'Dosis', sans-serif;
     box-sizing: border-box;
     list-style-type: none;
     text-decoration: none;
+    background:rgba(255, 0, 0, 0.137); */
 }
 
-.hello{
-    font-size: 1rem;
-    color: black;
-
-}

@@ -16,7 +16,8 @@ const Home = () => {
             <Files/>
 
             <div className="home-section">
-            <h6>hello SECTION HOME</h6>
+              <h6>hello SECTION HOME</h6>
+              <p>lorem corps de home </p>
             </div>
           </div>
 
