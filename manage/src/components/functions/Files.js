@@ -21,13 +21,13 @@ class Files extends React.Component {
     render() {
         return (
         <>
-            <div className='toolbar'>
+            {/* <div className='toolbar'>
                 <RichTextEditorComponent height={950} toolbarSettings={this.toolbarSettings}>
     
                     <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar]}/>
                 </RichTextEditorComponent>
                 
-            </div>
+            </div> */}
         </>
   
   );
