@@ -3,22 +3,32 @@ import React from "react";
 //  de mon home je vais chercher les autres elements composants
 import Navigation from "../Navigation";
 import "../../styles/components/authers/home.css";
-import Files from "./Files";
+import AppSide from "./AppSide";
+
 
 const Home = () => {
   return (
     <main>
       <div className="home">
           <Navigation />
+          
+            
         <div className="homeContent">
+          <div clasName="side-bar">
+              <AppSide/>
+            </div>
           <div className="content">
             {/* menu */}
-            <Files/>
-
+            
             <div className="home-section">
-              <h6>hello SECTION HOME</h6>
-              <p>lorem corps de home </p>
-            </div>
+              <div class="circles">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <span></span>
+              </div>    
+          </div> 
+          
           </div>
 
           {/* creat login interface */}
