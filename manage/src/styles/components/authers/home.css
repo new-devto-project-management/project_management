@@ -150,7 +150,7 @@
   /* home structure  */
   @charset "UTF-8";
 nav {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(255, 255, 255, 0.7);
   position: relative;
   top: 0;
   left: 0;
@@ -468,7 +468,7 @@ input.embedded:-ms-input-placeholder {
 }
 
 body {
-  background: #222 url(http://www.transparenttextures.com/patterns/dark-matter.png) repeat;
+  background: rgb(0, 0, 0) url(http://www.transparenttextures.com/patterns/dark-matter.png) repeat;
   color: #eee;
   font-family: Lato, sans-serif;
 }
@@ -480,9 +480,7 @@ html, body {
   padding: 0;
 }
 
-html {
-  color: #00ff99;
-}
+
 
 .fancy {
   margin: 20px;

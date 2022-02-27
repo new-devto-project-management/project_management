@@ -3,7 +3,7 @@ import { Navlink } from "react-router-dom";
 //  de mon home je vais chercher les autres elements composants
 import Navigation from "../Navigation";
 import AppSide from "./AppSide";
-import LogTeam from "./LogTeam";
+import LogTeam from "../logs/LogTeam";
 import "../../styles/components/authers/home.css";
 
 
@@ -37,6 +37,7 @@ const Home = () => {
 
                 <section class="entries">
                   <header class="entries-title">Bug Tracker</header>
+                
                   
                 </section>
               </div>
