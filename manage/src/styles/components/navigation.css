@@ -90,3 +90,14 @@
     -ms-border-radius: 40px;
     -o-border-radius: 40px;
 }
+
+.space{
+    width: 50px;
+}
+.nav-links-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+}

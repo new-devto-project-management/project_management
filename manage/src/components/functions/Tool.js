@@ -4,26 +4,13 @@ import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent,
 
 
 class Tool extends React.Component {
-    constructor() {
-        super(...arguments);
-        this.toolbarSettings = {
-            items: ['Bold', 'Italic', 'Underline', 'StrikeThrough',
-                'FontName', 'FontSize', 'FontColor', 'BackgroundColor',
-                'LowerCase', 'UpperCase', '|',
-                'Formats', 'Alignments', 'OrderedList', 'UnorderedList',
-                'Outdent', 'Indent', '|',
-                'CreateLink', 'Image', '|', 'ClearFormat', 'Print',
-                'SourceCode', 'FullScreen', '|', 'Undo', 'Redo'
-            ],
-            type: 'Expand'
-        };
-    }
-    render (){
+        render (){
         
         return (
             <main>
-                <div className="tooblar" toolbarSettings={this.toolbarSettings}>
-                   hello tools ..................;;
+                <div className="toolbar" toolbarSettings={this.toolbarSettings}>
+                   he hello hello tools...
+                   
                 </div>
             </main>
         )
