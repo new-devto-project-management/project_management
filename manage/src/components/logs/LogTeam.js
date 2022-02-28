@@ -1,45 +1,44 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+import ClientForm from '../posts/ClientForm';
+import Client from '../posts/Client';
 import "../../styles/components/authers/logteam.css";
 
 
 
 class LogTeam extends React.Component {
-    clientInput = React.createRef();
+    // clientInput = React.createRef();
 
     state = {
         clients: [
             {id:1 , nom:"Lior Chamla"},
             {id:2 , nom:"traore cheick"},
             {id:3 , nom:" oumar tidiane"},
-        ],
-        nouveauClient : ''
+        ]
     };
 
-    handelClick = () => {
-        console.log(this.state);
-    };
-
+  
 
 
     handelDelete = id => {
-        const clients = this.state.clients.slice();
-        const index = clients.findIndex((client) => {
-            return client.id === id
-        });
+        const clients = [...this.state.clients];
+        const index = clients.findIndex(client => client.id === id);
 
         clients.splice(index, 1);
 
-        this.setState({clients : clients});
+        this.setState({ clients });
     };
 
-    hundelSubmit  = (event) => {
-        event.preventDefault();
-        console.log("ca marche du tonere ...");
-    };
-    handelChange = (event) => {
-        console.log(event.currentTarget.value);
-    };
+        handelAdd = client => {
+             // faire une copie
+        const clients = [...this.state.clients];
+        clients.push({client});
+
+        // mise a jour de mon state
+        this.setState({ clients });
+        }
+  
+
     render(){
         const dev = "Présentation de l'équipe de Développeurs."
       return(
@@ -47,20 +46,15 @@ class LogTeam extends React.Component {
                   <div className='logContent'>
                         <li>{dev}</li>
                         <ul>
-                        <button onClick={this.handelClick}>Ajouter un nouveau membre !</button>
                             {
                                 this.state.clients.map(client => (
-                                <li>{client.nom}{""}
-                                <button onClick={() => this.handelDelete(client.id)}>Enlevé un membre !</button>
-                                </li> 
+                               
+                                <Client details={client} onDelete={this.handelDelete}/>
                                 
                                 ))
                             }
                         </ul>
-                        <form onSubmit={this.handelSubmit}>
-                            <input value={this.state.nouveauClient} ref={this.clientInput} onChange={this.handelChange} type="text" placeholder='Ajouter un client ...' />
-                            <button>Confirmer</button>
-                        </form>
+                        <ClientForm onClientAdd={this.handelAdd} />
                         
                   </div>
                 
