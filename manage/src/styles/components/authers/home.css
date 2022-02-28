@@ -1,7 +1,10 @@
+@import url(https://fonts.googleapis.com/css2?family=Dosis:wght@100;200;300;400;500;600;800&display=swap);
+
+
 .home{
     margin:1rem 5px;
     height: 100vh;
-    font-family: @import url(https://fonts.googleapis.com/css2?family=Dosis:wght@100;200;300;400;500;600;800&display=swap);
+    font-family: "Dosis Bold" ;
     
     body {
       font-family: 'Dosis', sans-serif;
@@ -45,13 +48,21 @@
 }
 
 /* circle */
+.anime{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #176e86;
+    transition: 5s;
+}
 
 .circles {
     width: 50vmin;
     height: 50vmin;
     position: relative;
     perspective: 50000px;
-    color: #61DAFB;
+    color: #176e86;
+    
   }
   .circles span {
     position: absolute;
@@ -229,6 +240,7 @@ a:hover {
 .main-header.small .main-header-content {
   max-height: 50px;
   padding: 10px 15px;
+  
 }
 .main-header.small .header-title {
   font-size: 2em;
@@ -250,10 +262,14 @@ a:hover {
   transition: all 500ms ease;
   position: relative;
   padding: 50px 10px;
-  max-width: 800px;
-  max-height: 200px;
+  max-width: 50%;
+  max-height: 300px;
   margin: 0 auto;
+  border-radius: 19px ;
+  box-shadow: inset 1px 2px 2px 3px ;
+  border: 0.6rem solid #00ff99;
   overflow: hidden;
+  
 }
 .main-header .header-title {
   transition: all 500ms ease;
@@ -592,4 +608,14 @@ html, body {
 
 ::selection {
   background: rgba(0, 255, 153, 0.3);
+}
+
+
+
+/* gantt-confid  */
+.gantt-config{
+  min-width: 100%;
+  min-height: 120vh;
+  border: 2px solid  #000;
+  box-shadow: inset 1px 3px 1px 1px #80ffcc;
 }

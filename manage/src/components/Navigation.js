@@ -18,8 +18,8 @@ const Navigation = () => {
                   
                   {/* logo */}
                     <NavLink exact to="/" ng-click="base.mainPage=false">
-                        <li className="nav-links current">
-                        <span  class="page-title"><big>O</big>pen<strong> Project</strong></span>
+                        <li className="nav-links current entries">
+                        <span  class="page-title entries-title"><big>O</big>pen<strong> Project</strong></span>
                         </li>
                     </NavLink>
                    
@@ -35,13 +35,13 @@ const Navigation = () => {
                     <NavLink to="/files">
                         <li className="nav-links" ng-click="base.mainPage=true">Fichier</li>
                     </NavLink>
-                    <NavLink to="/taches">
-                        <li className="nav-links checkbox">Tâches</li>
+                    <NavLink to="/taches" >
+                        <li className="nav-links" >Tâches</li>
                     </NavLink>
                     <NavLink to="/ressouces">
                         <li className="nav-links">Ressources</li>
                     </NavLink>
-                    <NavLink to="/tools">
+                    <NavLink to="/tool">
                         <li className="nav-links">Outils</li>
                     </NavLink>
                     <NavLink to="/settings">

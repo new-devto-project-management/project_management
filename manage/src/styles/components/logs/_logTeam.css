@@ -1,0 +1,65 @@
+.logContent{
+    min-width: 100%;
+    min-height: 100%;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    place-content:inherit;
+    align-items: center;
+    grid-template-columns: 30% 70%;
+    gap: 10px;
+    border: 2px solid red;
+    
+}
+.logContent .presentation{
+    transition: all 500ms ease;
+    border-bottom: 2px solid #111;
+    box-shadow: inset 0 0 50px #000, 0 0 1px rgba(255, 255, 255, 0.3);
+    padding-top: 10rem;
+    text-shadow: 0 5px 15px #000;
+    transform: translateY(0% );
+    border-radius: 19px ;
+    box-shadow: inset 1px 2px 2px 3px #ccc;
+    min-height: 100%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+.presentation .presentationContent{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 100%;
+   
+}
+.presentation .presentationContent button:hover{
+    padding:1rem;
+}
+
+.logContent .formulaire{
+    border-bottom: 2px solid #111;
+  box-shadow: inset 0 0 50px #000, 0 0 1px rgba(255, 255, 255, 0.3);
+  text-align: center;
+  padding-top: 2rem;
+  text-shadow: 0 5px 15px #000;
+  position: relative;
+  border-radius: 19px;
+  display: flexbox;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.Mou, .Moe, .Ca, .chefDequipe, .resPlan, .resDepart, .resQual, .resCont, .nbrDev{
+    padding: 2rem;
+    min-width: 60%;
+    display: grid;
+    grid-template-rows: auto;
+}
+.Mou input, .Moe input, .Ca input, .chefDequipe input, .resPlan input, .resDepart input, .resQual input, .resCont input, .nbrDev input{
+    min-height: 3rem;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: "Dosis" 'Dosis', sans-serif;
+    font-variant-numeric: normal;
+}

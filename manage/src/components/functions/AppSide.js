@@ -4,8 +4,8 @@ import "../../styles/components/authers/_appside.css";
 const AppSide = () => {
     return (
        <>
-            <div className="appSide">
-                <ul className='id'>
+            <div className="appSide fancy"> 
+                <ul className='id '>
                     <NavLink to="/">
                         <li className="id-Content">
                             <span>           
@@ -19,7 +19,7 @@ const AppSide = () => {
                         </li>
                     </NavLink>
                     <NavLink to="/">
-                        <li className="id-Content">
+                        <li className="id-Content ">
                             <span>
                                 <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
                                     stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
