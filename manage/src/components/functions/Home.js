@@ -78,10 +78,12 @@ class Home extends React.Component {
                     </canvas>
                   </div>
                 </div>
-      
+      {/* end header */}
+               
          
               
           <div className="homeContent">
+            
           {/* insert side bar component  */}
             <aside clasName="side-bar">
                 <AppSide/>
@@ -90,6 +92,9 @@ class Home extends React.Component {
               {/* menu */}
               
               <div className="home-section">
+               <div className="main-header-content">
+                    <span className="header-title">PLANIFICATION D'UN PROJET ...</span>
+                </div>
               {/* insert component presentation de l'equipe dev et attribytion des tâches  */}
                 <div className="login-dev">
                   <LogTeam/>
@@ -103,7 +108,10 @@ class Home extends React.Component {
                     <span></span>
                 </div>   
                 </div>  */}
-  
+                
+                <div className="home-section">
+                            presentation du formulaire
+                  </div>
                 <div className="gantt-config">
                   <Gantt />
                 </div>

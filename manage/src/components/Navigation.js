@@ -19,6 +19,14 @@ const Navigation = () => {
           <div className="container-fuild">
             <div className="app-header" ng-app="app" ng-controller="baseController as base">
               <div className="navigation frozen">
+                <div className="menu-icon" onClilck={handelClick}>
+                      <li className="new-project">
+                        <Link to="/" className="create-new-project">
+                          <i className={ 'fas fa-plus'}/>                     
+
+                        </Link>
+                      </li>
+                    </div>
                  <div className="menu-icon" onClilck={handelClick}>
                       <i className={ click ? 'fas fa-times' : 'fas fa-bars'} />
                     </div>

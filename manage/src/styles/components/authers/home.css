@@ -1,15 +1,24 @@
 @import url(https://fonts.googleapis.com/css2?family=Dosis:wght@100;200;300;400;500;600;800&display=swap);
 
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
 .home{
     margin:1rem 5px;
     height: 100vh;
+    transition-delay: 2s all ease;
     font-family: "Dosis Bold" ;
-    
+    overflow: auto;
+    background: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.wallpapertip.com%2Ffr%2FowiTRo%2F&psig=AOvVaw3e4sfUQqIRhW24_3gf6So3&ust=1646207580859000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMDi07C3pPYCFQAAAAAdAAAAABAJ") center/cover fixed;
     body {
       font-family: 'Dosis', sans-serif;
     };
 }
+
 .homeContent{
     border: 4px solid #ccc;
     /* height: 23vh; */
@@ -17,7 +26,8 @@
     display: grid;
     grid-template-columns:4% 96%;
     float: right;
-    background-color: azure;
+    /* background: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.wallpapertip.com%2Ffr%2FowiTRo%2F&psig=AOvVaw3e4sfUQqIRhW24_3gf6So3&ust=1646207580859000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMDi07C3pPYCFQAAAAAdAAAAABAJ"); */
+    /* background-color: azure; */
     border-radius: 12px;
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
@@ -31,7 +41,21 @@
     animation: alternate;
     justify-content: center;
     min-width: 100%;
-    border:5px solid #cf0404;
+    /* border:5px solid #cf0404; */
+}
+.home-section .main-header{
+  min-width: 90%;
+  justify-content: center;
+  align-self: center;
+  justify-self: end;
+}
+.home-section .main-header-content .header-title{
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  text-shadow: 1px 2px 1px #777;
 }
 .homeContent .content{
     display: flex;
@@ -44,7 +68,7 @@
     min-width: 100%;
     display: grid;
     color: rgb(7, 53, 53);
-    border: 1px solid rgba(7, 53, 53, 0.575);
+    /* border: 1px solid rgba(7, 53, 53, 0.575); */
 }
 
 /* circle */
@@ -161,7 +185,7 @@
   /* home structure  */
   @charset "UTF-8";
 nav {
-  background: rgba(255, 255, 255, 0.7);
+  /* background: rgba(255, 255, 255, 0.7); */
   position: relative;
   top: 0;
   left: 0;
@@ -262,13 +286,17 @@ a:hover {
   transition: all 500ms ease;
   position: relative;
   padding: 50px 10px;
-  max-width: 50%;
-  max-height: 300px;
-  margin: 0 auto;
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  max-height: 340px;
+  margin: 1rem auto;
   border-radius: 19px ;
-  box-shadow: inset 1px 2px 2px 3px ;
-  border: 0.6rem solid #00ff99;
+  box-shadow: inset 1px 2px 1px 2px ;
+  border: 0.3rem solid #00ff99;
   overflow: hidden;
+  font-size: larger;
   
 }
 .main-header .header-title {
@@ -483,18 +511,7 @@ input.embedded:-ms-input-placeholder {
   color: inherit;
 }
 
-body {
-  background: rgb(0, 0, 0) url(http://www.transparenttextures.com/patterns/dark-matter.png) repeat;
-  color: #eee;
-  font-family: Lato, sans-serif;
-}
 
-html, body {
-  min-height: 100vh;
-  min-width: 100%;
-  margin: 0;
-  padding: 0;
-}
 
 
 
@@ -614,7 +631,7 @@ html, body {
 
 /* gantt-confid  */
 .gantt-config{
-  min-width: 100%;
+  min-width: 98%;
   min-height: 120vh;
   border: 2px solid  #000;
   box-shadow: inset 1px 3px 1px 1px #80ffcc;
