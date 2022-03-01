@@ -185,10 +185,22 @@
 }
 
 .new-project{
-    min-height: 2rem;
-    width: 2rem;
+    border-radius: 60px;
 }
 .create-new-project i {
     font-weight: bolder;
+    min-height: 50px;
+    width: 70px;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-shadow: 1px 2px 4px 2px #000;
+    border-radius: 60px;
+}
+.create-new-project i:hover{
+    position: relative;
+    padding: 10px;
+    top: -4px;
+    transition: 1s all ease-in-out;
 }

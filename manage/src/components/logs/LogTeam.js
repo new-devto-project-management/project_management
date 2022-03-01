@@ -87,7 +87,7 @@ class LogTeam extends React.Component {
                                  <div className='flex'>  
                                 {/*  */}
                                 <Tooltip content="Valider le formulaire" position='right'>                                            
-                                    <button className='fancy'>Confirmer</button>
+                                    <Button className='fancy'>Confirmer</Button>
                                 </Tooltip>
                                 </div>
                                </form>
@@ -109,70 +109,89 @@ class LogTeam extends React.Component {
                                 </ul> */}
                                 <form>
                                     
-                                    <div className='chefDequipe'>                                    
-                                        {/* chefs d'"quipe" */}
-                                        <Tooltip content="personne physique chargée dans le cadre d'une mission définie,
-                                                d'assumer la maîtrise du projet, c'est-à-dire de veiller à sa bonne réalisation dans les
-                                                objectifs de technique, de coût et de délai." position='right'>
-                                            
-                                            <input aria-label="personne physique chargée dans le cadre d'une mission définie,
-                                                d'assumer la maîtrise du projet, c'est-à-dire de veiller à sa bonne réalisation dans les
-                                                objectifs de technique, de coût et de délai." placeholder="chef de Projet..." required aria-required="true"/>
-                                        </Tooltip>
-                                        <label>Chef de projet / Project Manager</label>
+                                    <div className='part1'>
+                                        <div className='chefDequipe'>                                    
+                                            {/* chefs d'"quipe" */}
+                                            <Tooltip content="personne physique chargée dans le cadre d'une mission définie,
+                                                    d'assumer la maîtrise du projet, c'est-à-dire de veiller à sa bonne réalisation dans les
+                                                    objectifs de technique, de coût et de délai." position='right'>
+                                                
+                                                <input aria-label="personne physique chargée dans le cadre d'une mission définie,
+                                                    d'assumer la maîtrise du projet, c'est-à-dire de veiller à sa bonne réalisation dans les
+                                                    objectifs de technique, de coût et de délai." placeholder="chef de Projet..." required aria-required="true"/>
+                                            </Tooltip>
+                                            <label>Chef de projet / Project Manager</label>
+                                        </div>
+                                        
+                                        <div className='resPlan'>                                    
+                                            {/* personne responnsable de la planification */}
+                                            <Tooltip content="Il identifie et organise les tâches, publie l'échéancier de chaque activité; ensuite, il met
+                                                à jour le planning et calcule la probabilité que les délais soient maintenus. Souvent, le
+                                                chef de projet assume cette fonction." position='right'>
+                                                
+                                                <input aria-label="Il identifie et organise les tâches, publie l'échéancier de chaque activité; ensuite, il met
+                                                à jour le planning et calcule la probabilité que les délais soient maintenus. Souvent, le
+                                                chef de projet assume cette fonction. " placeholder="Responsable Planification..." required aria-required="true"/>
+                                            </Tooltip>
+                                            <label>Responsable planification / Scope & Time Manager</label>
+                                        </div>
+                                        
+
+                                        <div className='resDepart'> 
+                                            {/* personne responnsable de departement */}
+                                            <Tooltip content="le garant d'un des savoir-faire de l'entreprise. Il est sollicité par la chef de projet à
+                                                qui il doit fournir les moyens en rapport avec son métier. " position='right'>
+                                                
+                                                <input aria-label="le garant d'un des savoir-faire de l'entreprise. Il est sollicité par la chef de projet à
+                                                qui il doit fournir les moyens en rapport avec son métier. "  placeholder="Responsable de département..." required aria-required="true"/>
+                                            </Tooltip> 
+                                            <label>Responsable de département / Team leader & HR Manager</label>
+                                        </div>
+
                                     </div>
                                     
-                                    <div className='resPlan'>                                    
-                                        {/* personne responnsable de la planification */}
-                                        <Tooltip content="Il identifie et organise les tâches, publie l'échéancier de chaque activité; ensuite, il met
-                                            à jour le planning et calcule la probabilité que les délais soient maintenus. Souvent, le
-                                            chef de projet assume cette fonction." position='right'>
+                                    <div className='part2'>
+                                                <div className='chefDequipe'>                                    
+                                                {/* chefs d'"quipe" */}
+                                                <Tooltip content="personne physique chargée dans le cadre d'une mission définie,
+                                                        d'assumer la maîtrise du projet, c'est-à-dire de veiller à sa bonne réalisation dans les
+                                                        objectifs de technique, de coût et de délai." position='right'>
+                                                    
+                                                    <input aria-label="personne physique chargée dans le cadre d'une mission définie,
+                                                        d'assumer la maîtrise du projet, c'est-à-dire de veiller à sa bonne réalisation dans les
+                                                        objectifs de technique, de coût et de délai." placeholder="chef de Projet..." required aria-required="true"/>
+                                                </Tooltip>
+                                                <label>Chef de projet / Project Manager</label>
+                                            </div>
                                             
-                                            <input aria-label="Il identifie et organise les tâches, publie l'échéancier de chaque activité; ensuite, il met
-                                            à jour le planning et calcule la probabilité que les délais soient maintenus. Souvent, le
-                                            chef de projet assume cette fonction. " placeholder="Responsable Planification..." required aria-required="true"/>
-                                        </Tooltip>
-                                        <label>Responsable planification / Scope & Time Manager</label>
-                                    </div>
+                                            <div className='resPlan'>                                    
+                                                {/* personne responnsable de la planification */}
+                                                <Tooltip content="Il identifie et organise les tâches, publie l'échéancier de chaque activité; ensuite, il met
+                                                    à jour le planning et calcule la probabilité que les délais soient maintenus. Souvent, le
+                                                    chef de projet assume cette fonction." position='right'>
+                                                    
+                                                    <input aria-label="Il identifie et organise les tâches, publie l'échéancier de chaque activité; ensuite, il met
+                                                    à jour le planning et calcule la probabilité que les délais soient maintenus. Souvent, le
+                                                    chef de projet assume cette fonction. " placeholder="Responsable Planification..." required aria-required="true"/>
+                                                </Tooltip>
+                                                <label>Responsable planification / Scope & Time Manager</label>
+                                            </div>
+                                            
+
+                                            <div className='resDepart'> 
+                                                {/* personne responnsable de departement */}
+                                                <Tooltip content="le garant d'un des savoir-faire de l'entreprise. Il est sollicité par la chef de projet à
+                                                    qui il doit fournir les moyens en rapport avec son métier. " position='right'>
+                                                    
+                                                    <input aria-label="le garant d'un des savoir-faire de l'entreprise. Il est sollicité par la chef de projet à
+                                                    qui il doit fournir les moyens en rapport avec son métier. "  placeholder="Responsable de département..." required aria-required="true"/>
+                                                </Tooltip> 
+                                                <label>Responsable de département / Team leader & HR Manager</label>
+                                            </div>
+
+                                            </div>
                                     
 
-                                    <div className='resDepart'> 
-                                        {/* personne responnsable de departement */}
-                                        <Tooltip content="le garant d'un des savoir-faire de l'entreprise. Il est sollicité par la chef de projet à
-                                            qui il doit fournir les moyens en rapport avec son métier. " position='right'>
-                                            
-                                            <input aria-label="le garant d'un des savoir-faire de l'entreprise. Il est sollicité par la chef de projet à
-                                            qui il doit fournir les moyens en rapport avec son métier. "  placeholder="Responsable de département..." required aria-required="true"/>
-                                        </Tooltip> 
-                                        <label>Responsable de département / Team leader & HR Manager</label>
-                                    </div>
-
-                                    <div className='resQual'>                                
-                                        {/* personne responnsable de la qualité*/}
-                                        <input aria-label="Personne physique ou morale de la démarche qualité dont l'importance va en augmentant (Risk Management) " placeholder="Responsable Qualité (QM)..." required aria-required="true"/>
-                                        <label>Directeur Qualité / Quality Manager</label>
-                                        
-                                    </div>
-                                    <div className='resCont'>
-                                        
-                                        {/* personne responnsable du contrôle de gestion*/}
-                                        <Tooltip content="Le coût est l'un des trois piliers de la gestion de projet (Qualité – Coûts – Délais), d'où
-                                            l'importance de ce rôle. Les outils mathématiques sont aussi à ce niveau
-                                            indispensables. " position='right'>
-                                            
-                                            <input aria-label="Le coût est l'un des trois piliers de la gestion de projet (Qualité – Coûts – Délais), d'où
-                                            l'importance de ce rôle. Les outils mathématiques sont aussi à ce niveau
-                                            indispensables. " placeholder=" Contrôleur de gestion  (Coût)..." required aria-required="true"/>
-                                        </Tooltip> 
-                                        <label>Contrôleur de Gestion / Cost Manager</label>
-                                    </div>
-
-                                    <div className='nbrDev'>
-                                    {/* nombr de dev */}
-                                        <Tooltip content="nombre de developpeurs sur le projet" position='right'>                                            
-                                        <input aria-label='nombre de developpeurs' placeholder='total de developpeur...' required aria-required="true"/>
-                                        </Tooltip> 
-                                        <label>nombre de developpeur sur le projet</label>
                                     </div>
 
                                     {/*  */}
