@@ -32,7 +32,7 @@ class Home extends React.Component {
         {/* insertion component navigation  */}
             <Navigation />
                   
-                <header className="main-header" ng-class="{small: !base.mainPage}">
+                <header className="main-header">
                   <canvas className="cover" id="sparks"></canvas>
                   <div className="main-header-content">
                     <span className="header-title">Project Name</span>
@@ -94,15 +94,15 @@ class Home extends React.Component {
                 <div className="login-dev">
                   <LogTeam/>
                 </div>
-                {/* animation  */}
+                {/* animation  
                 <div className="anime">
-                <div class="circles">
+                {/* <div className="circles">
                     <div></div>
                     <div></div>
                     <div></div>
                     <span></span>
-                </div>  
-                </div>  
+                </div>   
+                </div>  */}
   
                 <div className="gantt-config">
                   <Gantt />

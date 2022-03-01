@@ -63,3 +63,14 @@
     font-family: "Dosis" 'Dosis', sans-serif;
     font-variant-numeric: normal;
 }
+
+@media screen and (max-width: 960px) {
+    .logContent, .logContent .formulaire{
+        position: relative;
+        display: block;
+        min-width: 100%;
+        min-height: 110vh;
+        /* border: 2rem solid red; */
+    }
+    
+  }

@@ -1,12 +1,17 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import "../styles/components/navigation.css"
+import React, {useState} from "react";
+import { BrowserRouter as Router} from "react-router-dom";
+import { Link} from "react-router-dom";
 import Tool from "./functions/Tool";
-import Files from "./functions/Files";
-
+// import Files from "./functions/Files";
+import Dropdown from "./functions/Dropdown";
+import "../styles/components/navigation.css";
 // import "../styles/components/Navigation.scss"
 
 const Navigation = () => {
+  const [click , setClick] = useState(false);
+  const [dropdown , setDropdown] = useState(false);
+  const handelClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
   return (
     <>
       <main>
@@ -14,44 +19,50 @@ const Navigation = () => {
           <div className="container-fuild">
             <div className="app-header" ng-app="app" ng-controller="baseController as base">
               <div className="navigation frozen">
+                 <div className="menu-icon" onClilck={handelClick}>
+                      <i className={ click ? 'fas fa-times' : 'fas fa-bars'} />
+                    </div>
                 <div className="open-project">
                   
                   {/* logo */}
-                    <NavLink exact to="/" ng-click="base.mainPage=false">
+                    <Link exact to="/" ng-click="base.mainPage=false">
                         <li className="nav-links current entries">
                         <span  class="page-title entries-title"><big>O</big>pen<strong> Project</strong></span>
                         </li>
-                    </NavLink>
+                    </Link>
                    
                 </div>
                   <div className="space">
-
-                    <span>  </span>
+                      
                   </div>
+                  
                   
                   {/* menu */}
                 <div className="nav">
                   <ul className="nav-bar">
-                    <NavLink to="/files">
-                        <li className="nav-links" ng-click="base.mainPage=true">Fichier</li>
-                    </NavLink>
-                    <NavLink to="/taches" >
-                        <li className="nav-links" >Tâches</li>
-                    </NavLink>
-                    <NavLink to="/ressouces">
-                        <li className="nav-links">Ressources</li>
-                    </NavLink>
-                    <NavLink to="/tool">
-                        <li className="nav-links">Outils</li>
-                    </NavLink>
-                    <NavLink to="/settings">
-                        <li className="nav-links">
+                    <Link to="/files">
+                        <li className="nav-links nav-links-mobile" onClick={closeMobileMenu}>Fichier</li>
+                       
+                    </Link>
+                    <Link to="/"  >
+                        <li className="nav-links nav-links-mobile">Tâches</li>
+                        <i className='fas fa-caret-down'/>
+                        {dropdown && <Dropdown/>}
+                    </Link>
+                    <Link to="/ressouces">
+                        <li className="nav-links nav-links-mobile">Ressources</li>
+                    </Link>
+                    <Link to="/tool">
+                        <li className="nav-links nav-links-mobile">Outils</li>
+                    </Link>
+                    <Link to="/settings">
+                        <li className="nav-links nav-links-mobile">
 
                           <div className="nav-links-content">
                             <div className="icons">           
-                              <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                              <svg className="link-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
                                   stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  class="feather feather-settings" viewBox="0 0 24 24">
+                                  className="feather feather-settings" viewBox="0 0 24 24">
                                   <defs />
                                   <circle cx="12" cy="12" r="3" />
                                   <path
@@ -63,17 +74,17 @@ const Navigation = () => {
                             </div>
                           </div>
                         </li>
-                    </NavLink>
-                    <NavLink to="/help">
-                        <li className="nav-links">Aides !</li>
-                    </NavLink>
+                    </Link>
+                    <Link to="/help">
+                        <li className="nav-links">Aides!</li>
+                    </Link>
                   </ul> 
                 </div>
 
               </div>
             </div>
             {/* insertion de files component  */}
-            <Files/>
+            {/* <Files/> */}
             <div className="app-tools">
               <div className="navigation">
                 <Tool />

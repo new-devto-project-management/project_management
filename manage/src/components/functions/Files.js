@@ -1,13 +1,18 @@
-import React from 'react';
-import "../../styles/components/authers/files.css";
+export const Files = [
+  {
+    title: 'Marketing',
+    path: '/marketing',
+    name: 'dropdown-link'
+  },
+  {
+    title: 'digital',
+    path: '/ sofware',
+    name: 'dropdown-link'
+  },
+  {
+    title: ' developpemnt',
+    path: '/hardware',
+    name: 'dropdown-link'
+  },
 
-const Files = () => {
-  return (
-    <div>
-      
-      
-    </div>
-  );
-};
-
-export default Files;
+]

@@ -11,9 +11,9 @@ class LogTeam extends React.Component {
 
     state = {
         clients: [
-            {id:'' , nom:""},
+            {id:'1' , nom:""},
             {id:2 , nom:"traore cheick"},
-            {id:3 , nom:" oumar tidiane"},
+            
         ]
     };
 

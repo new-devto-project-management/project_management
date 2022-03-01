@@ -42,11 +42,11 @@
     -o-border-radius: 12px;
 }
 .appSide li svg{
-    height: 35px;
-    width: 35px
+    height: 45px;
+    width: 45px
 }
 .appSide li:hover{
-    top: 1px;
+    top: 3px;
     left: 4px;
     color: #000;
     /* padding: 1.4rem; */
@@ -62,8 +62,8 @@
     box-shadow: 1px 2px 1px 1px #111;
     font-weight: bolder;
     border-radius: 40px;
-    height: 50px;
-    width: 50px;
+    height: 70px;
+    width: 70px;
 
 }
 .appSide .id  {
