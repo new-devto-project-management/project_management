@@ -2,6 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+A [Pen](https://codepen.io/tcotidiane33/pen/abVJdPb) by [tcotidiane](https://codepen.io/tcotidiane33) on [CodePen](https://codepen.io).
+
+[License](https://codepen.io/license/pen/abVJdPb).
+-------------------------------
+my tokens acess for github: (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)
+
 #Gantt chart for React.JS
 ===================
 
@@ -10,6 +16,13 @@ This is a react gantt chart demo app that is made with the help of dhtmlxGantt. 
 More features can be added due to rich functionality of dhtmlxGantt: https://dhtmlx.com/docs/products/dhtmlxGantt/#product-features
 
 ## Available Scripts
+
+how to run OpenProject 
+### clone project on github with " https://github.com/new-devto-project-management/project_management.git "
+
+and run command :
+
+### 'npm install'
 
 In the project directory, you can run:
 

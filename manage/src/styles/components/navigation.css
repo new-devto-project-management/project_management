@@ -69,10 +69,12 @@
 .nav .nav-bar li{
     height: 90%;
     min-width: 100% ;
+    
     border-radius: 22px;
     align-items: center;
     padding: 2px 7px;
     display: grid;
+    list-style: none;
     grid-template-columns: 100%;
     justify-content: center;
     border-bottom: 2px solid #111;
@@ -117,7 +119,10 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    display: inline-flex;
+    display: flex;
+}
+.nav-links div{
+    display: flex;
 }
 @media screen and (max-width: 960px) {
     .nav{

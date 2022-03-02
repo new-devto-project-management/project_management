@@ -1,9 +1,14 @@
 .message-area {
     background: #ebebeb;
-    height: 200px;
+    height: 300px;
+    max-height: 100%;
     top: 30vh;
     overflow: auto;
     padding: 10px;
+    font-size: 1rem;
+    font: 900;
+    border-radius: 19px;
+    box-shadow: inset 1px 3px 5px 3px rgb(0, 255, 221);
     box-sizing:border-box;
   }
   

@@ -78,13 +78,14 @@
   justify-content: center;
   align-self: center;
 }
+
 .Mou, .Moe, .Ca, .chefDequipe, .resPlan, .resDepart, .resQual, .resCont, .nbrDev{
     padding: 2rem;
-    
     min-width: 60%;
     display: grid;
     grid-template-rows: auto;
 }
+
 .Mou input, .Moe input, .Ca input, .chefDequipe input, .resPlan input, .resDepart input, .resQual input, .resCont input, .nbrDev input{
     min-height: 3rem;
     font-weight: bold;
@@ -96,6 +97,15 @@
     font-variant-numeric: normal;
 }
 
+
+
+
+
+
+
+
+
+/* responsive */
 @media screen and (max-width: 960px) {
     .logContent, .logContent .formulaire{
         position: relative;

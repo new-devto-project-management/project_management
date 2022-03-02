@@ -114,8 +114,9 @@ class LogTeam extends React.Component {
                                             <div className='chefDequipe'>                                    
                                                 {/* chefs d'"quipe" */}
                                                 <Tooltip content="personne physique chargée dans le cadre d'une mission définie,
-                                                        d'assumer la maîtrise du projet, c'est-à-dire de veiller à sa bonne réalisation dans les
-                                                        objectifs de technique, de coût et de délai." position='right'>
+                                                        d'assumer la maîtrise du projet." position='right'>
+                                                        {/*  c'est-à-dire de veiller à sa bonne réalisation dans les
+                                                        objectifs de technique, de coût et de délai */}
                                                     
                                                     <input aria-label="personne physique chargée dans le cadre d'une mission définie,
                                                         d'assumer la maîtrise du projet, c'est-à-dire de veiller à sa bonne réalisation dans les
@@ -127,8 +128,9 @@ class LogTeam extends React.Component {
                                             <div className='resPlan'>                                    
                                                 {/* personne responnsable de la planification */}
                                                 <Tooltip content="Il identifie et organise les tâches, publie l'échéancier de chaque activité; ensuite, il met
-                                                    à jour le planning et calcule la probabilité que les délais soient maintenus. Souvent, le
-                                                    chef de projet assume cette fonction." position='right'>
+                                                    à jour le planning et calcule la probabilité que les délais soient maintenus." position='right'>
+                                                    {/*  Souvent, le
+                                                    chef de projet assume cette fonction. */}
                                                     
                                                     <input aria-label="Il identifie et organise les tâches, publie l'échéancier de chaque activité; ensuite, il met
                                                     à jour le planning et calcule la probabilité que les délais soient maintenus. Souvent, le
@@ -155,8 +157,9 @@ class LogTeam extends React.Component {
                                                     <div className='chefDequipe'>                                    
                                                     {/* chefs d'"quipe" */}
                                                     <Tooltip content="personne physique chargée dans le cadre d'une mission définie,
-                                                            d'assumer la maîtrise du projet, c'est-à-dire de veiller à sa bonne réalisation dans les
-                                                            objectifs de technique, de coût et de délai." position='right'>
+                                                            d'assumer la maîtrise du projet." position='right'>
+                                                            {/* c'est-à-dire de veiller à sa bonne réalisation dans les
+                                                            objectifs de technique, de coût et de délai. */}
                                                         
                                                         <input aria-label="personne physique chargée dans le cadre d'une mission définie,
                                                             d'assumer la maîtrise du projet, c'est-à-dire de veiller à sa bonne réalisation dans les
@@ -168,8 +171,9 @@ class LogTeam extends React.Component {
                                                 <div className='resPlan'>                                    
                                                     {/* personne responnsable de la planification */}
                                                     <Tooltip content="Il identifie et organise les tâches, publie l'échéancier de chaque activité; ensuite, il met
-                                                        à jour le planning et calcule la probabilité que les délais soient maintenus. Souvent, le
-                                                        chef de projet assume cette fonction." position='right'>
+                                                        à jour le planning et calcule la probabilité que les délais soient maintenus." position='right'>
+                                                        {/*  Souvent, le
+                                                        chef de projet assume cette fonction. */}
                                                         
                                                         <input aria-label="Il identifie et organise les tâches, publie l'échéancier de chaque activité; ensuite, il met
                                                         à jour le planning et calcule la probabilité que les délais soient maintenus. Souvent, le
