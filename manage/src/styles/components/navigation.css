@@ -191,6 +191,8 @@
     font-weight: bolder;
     min-height: 50px;
     width: 70px;
+    justify-self: start;
+    float: right;
     font-size: 4rem;
     display: flex;
     justify-content: center;

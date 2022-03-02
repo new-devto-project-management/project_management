@@ -109,49 +109,9 @@ class LogTeam extends React.Component {
                                 </ul> */}
                                 <form>
                                     
-                                    <div className='part1'>
-                                        <div className='chefDequipe'>                                    
-                                            {/* chefs d'"quipe" */}
-                                            <Tooltip content="personne physique chargée dans le cadre d'une mission définie,
-                                                    d'assumer la maîtrise du projet, c'est-à-dire de veiller à sa bonne réalisation dans les
-                                                    objectifs de technique, de coût et de délai." position='right'>
-                                                
-                                                <input aria-label="personne physique chargée dans le cadre d'une mission définie,
-                                                    d'assumer la maîtrise du projet, c'est-à-dire de veiller à sa bonne réalisation dans les
-                                                    objectifs de technique, de coût et de délai." placeholder="chef de Projet..." required aria-required="true"/>
-                                            </Tooltip>
-                                            <label>Chef de projet / Project Manager</label>
-                                        </div>
-                                        
-                                        <div className='resPlan'>                                    
-                                            {/* personne responnsable de la planification */}
-                                            <Tooltip content="Il identifie et organise les tâches, publie l'échéancier de chaque activité; ensuite, il met
-                                                à jour le planning et calcule la probabilité que les délais soient maintenus. Souvent, le
-                                                chef de projet assume cette fonction." position='right'>
-                                                
-                                                <input aria-label="Il identifie et organise les tâches, publie l'échéancier de chaque activité; ensuite, il met
-                                                à jour le planning et calcule la probabilité que les délais soient maintenus. Souvent, le
-                                                chef de projet assume cette fonction. " placeholder="Responsable Planification..." required aria-required="true"/>
-                                            </Tooltip>
-                                            <label>Responsable planification / Scope & Time Manager</label>
-                                        </div>
-                                        
-
-                                        <div className='resDepart'> 
-                                            {/* personne responnsable de departement */}
-                                            <Tooltip content="le garant d'un des savoir-faire de l'entreprise. Il est sollicité par la chef de projet à
-                                                qui il doit fournir les moyens en rapport avec son métier. " position='right'>
-                                                
-                                                <input aria-label="le garant d'un des savoir-faire de l'entreprise. Il est sollicité par la chef de projet à
-                                                qui il doit fournir les moyens en rapport avec son métier. "  placeholder="Responsable de département..." required aria-required="true"/>
-                                            </Tooltip> 
-                                            <label>Responsable de département / Team leader & HR Manager</label>
-                                        </div>
-
-                                    </div>
-                                    
-                                    <div className='part2'>
-                                                <div className='chefDequipe'>                                    
+                                    <div className='part'>
+                                        <div className='part1'>
+                                            <div className='chefDequipe'>                                    
                                                 {/* chefs d'"quipe" */}
                                                 <Tooltip content="personne physique chargée dans le cadre d'une mission définie,
                                                         d'assumer la maîtrise du projet, c'est-à-dire de veiller à sa bonne réalisation dans les
@@ -189,9 +149,49 @@ class LogTeam extends React.Component {
                                                 <label>Responsable de département / Team leader & HR Manager</label>
                                             </div>
 
-                                            </div>
-                                    
+                                        </div>
+                                        
+                                        <div className='part2'>
+                                                    <div className='chefDequipe'>                                    
+                                                    {/* chefs d'"quipe" */}
+                                                    <Tooltip content="personne physique chargée dans le cadre d'une mission définie,
+                                                            d'assumer la maîtrise du projet, c'est-à-dire de veiller à sa bonne réalisation dans les
+                                                            objectifs de technique, de coût et de délai." position='right'>
+                                                        
+                                                        <input aria-label="personne physique chargée dans le cadre d'une mission définie,
+                                                            d'assumer la maîtrise du projet, c'est-à-dire de veiller à sa bonne réalisation dans les
+                                                            objectifs de technique, de coût et de délai." placeholder="chef de Projet..." required aria-required="true"/>
+                                                    </Tooltip>
+                                                    <label>Chef de projet / Project Manager</label>
+                                                </div>
+                                                
+                                                <div className='resPlan'>                                    
+                                                    {/* personne responnsable de la planification */}
+                                                    <Tooltip content="Il identifie et organise les tâches, publie l'échéancier de chaque activité; ensuite, il met
+                                                        à jour le planning et calcule la probabilité que les délais soient maintenus. Souvent, le
+                                                        chef de projet assume cette fonction." position='right'>
+                                                        
+                                                        <input aria-label="Il identifie et organise les tâches, publie l'échéancier de chaque activité; ensuite, il met
+                                                        à jour le planning et calcule la probabilité que les délais soient maintenus. Souvent, le
+                                                        chef de projet assume cette fonction. " placeholder="Responsable Planification..." required aria-required="true"/>
+                                                    </Tooltip>
+                                                    <label>Responsable planification / Scope & Time Manager</label>
+                                                </div>
+                                                
 
+                                                <div className='resDepart'> 
+                                                    {/* personne responnsable de departement */}
+                                                    <Tooltip content="le garant d'un des savoir-faire de l'entreprise. Il est sollicité par la chef de projet à
+                                                        qui il doit fournir les moyens en rapport avec son métier. " position='right'>
+                                                        
+                                                        <input aria-label="le garant d'un des savoir-faire de l'entreprise. Il est sollicité par la chef de projet à
+                                                        qui il doit fournir les moyens en rapport avec son métier. "  placeholder="Responsable de département..." required aria-required="true"/>
+                                                    </Tooltip> 
+                                                    <label>Responsable de département / Team leader & HR Manager</label>
+                                                </div>
+
+                                        </div>
+                                    
                                     </div>
 
                                     {/*  */}

@@ -19,4 +19,4 @@ class Tool extends React.Component {
     }
 }
 
-export default Tool
+export default Tool;

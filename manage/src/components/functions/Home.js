@@ -1,12 +1,14 @@
 import React from "react";
-import { Navlink } from "react-router-dom";
+import { Navlink, Link } from "react-router-dom";
+import { render } from "react-dom";
+
 //  de mon home je vais chercher les autres elements composants
 import Navigation from "../Navigation";
 import AppSide from "./AppSide";
 import LogTeam from "../logs/LogTeam";
 import Gantt from "../logs/Gantt";
+import '../../styles/components/logs/_MessageArea.css';
 import "../../styles/components/authers/home.css";
-import { render } from "react-dom";
 
 
 class Home extends React.Component {
@@ -21,11 +23,9 @@ class Home extends React.Component {
     ],
 
   };
-  handelClick = (event) => {
-    console.log(event)
-  }
-
+ 
   render() {
+   
     return (
       <>
         <div className="home">
@@ -58,25 +58,23 @@ class Home extends React.Component {
   
                   <section className="entries">
                     <header className="entries-title">Bug Tracker</header>
+                    <article>
+                    {/* i ahve bugs */}
+                      <p>News content will be here, and will be truncated so it&hellip;</p>
+                    </article>
                   </section>
                 </div>
   
                 <div className="flex">
                   <div className="chart-container">
                     <header>Capacity</header>
-                    <canvas className="chart chart-line chart-small" chart-data="[[1,2,3,2,5,4,7,4,4,10,9,8]]" chart-labels="['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']" chart-options="{bezierCurve:false,pointDotRadius:3}">
-                    </canvas>
+                    
                   </div>
                   <div className="chart-container">
                     <header>Projected</header>
-                    <canvas className="chart chart-line chart-small" chart-data="[[6,7,4,6,2,3,5,5,2,3,6,9]]" chart-labels="['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']" chart-options="{bezierCurve:false,pointDotRadius:3}">
-                    </canvas>
+                    
                   </div>
-                  <div className="chart-container">
-                    <header>Chart title</header>
-                    <canvas className="chart chart-line chart-small" chart-data="[[1,2,8,8,7,6,7,6,5,6,5,3,4]]" chart-labels="['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']" chart-options="{bezierCurve:false,pointDotRadius:3}">
-                    </canvas>
-                  </div>
+                 
                 </div>
       {/* end header */}
                
@@ -99,21 +97,34 @@ class Home extends React.Component {
                 <div className="login-dev">
                   <LogTeam/>
                 </div>
-                {/* animation  
+                {/* animation  */}
                 <div className="anime">
-                {/* <div className="circles">
+                <div className="circles">
                     <div></div>
                     <div></div>
                     <div></div>
                     <span></span>
                 </div>   
-                </div>  */}
+                <span>chargement ...</span>
+                 <text className="fancy" >EXPORTER LE FORMULAIRE DE PRESENTATION DE L'EQUIPE DE DEVELOPPEUR  <i className='fab fa-get-pocket'/>  </text>
                 
+                </div> 
+                {/* formulaire */}
                 <div className="home-section">
                             presentation du formulaire
                   </div>
+
+                  {/* gantt config */}
+
+
+                      <div className="main-header-content">
+                        <span className="header-title">PLANIFICATION DU GANTT ...</span>
+                      </div>
                 <div className="gantt-config">
-                  <Gantt />
+                  <div className="gantt-container">
+                      <Gantt />
+                  </div>
+                  
                 </div>
             </div> 
             
@@ -122,10 +133,7 @@ class Home extends React.Component {
             </div>
   
             {/* creat login interface */}
-  
-  
-  
-  
+
           </div>
         </div>
       </>
@@ -134,3 +142,4 @@ class Home extends React.Component {
 };
 
 export default Home;
+
