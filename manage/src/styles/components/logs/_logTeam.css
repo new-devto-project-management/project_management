@@ -119,6 +119,13 @@
 
     }
   }
+  @media (min-width:900px) and (max-width:1400px) {
+      .containers{
+          /* min-height: 50vh; */
+          border: 1px solid aliceblue;
+          justify-content: center;
+      }
+  }
 
   .part{
       display: grid;
