@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom/cjs/react-router-dom.min';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
-import "../../styles/components/authers/_appside.css";
+import "../../styles/components/functions/_appside.css";
 const AppSide = () => {
     return (
        <>

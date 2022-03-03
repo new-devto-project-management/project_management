@@ -8,7 +8,7 @@ import AppSide from "./AppSide";
 import LogTeam from "../logs/LogTeam";
 import Gantt from "../logs/Gantt";
 import '../../styles/components/logs/_MessageArea.css';
-import "../../styles/components/authers/home.css";
+import "../../styles/components/functions/home.css";
 
 
 class Home extends React.Component {

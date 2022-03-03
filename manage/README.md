@@ -18,11 +18,11 @@ More features can be added due to rich functionality of dhtmlxGantt: https://dht
 ## Available Scripts
 
 how to run OpenProject 
-### clone project on github with " https://github.com/new-devto-project-management/project_management.git "
+### ` git clone project on github with " https://github.com/new-devto-project-management/project_management.git `
 
 and run command :
 
-### 'npm install'
+### `npm install `
 
 In the project directory, you can run:
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import "../../styles/components/authers/taches.css";
+import "../../styles/components/functions/taches.css";
 
 function Taches() {
     return (
