@@ -67,17 +67,39 @@
 .homeContent .content{
     display: flex;
     min-width: 100%;
-}
-.home-section{
+  }
+  .home-section{
     justify-content: center;
     align-items: center;
     min-height: 300vh;
     min-width: 100%;
     display: grid;
     color: rgb(7, 53, 53);
+    
     /* border: 1px solid rgba(7, 53, 53, 0.575); */
 }
+.home-section .crud__section{
+  border: 1rem solid rgb(43, 255, 0);
+  border-radius: 19px;
+  padding: 0;
+  margin: 0;
+  min-width:100%;
+  width: 93vw;
+  height: 100%;
+}
+/* crud__section */
+.crud__section{
+  border:2rem solid #176e86;
+  background: rgba(17, 17, 17, 0.795);
+  font-size: 1rem;
+  min-width: 100vw;
+  height: 100vh;
+  position: relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 
+}
 /* circle */
 .anime{
   display: flex;

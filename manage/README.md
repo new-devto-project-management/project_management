@@ -15,6 +15,27 @@ This is a react gantt chart demo app that is made with the help of dhtmlxGantt. 
 
 More features can be added due to rich functionality of dhtmlxGantt: https://dhtmlx.com/docs/products/dhtmlxGantt/#product-features
 
+
+# Simple Crud
+A simple crud app with React Hooks (+Axios) consuming a simple Nodejs api server (+Sequelize Sqlite).
+
+## Screenshot
+![alt text](https://github.com/arturguitelar/simple-crud-react-nodejs/blob/master/simple-crud-app-screenshot-frontend.png)
+
+## frontend
+
+| dependencies | links |
+| ------ | ----- |
+| axios | [link](https://github.com/axios/axios#readme) |
+| querystring | [link](https://github.com/sindresorhus/query-string#readme) |
+| react | [link](https://reactjs.org/) |
+| react-dom | [link](https://reactjs.org/docs/react-dom.html) |
+| react-scripts | [link](https://github.com/facebook/create-react-app#readme) |
+
+CSS Style - (html tags on index.html): [Materialize](https://materializecss.com/)
+
+### `Auteur @tcotidiane33`
+
 ## Available Scripts
 
 how to run OpenProject 

@@ -7,7 +7,8 @@ import Navigation from "../Navigation";
 import AppSide from "./AppSide";
 import LogTeam from "../logs/LogTeam";
 import Gantt from "../logs/Gantt";
-import Nav from "./nav-bar/Nav";
+// import NavBar from '../crud/navbar/NavBar';
+import CrudContext from '../posts/CrudContext';
 import '../../styles/components/logs/_MessageArea.css';
 import "../../styles/components/functions/home.css";
 
@@ -113,7 +114,12 @@ class Home extends React.Component {
                 {/* formulaire */}
                 <div className="home-section">
                             presentation du formulaire
-                            <Nav />
+                    
+                            <div className="crud__section">
+                              {/* <NavBar /> */}
+
+                              <CrudContext />            
+                          </div>
                   </div>
 
                   {/* gantt config */}

@@ -1,0 +1,12 @@
+dependencies of backend: 
+ 
+ "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "sequelize": "^5.16.0",
+    "sqlite3": "^4.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1",
+    "sequelize-cli": "^5.5.0"
+  }

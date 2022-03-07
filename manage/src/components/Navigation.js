@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { BrowserRouter as Router} from "react-router-dom";
 import { Link} from "react-router-dom";
-import Tool from "./functions/Tool";
+// import Tool from "./functions/Tool";
 // import Files from "./functions/Files";
 import Dropdown from "./functions/Dropdown";
 import "../styles/components/navigation.css";
@@ -119,7 +119,7 @@ const Navigation = () => {
             {/* <Files/> */}
             <div className="app-tools">
               <div className="navigation__tool">
-                <Tool />
+                {/* <Tool /> */}
               </div>
             </div>
           

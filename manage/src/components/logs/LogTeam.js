@@ -3,8 +3,6 @@ import ReactDom from 'react-dom';
 // import ReactTooltip from 'react-tooltip';
 import '@blueprintjs/core/lib/css/blueprint.css';
 import { Tooltip, Button } from "@blueprintjs/core";
-import ClientForm from '../posts/ClientForm';
-import Client from '../posts/Client';
 import "../../styles/components/logs/_logTeam.css";
 
 
@@ -12,13 +10,13 @@ import "../../styles/components/logs/_logTeam.css";
 class LogTeam extends React.Component {
     // clientInput = React.createRef();
 
-    state = {
-        clients: [
-            {id:'1' , nom:""},
-            {id:2 , nom:"traore cheick"},
+    // state = {
+    //     clients: [
+    //         {id:'1' , nom:""},
+    //         {id:2 , nom:"traore cheick"},
             
-        ]
-    };
+    //     ]
+    // };
 
   
 
