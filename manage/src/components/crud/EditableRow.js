@@ -22,9 +22,9 @@ const EditableRow = ({
         <input
           type="text"
           required="required"
-          placeholder="Enter an address..."
-          name="address"
-          value={editFormData.address}
+          placeholder="Fonction du dev..."
+          name="function"
+          value={editFormData.functions}
           onChange={handleEditFormChange}
         ></input>
       </td>
@@ -49,9 +49,9 @@ const EditableRow = ({
         ></input>
       </td>
       <td>
-        <button type="submit">Save</button>
-        <button type="button" onClick={handleCancelClick}>
-          Cancel
+        <button className="fancy" type="submit">Enregistrer</button>
+        <button className="fancy" type="button" onClick={handleCancelClick}>
+          Annuler
         </button>
       </td>
     </tr>

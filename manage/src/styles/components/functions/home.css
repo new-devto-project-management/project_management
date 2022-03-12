@@ -713,10 +713,7 @@ input.embedded:-ms-input-placeholder {
   border: 0.3rem solid #00ff99;
   overflow: hidden;
   }
-.home-section .login-dev{
-  min-height: 224vh;
-  position: relative;
-}
+
   .home-section .gantt-config{
     position: relative;
     display: block;

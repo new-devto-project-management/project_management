@@ -9,14 +9,14 @@ const App = () => {
   const [contacts, setContacts] = useState(data);
   const [addFormData, setAddFormData] = useState({
     fullName: "",
-    address: "",
+    functions: "",
     phoneNumber: "",
     email: "",
   });
 
   const [editFormData, setEditFormData] = useState({
     fullName: "",
-    address: "",
+    functions: "",
     phoneNumber: "",
     email: "",
   });
@@ -53,7 +53,7 @@ const App = () => {
     const newContact = {
       id: nanoid(),
       fullName: addFormData.fullName,
-      address: addFormData.address,
+      functions: addFormData.functions,
       phoneNumber: addFormData.phoneNumber,
       email: addFormData.email,
     };
@@ -68,7 +68,7 @@ const App = () => {
     const editedContact = {
       id: editContactId,
       fullName: editFormData.fullName,
-      address: editFormData.address,
+      functions: editFormData.functions,
       phoneNumber: editFormData.phoneNumber,
       email: editFormData.email,
     };
@@ -89,7 +89,7 @@ const App = () => {
 
     const formValues = {
       fullName: contact.fullName,
-      address: contact.address,
+      functions: contact.functions,
       phoneNumber: contact.phoneNumber,
       email: contact.email,
     };
@@ -118,7 +118,7 @@ const App = () => {
           <thead>
             <tr>
               <th>Name</th>
-              <th>Address</th>
+              <th>Fonction</th>
               <th>Phone Number</th>
               <th>Email</th>
               <th>Actions</th>
@@ -157,9 +157,9 @@ const App = () => {
         />
         <input
           type="text"
-          name="address"
+          name="functions"
           required="required"
-          placeholder="Enter an addres..."
+          placeholder="fonction du dev..."
           onChange={handleAddFormChange}
         />
         <input

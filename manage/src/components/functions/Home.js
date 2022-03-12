@@ -96,12 +96,20 @@ class Home extends React.Component {
               
               <div className="home-section">
                <div className="main-header-content">
-                    <span className="header-title">PLANIFICATION D'UN PROJET ...</span>
+                    <span className="header-title">PLANIFICATION DE L'EQUIPE DU PROJET ...</span>
                 </div>
               {/* insert component presentation de l'equipe dev et attribytion des tâches  */}
-                <div className="login-dev">
-                  <LogTeam/>
-                </div>
+               {/* crud config */}
+                  <div className="gantt-config">
+                    
+                    <div className="gantt-container">
+                      <LogTeam/>
+                      {/* <CrudTeamContext />  */}
+                    </div>
+                    
+                  </div>
+                {/* <div className="login-  dev">
+                </div> */}
 
                 {/* animation  */}
                 <div className="anime">
