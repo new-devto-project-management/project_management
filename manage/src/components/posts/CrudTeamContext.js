@@ -1,15 +1,16 @@
 import React, { useState, Fragment } from "react";
 import { nanoid } from "nanoid";
 // import "./App.css";
-import data from "./mock-data.json";
-import ReadOnlyRow from "../crud/ReadOnlyRow";
-import EditableRow from "../crud/EditableRow";
+import data from "./mock-data-team.json";
+import ReadOnlyRow from "../crud/ReadOnlyRowTeam";
+import EditableRow from "../crud/EditableRowTeam";
 
 const App = () => {
   const [contacts, setContacts] = useState(data);
   const [addFormData, setAddFormData] = useState({
     fullName: "",
     address: "",
+    function: "",
     phoneNumber: "",
     email: "",
   });
@@ -17,6 +18,7 @@ const App = () => {
   const [editFormData, setEditFormData] = useState({
     fullName: "",
     address: "",
+    function: "",
     phoneNumber: "",
     email: "",
   });
@@ -117,8 +119,9 @@ const App = () => {
         <table>
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Address</th>
+              <th>Nom</th>
+              <th>Prenom</th>
+              <th>Function</th>
               <th>Phone Number</th>
               <th>Email</th>
               <th>Actions</th>
@@ -146,20 +149,27 @@ const App = () => {
         </table>
       </form>
 
-      <h2>Ajouter un membre</h2>
+      <h2>Ajouter un Développeur</h2>
       <form onSubmit={handleAddFormSubmit}>
         <input
           type="text"
           name="fullName"
           required="required"
-          placeholder="Enter a name..."
+          placeholder="Entrer un nom..."
           onChange={handleAddFormChange}
         />
         <input
           type="text"
           name="address"
           required="required"
-          placeholder="Enter an addres..."
+          placeholder="Entrer un prénom..."
+          onChange={handleAddFormChange}
+        />
+            <input
+          type="text"
+          name="address"
+          required="required"
+          placeholder="Entrer la function..."
           onChange={handleAddFormChange}
         />
         <input
@@ -176,7 +186,7 @@ const App = () => {
           placeholder="Enter an email..."
           onChange={handleAddFormChange}
         />
-        <button type="submit">Add</button>
+        <button type="submit" className="fancy">Add</button>
       </form>
     </div>
   );

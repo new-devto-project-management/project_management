@@ -9,6 +9,9 @@ import LogTeam from "../logs/LogTeam";
 import Gantt from "../logs/Gantt";
 // import NavBar from '../crud/navbar/NavBar';
 import CrudContext from '../posts/CrudContext';
+import CrudTeamContext from '../posts/CrudContext';
+import Crud from '../posts/Crud';
+
 import '../../styles/components/logs/_MessageArea.css';
 import "../../styles/components/functions/home.css";
 
@@ -99,6 +102,7 @@ class Home extends React.Component {
                 <div className="login-dev">
                   <LogTeam/>
                 </div>
+
                 {/* animation  */}
                 <div className="anime">
                 <div className="circles">
@@ -112,14 +116,32 @@ class Home extends React.Component {
                 
                 </div> 
                 {/* formulaire */}
-                <div className="home-section">
-                            presentation du formulaire
-                    
-                            <div className="crud__section">
-                              {/* <NavBar /> */}
+               
+                   {/* crud config */}
 
-                              <CrudContext />            
-                          </div>
+
+                   <div className="main-header-content">
+                        <span className="header-title">PRESENTATION DE L'EQUIPE  ...</span>
+                    </div>
+                  <div className="gantt-config">
+                    <div className="gantt-container">
+                      <CrudTeamContext /> 
+                    </div>
+                    
+                  </div>
+
+
+                   {/* Wbs config */}
+
+
+                   <div className="main-header-content">
+                        <span className="header-title">PLANIFICATION DU WBS ...</span>
+                    </div>
+                  <div className="gantt-config">
+                    <div className="gantt-container">
+                      <CrudContext /> 
+                    </div>
+                    
                   </div>
 
                   {/* gantt config */}

@@ -1,9 +1,9 @@
 import React, { useState, Fragment } from "react";
 import { nanoid } from "nanoid";
-// import "./App.css";
 import data from "./mock-data.json";
 import ReadOnlyRow from "../crud/ReadOnlyRow";
 import EditableRow from "../crud/EditableRow";
+import "../../styles/components/post/crud.css";
 
 const App = () => {
   const [contacts, setContacts] = useState(data);
@@ -146,7 +146,7 @@ const App = () => {
         </table>
       </form>
 
-      <h2>Ajouter un membre</h2>
+      <h2>Add a Contact</h2>
       <form onSubmit={handleAddFormSubmit}>
         <input
           type="text"
