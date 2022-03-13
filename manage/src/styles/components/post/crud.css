@@ -39,4 +39,9 @@
   form * {
     font-size: 28px;
   }
-  
+  input{
+    background-color: aliceblue;
+    color:rgb(0, 139, 194);
+    font-size: 12px;
+    font-weight: 900;
+  }

@@ -2,8 +2,8 @@ import React, { useState, Fragment } from "react";
 import { nanoid } from "nanoid";
 // import "./App.css";
 import data from "./mock-data-team.json";
-import ReadOnlyRow from "../crud/ReadOnlyRowTeam";
-import EditableRow from "../crud/EditableRowTeam";
+import ReadOnlyRowTeam from "../crud/ReadOnlyRowTeam";
+import EditableRowTeam from "../crud/EditableRowTeam";
 
 const App = () => {
   const [contacts, setContacts] = useState(data);
@@ -131,13 +131,13 @@ const App = () => {
             {contacts.map((contact) => (
               <Fragment>
                 {editContactId === contact.id ? (
-                  <EditableRow
+                  <EditableRowTeam
                     editFormData={editFormData}
                     handleEditFormChange={handleEditFormChange}
                     handleCancelClick={handleCancelClick}
                   />
                 ) : (
-                  <ReadOnlyRow
+                  <ReadOnlyRowTeam
                     contact={contact}
                     handleEditClick={handleEditClick}
                     handleDeleteClick={handleDeleteClick}
@@ -186,7 +186,7 @@ const App = () => {
           placeholder="Enter an email..."
           onChange={handleAddFormChange}
         />
-        <button type="submit" className="fancy">Add</button>
+        <button type="submit" className="fancy">Ajouter</button>
       </form>
     </div>
   );

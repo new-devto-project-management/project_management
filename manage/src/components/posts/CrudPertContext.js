@@ -1,24 +1,24 @@
 import React, { useState, Fragment } from "react";
 import { nanoid } from "nanoid";
-import data from "./mock-data.json";
-import ReadOnlyRow from "../crud/ReadOnlyRow";
-import EditableRow from "../crud/EditableRow";
+import data from "./mock-data-pert.json";
+import ReadOnlyRowPert from "../crud/ReadOnlyRowPert";
+import EditableRowPert from "../crud/EditableRowPert ";
 import "../../styles/components/post/crud.css";
 
 const App = () => {
   const [contacts, setContacts] = useState(data);
   const [addFormData, setAddFormData] = useState({
     fullName: "",
-    address: "",
-    phoneNumber: "",
-    email: "",
+    taches: "",
+    dateBefore: "",
+    dateAfter: "",
   });
 
   const [editFormData, setEditFormData] = useState({
     fullName: "",
-    address: "",
-    phoneNumber: "",
-    email: "",
+    taches: "",
+    dateBefore: "",
+    dateAfter: "",
   });
 
   const [editContactId, setEditContactId] = useState(null);
@@ -53,9 +53,9 @@ const App = () => {
     const newContact = {
       id: nanoid(),
       fullName: addFormData.fullName,
-      address: addFormData.address,
-      phoneNumber: addFormData.phoneNumber,
-      email: addFormData.email,
+      taches: addFormData.taches,
+      dateBefore: addFormData.dateBefore,
+      dateAfter: addFormData.dateAfter,
     };
 
     const newContacts = [...contacts, newContact];
@@ -68,9 +68,9 @@ const App = () => {
     const editedContact = {
       id: editContactId,
       fullName: editFormData.fullName,
-      address: editFormData.address,
-      phoneNumber: editFormData.phoneNumber,
-      email: editFormData.email,
+      taches: editFormData.taches,
+      dateBefore: editFormData.dateBefore,
+      dateAfter: editFormData.dateAfter,
     };
 
     const newContacts = [...contacts];
@@ -89,9 +89,9 @@ const App = () => {
 
     const formValues = {
       fullName: contact.fullName,
-      address: contact.address,
-      phoneNumber: contact.phoneNumber,
-      email: contact.email,
+      taches: contact.taches,
+      dateBefore: contact.dateBefore,
+      dateAfter: contact.dateAfter,
     };
 
     setEditFormData(formValues);
@@ -117,10 +117,10 @@ const App = () => {
         <table>
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Address</th>
-              <th>Phone Number</th>
-              <th>Email</th>
+              <th>Nom & prénom</th>
+              <th>Tâches</th>
+              <th>Date au plus tôt</th>
+              <th>Date au plus tard</th>
               <th>Actions</th>
             </tr>
           </thead>
@@ -128,13 +128,13 @@ const App = () => {
             {contacts.map((contact) => (
               <Fragment>
                 {editContactId === contact.id ? (
-                  <EditableRow
+                  <EditableRowPert
                     editFormData={editFormData}
                     handleEditFormChange={handleEditFormChange}
                     handleCancelClick={handleCancelClick}
                   />
                 ) : (
-                  <ReadOnlyRow
+                  <ReadOnlyRowPert
                     contact={contact}
                     handleEditClick={handleEditClick}
                     handleDeleteClick={handleDeleteClick}
@@ -146,37 +146,37 @@ const App = () => {
         </table>
       </form>
 
-      <h2>Add a Contact</h2>
+      <h2>Ajouter une Tâche</h2>
       <form onSubmit={handleAddFormSubmit}>
         <input
           type="text"
           name="fullName"
           required="required"
-          placeholder="Enter a name..."
+          placeholder="Entrer Nom et prénom..."
           onChange={handleAddFormChange}
         />
         <input
           type="text"
           name="address"
           required="required"
-          placeholder="Enter an addres..."
+          placeholder="Entrer la tâches..."
           onChange={handleAddFormChange}
         />
         <input
-          type="text"
-          name="phoneNumber"
+          type="date"
+          name="dateBefore"
           required="required"
-          placeholder="Enter a phone number..."
+          placeholder="date au plus tôt..."
           onChange={handleAddFormChange}
         />
         <input
-          type="email"
-          name="email"
+          type="date"
+          name="dateAfter"
           required="required"
-          placeholder="Enter an email..."
+          placeholder="date au plus tard..."
           onChange={handleAddFormChange}
         />
-        <button type="submit">Add</button>
+        <button className="fancy" type="submit">Ajouter</button>
       </form>
     </div>
   );

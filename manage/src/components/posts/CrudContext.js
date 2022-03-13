@@ -176,7 +176,7 @@ const App = () => {
           placeholder="Enter an email..."
           onChange={handleAddFormChange}
         />
-        <button type="submit">Add</button>
+        <button className="fancy" type="submit">Ajouter</button>
       </form>
     </div>
   );

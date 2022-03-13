@@ -5,18 +5,18 @@ const ReadOnlyRow = ({ contact, handleEditClick, handleDeleteClick }) => {
   return (
     <tr>
       <td>{contact.fullName}</td>
-      <td>{contact.functions}</td>
-      <td>{contact.phoneNumber}</td>
-      <td>{contact.email}</td>
+      <td>{contact.taches}</td>
+      <td>{contact.dateBefore}</td>
+      <td>{contact.dateAfter}</td>
       <td>
         <button
           type="button" className="fancy"
           onClick={(event) => handleEditClick(event, contact)}
         >
-          Edit
+          Modifier
         </button>
         <button type="button" className="fancy" onClick={() => handleDeleteClick(contact.id)}>
-          Delete
+          Supprimer
         </button>
       </td>
     </tr>

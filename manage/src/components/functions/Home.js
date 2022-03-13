@@ -10,8 +10,7 @@ import Gantt from "../logs/Gantt";
 // import NavBar from '../crud/navbar/NavBar';
 import CrudContext from '../posts/CrudContext';
 import CrudTeamContext from '../posts/CrudContext';
-import Crud from '../posts/Crud';
-
+import CrudPertContext from '../posts/CrudPertContext';
 import '../../styles/components/logs/_MessageArea.css';
 import "../../styles/components/functions/home.css";
 
@@ -108,8 +107,7 @@ class Home extends React.Component {
                     </div>
                     
                   </div>
-                {/* <div className="login-  dev">
-                </div> */}
+             
 
                 {/* animation  */}
                 <div className="anime">
@@ -124,6 +122,7 @@ class Home extends React.Component {
                 
                 </div> 
                 {/* formulaire */}
+               
                
                    {/* crud config */}
 
@@ -148,6 +147,19 @@ class Home extends React.Component {
                   <div className="gantt-config">
                     <div className="gantt-container">
                       <CrudContext /> 
+                    </div>
+                    
+                  </div>
+
+                   {/* Pert config */}
+
+
+                <div className="main-header-content">
+                        <span className="header-title">PLANIFICATION DU PERT  ...</span>
+                    </div>
+                  <div className="gantt-config">
+                    <div className="gantt-container">
+                      <CrudPertContext /> 
                     </div>
                     
                   </div>
