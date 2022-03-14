@@ -43,10 +43,10 @@ class Home extends React.Component {
                     <input type="text" placeholder="nom du projet.."/>
                     <button className="fancy">Confirmer</button>
   
-                    <div className="flex">
+                    {/* <div className="flex">
                       
                       <button className="fancy" onClick={this.handelClick}>Resources</button>
-                    </div>
+                    </div> */}
                   </div>
                 </header>
   
