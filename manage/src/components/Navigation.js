@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router} from "react-router-dom";
+import Help from "./functions/Help";
 import { Link} from "react-router-dom";
 import "../styles/components/navigation.css";
+
 // import "../styles/components/Navigation.scss"
 
 export default class Navigation extends Component {
@@ -117,7 +119,7 @@ export default class Navigation extends Component {
                             settings App
                           </Link>
                           <Link className="list-group-item">
-                            a bout 
+                            about 
                           </Link>
                           <Link className="list-group-item">
                             helps

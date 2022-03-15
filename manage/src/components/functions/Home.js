@@ -5,6 +5,7 @@ import { render } from "react-dom";
 //  de mon home je vais chercher les autres elements composants
 import Navigation from "../Navigation";
 import AppSide from "./AppSide";
+
 import LogTeam from "../logs/LogTeam";
 import Gantt from "../logs/Gantt";
 // import NavBar from '../crud/navbar/NavBar';
