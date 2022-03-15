@@ -256,3 +256,18 @@
 .app-tools{
     margin: 1rem 2px;
 }
+
+.modals{
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 2px 2px #6b6969;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    transform: translate(6%, -30%);
+    transition: 1s all ease-in-out;
+    min-height: 45px;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    
+}

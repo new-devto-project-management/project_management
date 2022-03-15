@@ -1,18 +1,144 @@
-import React, {useState} from "react";
+import React, { Component } from "react";
 import { BrowserRouter as Router} from "react-router-dom";
 import { Link} from "react-router-dom";
-// import Tool from "./functions/Tool";
-// import Files from "./functions/Files";
-import Dropdown from "./functions/Dropdown";
 import "../styles/components/navigation.css";
 // import "../styles/components/Navigation.scss"
 
-const Navigation = () => {
-  const [click , setClick] = useState(false);
-  const [dropdown , setDropdown] = useState(false);
-  const handelClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
-  return (
+export default class Navigation extends Component {
+  state = {
+    componentName : ''
+
+  }
+  // montrerModalFile = () => {
+  //  this.setState({
+  //    showFile : !this.state.showFile
+  //  })
+  // }
+  // montrerModalTask = () => {
+  //   this.setState({
+  //     show : !this.state.show
+  //   })
+  //  }
+
+
+   handleShow = (name) => {
+    this.setState({componentName:name.toLowerCase()});
+    console.log(this.state)
+   }
+   viewComponent = () => {
+     console.log("Trigger");
+     switch(this.state.componentName) {
+       case 'files' : 
+                return (
+              <div className="modals-group">
+                <ul className="list-group modals">
+                          <Link className="list-group-item">
+                            Open New Project
+                          </Link>
+                          <Link className="list-group-item">
+                            Open recents Project
+                          </Link>
+                          <Link className="list-group-item">
+                            New File
+                          </Link>
+                        
+                          <Link className="list-group-item">
+                            Save
+                          </Link>
+                          <Link className="list-group-item">
+                            Save As
+                          </Link>
+                          <Link className="list-group-item">
+                            Export 
+                          </Link>
+                        </ul>
+              </div>
+            );
+            // tasks
+            case 'tasks' : 
+                return (
+              <div className="modals-group">
+                <ul className="list-group modals">
+                          <Link className="list-group-item">
+                          creact New Tasks
+                          </Link>
+                          <Link className="list-group-item">
+                            Open recents Project
+                          </Link>
+                          <Link className="list-group-item">
+                            New File
+                          </Link>
+                        
+                        </ul>
+              </div>
+            );
+            //Ress 
+            case 'ressources' : 
+                return (
+              <div className="modals-group">
+                <ul className="list-group modals">
+                          <Link className="list-group-item">
+                            create New Tasks
+                          </Link>
+                          <Link className="list-group-item">
+                            Read Tasks 
+                          </Link>
+                          <Link className="list-group-item">
+                            Delete Tasks
+                          </Link>
+                        
+                        </ul>
+              </div>
+            );
+            // tools
+            case 'tools' : 
+                return (
+              <div className="modals-group">
+                <ul className="list-group modals">
+                          <Link className="list-group-item">
+                            create Diagram
+                          </Link>
+                          <Link className="list-group-item">
+                            Read pert
+                          </Link>
+                          <Link className="list-group-item">
+                            Read WBS
+                          </Link>
+                        
+                        </ul>
+              </div>
+            );
+            // settings
+            case 'settings' : 
+                return (
+              <div className="modals-group">
+                <ul className="list-group modals">
+                          <Link className="list-group-item">
+                            settings App
+                          </Link>
+                          <Link className="list-group-item">
+                            a bout 
+                          </Link>
+                          <Link className="list-group-item">
+                            helps
+                          </Link>
+                        
+                        </ul>
+              </div>
+            );
+
+            
+            
+      default :
+      return null;
+
+    }
+
+   }
+
+
+  render (){
+   return(
     <>
       <main>
         <div className="container">
@@ -28,18 +154,17 @@ const Navigation = () => {
                         <span  class="page-title entries-title"><big>O</big>pen<strong> Project</strong></span>
                         </li>
                     </Link>
-                   
                 </div>
                   
                   {/* menu */}
                 <div className="nav">
                   <ul className="nav-bar">
-                  <div className="menu-icon" onClilck={handelClick}>
-                      <i className={ click ? 'fas fa-times' : 'fas fa-bars'} />
+                  <div className="menu-icon" >
+                      {/* <i className={ click ? 'fas fa-times' : 'fas fa-bars'} /> */}
                     </div>
-                    <Link to="/files">
-                        <li className="nav-links nav-links-mobile file" onClick={closeMobileMenu}>
-                          <span>
+                    <Link to="" onClick={()=>this.handleShow('files')} >
+                        <li className="nav-links nav-links-mobile file">
+                          <span >
                             <span>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                       <g clip-path="url(#clip0_20_11)">
@@ -52,23 +177,24 @@ const Navigation = () => {
                                       </defs>
                                       </svg>
                             </span>
-                            <span>Fichier</span>
+                            <span>File</span>
                           </span>
 
                         </li> 
                     </Link>
-                    <Link to="/"  >
+                   
+                    <Link to="/" onClick={()=>this.handleShow('tasks')}  >
                         <li className="nav-links nav-links-mobile">
                         
                        
                           <span><span>
                         <svg width="27" height="29" viewBox="0 0 87 99" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M56.51 6.14193e-07L25.45 0.0160006C24.6423 0.015753 23.8594 0.294863 23.234 0.806001L1.284 16.781C0.882566 17.1094 0.559122 17.5228 0.33706 17.9915C0.114999 18.4602 -0.000129923 18.9724 1.10028e-07 19.491V84.75C1.10028e-07 85.6783 0.368749 86.5685 1.02513 87.2249C1.6815 87.8813 2.57174 88.25 3.5 88.25H6.03C5.965 82.13 6.019 76.004 6 69.883C5.716 66.439 8.62 63.114 12.082 62.984C13.388 62.982 14.694 62.984 16 62.982V46.5H21V62.982C34.333 62.97 47.666 62.97 61 62.969V46.5H65.984V62.967H69.068C72.374 62.708 75.594 65.321 75.943 68.633C76.055 75.156 75.99 81.687 76 88.213H78.484C79.4123 88.213 80.3025 87.8443 80.9589 87.1879C81.6152 86.5315 81.984 85.6413 81.984 84.713L81.998 51.5H83.25C84.1783 51.5 85.0685 51.1312 85.7249 50.4749C86.3813 49.8185 86.75 48.9283 86.75 48V38.5C86.75 37.5717 86.3813 36.6815 85.7249 36.0251C85.0685 35.3688 84.1783 35 83.25 35H81.99L81.984 19.451C81.9839 18.9325 81.8685 18.4204 81.6463 17.9519C81.424 17.4834 81.1005 17.0702 80.699 16.742L58.727 0.790001C58.1013 0.278645 57.318 -0.000477885 56.51 6.14193e-07V6.14193e-07ZM55.264 7L73.564 19.951H69.484C68.5557 19.951 67.6655 20.3197 67.0091 20.9761C66.3527 21.6325 65.984 22.5227 65.984 23.451V39.5H61V23H21V39.5H16V23.488C16 22.5597 15.6313 21.6695 14.9749 21.0131C14.3185 20.3567 13.4283 19.988 12.5 19.988H8.414L26.704 7.016L55.263 7H55.264ZM40.988 32.268H41C46.927 32.268 51.732 37.073 51.732 43C51.732 48.927 46.927 53.732 41 53.732C35.073 53.732 30.268 48.927 30.268 43C30.268 37.077 35.066 32.274 40.988 32.268ZM12.5 66.967C11.837 66.967 11.2011 67.2304 10.7322 67.6992C10.2634 68.1681 10 68.804 10 69.467V90C10 90.663 10.2634 91.2989 10.7322 91.7678C11.2011 92.2366 11.837 92.5 12.5 92.5H22.723V99H59.277V92.5H69.5C70.163 92.5 70.7989 92.2366 71.2678 91.7678C71.7366 91.2989 72 90.663 72 90V69.467C72 68.804 71.7366 68.1681 71.2678 67.6992C70.7989 67.2304 70.163 66.967 69.5 66.967H12.5ZM17.34 73.232H42.586V86.232H17.34V73.232ZM51.867 73.232H56.867V78.232H51.867V73.232ZM59.867 73.232H64.867V78.232H59.867V73.232ZM51.867 81.232H56.867V86.232H51.867V81.232ZM59.867 81.232H64.867V86.232H59.867V81.232Z" fill="black"/>
-                        </svg></span> Tâches<span> <i className='fab fa-get-pocket'/></span></span>                          
+                        </svg></span> Tasks<span> <i className='fab fa-get-pocket'/></span></span>                          
                         </li>
                         {/* {dropdown && <Dropdown/>} */}
                     </Link>
-                    <Link to="/ressouces">
+                    <Link to="" onClick={()=>this.handleShow('Ressources')}>
                         <li className="nav-links nav-links-mobile">
                           <span className="resources">
                             <span><svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -78,29 +204,29 @@ const Navigation = () => {
                           </span>
                         </li>
                     </Link>
-                    <Link to="/tool">
+                    <Link to="" onClick={()=>this.handleShow('tools')}>
                         <li className="nav-links nav-links-mobile">
                           <span><span><svg width="28" height="28" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M14.5 18C14.0402 18.0013 13.5846 17.9114 13.1598 17.7355C12.7349 17.5596 12.3492 17.3011 12.025 16.975L7.89699 12.847C6.72558 13.1057 5.50542 13.0349 4.37177 12.6425C3.23812 12.2502 2.23526 11.5516 1.47434 10.6241C0.713432 9.69672 0.224194 8.5767 0.0608613 7.38824C-0.102472 6.19979 0.0664801 4.98931 0.548989 3.891L1.13699 2.551L5.29299 6.707C5.48331 6.88874 5.73634 6.99014 5.99949 6.99014C6.26264 6.99014 6.51567 6.88874 6.70599 6.707C6.799 6.61428 6.87282 6.50413 6.92321 6.38285C6.97361 6.26157 6.9996 6.13154 6.99969 6.00021C6.99978 5.86887 6.97398 5.73881 6.92375 5.61746C6.87353 5.49611 6.79987 5.38585 6.70699 5.293L2.55099 1.136L3.89099 0.548C4.9894 0.0657916 6.19987 -0.102897 7.38827 0.0606269C8.57667 0.224151 9.69659 0.713502 10.6239 1.47446C11.5513 2.23541 12.2499 3.23825 12.6422 4.37186C13.0346 5.50547 13.1055 6.72559 12.847 7.897L16.975 12.025C17.4645 12.5145 17.7979 13.1381 17.933 13.8171C18.068 14.4961 17.9987 15.1999 17.7338 15.8394C17.4689 16.479 17.0202 17.0256 16.4446 17.4102C15.869 17.7948 15.1923 18 14.5 18V18ZM8.46999 10.591L13.44 15.561C13.7255 15.8336 14.1052 15.9858 14.5 15.9858C14.8948 15.9858 15.2744 15.8336 15.56 15.561C15.6995 15.4219 15.8101 15.2566 15.8856 15.0746C15.9611 14.8926 16 14.6975 16 14.5005C16 14.3035 15.9611 14.1084 15.8856 13.9264C15.8101 13.7444 15.6995 13.5791 15.56 13.44L10.591 8.47L10.779 7.887C10.9986 7.21187 11.0553 6.49431 10.9443 5.79308C10.8333 5.09184 10.5578 4.42686 10.1404 3.85257C9.72295 3.27828 9.17546 2.81101 8.54271 2.48901C7.90996 2.16701 7.20996 1.99943 6.49999 2C6.41599 2 6.33266 2.00233 6.24999 2.007L8.12199 3.879C8.6844 4.44158 9.00035 5.20451 9.00035 6C9.00035 6.79549 8.6844 7.55842 8.12199 8.121C7.55049 8.6667 6.79068 8.97119 6.00049 8.97119C5.2103 8.97119 4.45049 8.6667 3.87899 8.121L2.00699 6.249C2.00232 6.33233 1.99999 6.416 1.99999 6.5C1.99943 7.21009 2.16704 7.91022 2.48909 8.54309C2.81114 9.17595 3.27848 9.72355 3.85286 10.1411C4.42724 10.5586 5.09233 10.8341 5.79368 10.9452C6.49504 11.0563 7.21272 10.9996 7.88799 10.78L8.46999 10.591Z" fill="black"/>
-                          </svg></span>Outils<span> <i className='fab fa-get-pocket'/></span></span>
+                          </svg></span>Tools<span> <i className='fab fa-get-pocket'/></span></span>
                         </li>
                     </Link>
-                    <Link to="/settings">
+                    <Link to="" onClick={()=>this.handleShow('settings')}>
                         <li className="nav-links nav-links-mobile">
                             <span>           
-                                <span><svg className="link-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                <span><svg className="link-icon feather feather-settings" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
                                   stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  className="feather feather-settings" viewBox="0 0 24 24">
+                                  viewBox="0 0 24 24">
                                   <defs />
                                   <circle cx="12" cy="12" r="3" />
                                   <path
                                     d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z" />
                                 </svg> </span>
-                                <span >Paramètre</span>
+                                <span >Settings</span>
                               </span>
                         </li>
                     </Link>
-                    <Link to="/help">
+                    <Link to="" onClick={()=>this.handleShow('help')}>
                         <li className="nav-links help">
                          <span><span><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M24.18 14.17V14.12C24.18 11.12 21.84 8.92 18.3 8.92C17.2164 8.90209 16.1421 9.12307 15.1535 9.56725C14.1649 10.0114 13.2862 10.6679 12.58 11.49C12.4819 11.5809 12.403 11.6906 12.3481 11.8126C12.2931 11.9345 12.2631 12.0663 12.26 12.2C12.2599 12.3234 12.2847 12.4455 12.3328 12.5591C12.3809 12.6728 12.4514 12.7755 12.54 12.8614C12.6286 12.9472 12.7336 13.0143 12.8487 13.0588C12.9638 13.1032 13.0867 13.124 13.21 13.12C13.4742 13.1134 13.7268 13.0103 13.92 12.83C14.4545 12.2037 15.1183 11.7006 15.8658 11.3553C16.6132 11.0101 17.4266 10.8309 18.25 10.83C20.61 10.83 22.08 12.35 22.08 14.24V14.29C22.08 16.5 20.32 17.73 17.54 17.94C17.4274 17.9443 17.3171 17.9724 17.2161 18.0224C17.1151 18.0723 17.0258 18.143 16.9541 18.2299C16.8824 18.3167 16.8298 18.4178 16.7998 18.5264C16.7698 18.6349 16.763 18.7486 16.78 18.86C16.78 18.86 16.78 21.18 16.78 21.61C16.8049 21.8575 16.9211 22.0869 17.106 22.2533C17.2909 22.4197 17.5312 22.5112 17.78 22.51H17.89C18.1375 22.4851 18.3669 22.3689 18.5333 22.184C18.6997 21.9991 18.7913 21.7588 18.79 21.51V19.45C21.75 19 24.18 17.45 24.18 14.17V14.17Z" fill="black"/>
@@ -122,8 +248,9 @@ const Navigation = () => {
                 {/* <Tool /> */}
               </div>
             </div>
-          
-
+          {
+            this.viewComponent()
+          }
           </div>
 
         </div>
@@ -131,6 +258,6 @@ const Navigation = () => {
         {/* <></> */}
       </main>
     </>
-  );
-};
-export default Navigation;
+   )
+  }
+}

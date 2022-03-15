@@ -6,15 +6,15 @@ export default class Toolbar extends Component {
         }
     }
     render() {
-        const zoomRadios = ['Heures', 'Jours', 'Mois'].map((value) => {
-            const isActive = this.props.zoom === value;
+        const zoomRadios = [{label:'Heures',value:'Hours'},{label:'Jours',value:'Days'},{label:'Mois',value:'Months'}].map((obj) => {
+            const isActive = this.props.zoom === obj.value;
             return (
-                <label key={ value } className={ `radio-label ${isActive ? 'radio-label-active': ''}` }>
+                <label key={ obj.value } className={ `radio-label ${isActive ? 'radio-label-active': ''}` }>
                     <input type='radio'
                         checked={ isActive }
                         onChange={ this.handleZoomChange }
-                        value={ value }/>
-                    { value }
+                        value={ obj.value }/>
+                    { obj.label }
                 </label>
             );
         });
