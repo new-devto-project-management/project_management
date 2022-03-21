@@ -3,14 +3,14 @@ import { Navlink, Link } from "react-router-dom";
 import { render } from "react-dom";
 
 //  de mon home je vais chercher les autres elements composants
-import Navigation from "../Navigation";
-import AppSide from "./AppSide";
-import Index0 from "./pages/Index0";
-import LogTeam from "../logs/LogTeam";
-import Gantt from "../logs/Gantt";
+import Navigation from "../../Navigation";
+import AppSide from "../AppSide";
+
+import LogTeam from "../../logs/LogTeam";
+import Gantt from "../../logs/Gantt";
 // import NavBar from '../crud/navbar/NavBar';
 // import CrudContext from '../posts/CrudContext';
-import CrudTeamContext from '../posts/CrudContext';
+import CrudTeamContext from '../../posts/CrudContext';
 // import CrudPertContext from '../posts/CrudPertContext';
 import '../../styles/components/logs/_MessageArea.css';
 import "../../styles/components/functions/home.css";
@@ -45,17 +45,17 @@ class Home extends React.Component {
                     <span className="header-title">Project Name</span>
                     <input type="text" placeholder="nom du projet.."/>
                     <button className="fancy">Confirmer</button>
-
+  
                     {/* <div className="flex">
                       
                       <button className="fancy" onClick={this.handelClick}>Resources</button>
                     </div> */}
 
+
                     {/* END CREATE  */}
                   </div>
                 </header>
   
-                          <Index0 />
                 <div className="flex">
                   <section className="entries">
                     <header className="entries-title">News</header>

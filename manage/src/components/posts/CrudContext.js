@@ -119,7 +119,7 @@ const App = () => {
             <tr>
               <th>Name</th>
               <th>Fonction</th>
-              <th>Phone Number</th>
+              <th>Phone number</th>
               <th>Email</th>
               <th>Actions</th>
             </tr>

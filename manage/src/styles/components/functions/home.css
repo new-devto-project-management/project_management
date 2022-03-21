@@ -12,7 +12,7 @@
     height: 100vh;
     transition-delay: 2s all ease;
     font-family: "Dosis Bold" ;
-    overflow: auto;
+    /* overflow: auto; */
     background: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.wallpapertip.com%2Ffr%2FowiTRo%2F&psig=AOvVaw3e4sfUQqIRhW24_3gf6So3&ust=1646207580859000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMDi07C3pPYCFQAAAAAdAAAAABAJ") center/cover fixed;
     font-family: 'Dosis', sans-serif;
 }
