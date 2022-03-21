@@ -1,8 +1,26 @@
-.index{
-    min-height: 50vh;
-    min-width: 80%;
+.index, .index1{
+    min-height: 40vh;
+    width: 100%;
+    justify-content: center;
+    display: flex;
     border-radius: 19%;
 
+}
+
+.index1{
+    min-height: 30vh;
+}
+
+.index-content{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    min-height: 30vh;
+    margin-bottom: 30rem;
+}
+
+.flex article{
+    margin: 1.5rem;
 }
 
 .main-header.small canvas.cover {

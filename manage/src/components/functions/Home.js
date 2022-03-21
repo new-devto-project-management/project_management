@@ -6,7 +6,10 @@ import { render } from "react-dom";
 import Navigation from "../Navigation";
 import AppSide from "./AppSide";
 import Index0 from "./pages/Index0";
+import Index1 from "./pages/Index1";
+import Index2 from "./pages/Index2";
 import LogTeam from "../logs/LogTeam";
+
 import Gantt from "../logs/Gantt";
 // import NavBar from '../crud/navbar/NavBar';
 // import CrudContext from '../posts/CrudContext';
@@ -56,36 +59,10 @@ class Home extends React.Component {
                 </header>
   
                           <Index0 />
-                <div className="flex">
-                  <section className="entries">
-                    <header className="entries-title">News</header>
-                    <article>
-                    {/* i ahve bugs */}
-                      <p>News content will be here, and will be truncated so it&hellip;</p>
-                    </article>
-                    
-                  </section>
-  
-                  <section className="entries">
-                    <header className="entries-title">Bug Tracker</header>
-                    <article>
-                    {/* i ahve bugs */}
-                      <p>News content will be here, and will be truncated so it&hellip;</p>
-                    </article>
-                  </section>
-                </div>
-  
-                <div className="flex">
-                  <div className="chart-container">
-                    <header>Capacity</header>
-                    
-                  </div>
-                  <div className="chart-container">
-                    <header>Projected</header>
-                    
-                  </div>
-                 
-                </div>
+                          <Index1 />
+                          <Index2 />
+                          
+          
       {/* end header */}
                
          

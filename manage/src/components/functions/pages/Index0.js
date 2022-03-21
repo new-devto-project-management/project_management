@@ -36,8 +36,8 @@ class Home extends React.Component {
                       <section className="entries">
                           <button className="fancy">
                              <header className="entries-title">OPEN NEW PROJECT </header>
-                          
                           </button>
+                          
                        
                         <article>
                         {/* i ahve bugs */}
