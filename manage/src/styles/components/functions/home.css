@@ -21,7 +21,7 @@
     border: 4px solid #ccc;
     /* height: 23vh; */
     width: 100%;
-
+    background: url(../../../../public/assets/video.mp4) center/cover fixed;
     display: grid;
     grid-template-columns:4% 96%;
     float: right;
@@ -75,16 +75,7 @@
     color: rgb(7, 53, 53);
     
     /* border: 1px solid rgba(7, 53, 53, 0.575); */
-}
-.home-section .crud__section{
-  /* border: 1rem solid rgb(43, 255, 0);
-  border-radius: 19px;
-  padding: 0;
-  margin: 0;
-  min-width:100%;
-  width: 93vw;
-  height: 100%; */
-}
+  }
 /* crud__section */
 .crud__section{
   border:2rem solid #176e86;
@@ -685,17 +676,18 @@ input.embedded:-ms-input-placeholder {
 /* gantt-confid  */
 .gantt-config{
   min-width: 98%;
-  min-height: 130vh;
+  min-height: 180vh;
   border: 7px solid  #000;
   box-shadow: inset 1px 3px 1px 1px #80ffcc;
   border-radius: 19px;
+
 }
 .gantt-container{
   /* border: 3px solid red; */
   min-height: 100%;
   padding: 1rem;
   /* overflow: auto; */
-  height: 92vh;
+  height: 120vh;
 }
 
 @media screen and (max-width: 960px) {

@@ -4,7 +4,11 @@
     min-width: 100vw;
     width: 100%;
     font-size: 1rem;
-    background: url("../../../../../public/assets/b.webm");
+    visibility: visible;
+    opacity: 90%;
+    background: #00ff99;
+    background: url(../../../../../public/assets/video.mp4) center/cover fixed;
+    /* background: url("../../../../../public/assets/b.webm"); */
     /* background-image: url("../../../../public/assets/Data.mp4") center/cover fixed; */
     /* position: absolute; */
 
@@ -12,11 +16,11 @@
 }
 .main-index{
     transform: translate(-0%,5%);
-    min-height: 90vh;
+    min-height: 80vh;
     padding: 4rem;
     width: 80%;
     display: grid;
-    grid-template-rows: 10% 80% 10%;
+    grid-template-rows: 10% 70% 20%;
     border-radius: 20px;
     background:rgb(231, 223, 223);
     box-shadow: inset 2px 2px 7px 2px #222;
@@ -31,6 +35,7 @@
   visibility: visible;
   opacity: 59%;
   margin: 2rem 2px;
+  animation-delay: 2s ;
   display: flex;
   justify-content: center;
   justify-items: center;
@@ -40,10 +45,14 @@
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
 }
+.logo svg {
+  width: 100%;
+  height: 700px;
+}
 
 
 .index1{
-    min-height: 30vh;
+    /* min-height: 30vh; */
 }
 .header-title{
   display: flex;

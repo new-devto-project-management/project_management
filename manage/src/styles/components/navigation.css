@@ -9,6 +9,7 @@
     display: flex;
     padding-top: 1rem;
     color: rgb(124, 124, 124);
+    visibility: visible;
     background: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.wallpapertip.com%2Ffr%2FowiTRo%2F&psig=AOvVaw3e4sfUQqIRhW24_3gf6So3&ust=1646207580859000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMDi07C3pPYCFQAAAAAdAAAAABAJ) center/cover fixed;
     /* background: linear-gradient(90deg,rgb(28,27,27) 0%, rgb(26,23,23) 100%); */
     border-bottom: 2px solid #111;
@@ -59,7 +60,7 @@
     align-items: center;
     border-radius: 40px;
     min-width: 100%;
-    width: 1260px;
+    width: 50vw;
     float: right;
     box-shadow: 3px 2px 5px 6px  rgb(206, 221, 221);
 }
@@ -76,11 +77,12 @@
     min-height: 60px;
     padding: 12px;
     /* gap: 3px */
-}
+} 
 .nav .nav-bar li{
     height: 90%;
     min-width: 100% ;
-    width: 230px;
+    /* width: 175px; */
+    padding: 2px 4px;
     border-radius: 22px;
     align-items: center;
     justify-self: center;
