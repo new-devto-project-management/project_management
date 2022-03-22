@@ -1,7 +1,9 @@
 import React from "react";
 import { Navlink, Link } from "react-router-dom";
 import { render } from "react-dom";
-import data from '../../../../public/assets/Data.mp4';
+// import data from '../../../../public/assets/Data.mp4';
+// import b from '';
+
 //  de mon home je vais chercher les autres elements composants
 // import Navigation from "../../Navigation";
 
@@ -20,7 +22,7 @@ class Index0 extends React.Component {
         {/* insertion component navigation  */}
             {/* <Navigation /> */}
             <video className='videoTag' autoPlay loop muted>
-                <source src={data} type='video/mp4' />
+                <source src={"../../../../public/assets/b.webm"} type='video/webm' />
             </video>
                 <header className="main-header main-index">
                         {/* <canvas className="cover" id="sparks"></canvas> */}

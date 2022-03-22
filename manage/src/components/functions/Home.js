@@ -5,9 +5,6 @@ import { render } from "react-dom";
 //  de mon home je vais chercher les autres elements composants
 import Navigation from "../Navigation";
 import AppSide from "./AppSide";
-import Index0 from "./pages/Index0";
-import Index1 from "./pages/Index1";
-import Index2 from "./pages/Index1_2";
 import LogTeam from "../logs/LogTeam";
 
 import Gantt from "../logs/Gantt";
@@ -21,109 +18,99 @@ import "../../styles/components/functions/home.css";
 
 class Home extends React.Component {
   state = {
-    ressource:[
-      {id:1, ressources:"Méthode Traditionnelle "},
-      {id:2, ressources:"Méthode Agile"},
-      {id:3, ressources:"Méthodes PERT"},
-      {id:4, ressources:"Méthodes Adaptative"},
-      {id:5, ressources:"Méthode du Chemin Critrique"},
-      {id:6, ressources:"PRINCE2"},
+    ressource: [
+      { id: 1, ressources: "Méthode Traditionnelle " },
+      { id: 2, ressources: "Méthode Agile" },
+      { id: 3, ressources: "Méthodes PERT" },
+      { id: 4, ressources: "Méthodes Adaptative" },
+      { id: 5, ressources: "Méthode du Chemin Critrique" },
+      { id: 6, ressources: "PRINCE2" },
     ],
 
   };
- 
+
   render() {
-   
+
     return (
       <>
         <div className="home">
-        {/* insertion component navigation  */}
-            <Navigation />
-                  
-                <header className="main-header">
-                  <canvas className="cover" id="sparks"></canvas>
-                  <div className="main-header-content">
+          {/* insertion component navigation  */}
+          <Navigation />
 
-                  {/* create CRUUD  */}
-                    <span className="header-title">Project Name</span>
-                    <input type="text" placeholder="nom du projet.."/>
-                    <button className="fancy">Confirmer</button>
+          <header className="main-header">
+            <canvas className="cover" id="sparks"></canvas>
+            <div className="main-header-content">
 
-                    {/* <div className="flex">
+              {/* create CRUUD  */}
+              <span className="header-title">Project Name</span>
+              <input type="text" placeholder="nom du projet.." />
+              <button className="fancy">Confirmer</button>
+
+              {/* <div className="flex">
                       
                       <button className="fancy" onClick={this.handelClick}>Resources</button>
                     </div> */}
 
-                    {/* END CREATE  */}
-                  </div>
-                </header>
-  
-                          <Index0 />
-                          <Index1 />
-                          <Index2 />
-                          
-          
-      {/* end header */}
-               
-         
-              
+              {/* END CREATE  */}
+            </div>
+          </header>
+
+
+
+
+          {/* end header */}
+
+
+
           <div className="homeContent">
-            
-          {/* insert side bar component  */}
+
+            {/* insert side bar component  */}
             <aside clasName="side-bar">
-                <AppSide/>
-              </aside>
+              <AppSide />
+            </aside>
             <div className="content">
               {/* menu */}
-              
+
               <div className="home-section">
-               <div className="main-header-content">
-                    <span className="header-title">PLANIFICATION DU PROJET ...</span>
+                <div className="main-header-content">
+                  <span className="header-title">PLANIFICATION DU PROJET ...</span>
                 </div>
-              {/* insert component presentation de l'equipe dev et attribytion des tâches  */}
-               {/* crud config */}
-                  <div className="gantt-config">
-                    
-                    <div className="gantt-container">
-                      <LogTeam/>
-                      {/* <CrudTeamContext />  */}
-                    </div>
-                    
-                  </div>
-             
+                {/* insert component presentation de l'equipe dev et attribytion des tâches  */}
+                
+
 
                 {/* animation  */}
                 <div className="anime">
-                <div className="circles">
+                  <div className="circles">
                     <div></div>
                     <div></div>
                     <div></div>
                     <span></span>
-                </div>   
-                <span>chargement ...</span>
-                 <text className="fancy" >EXPORTER LE FORMULAIRE DE PRESENTATION DE L'EQUIPE DE DEVELOPPEUR  <i className='fab fa-get-pocket'/>  </text>
-                
-                </div> 
+                  </div>
+                  <span>chargement ...</span>
+                  <text className="fancy" >EXPORTER LE FORMULAIRE DE PRESENTATION DE L'EQUIPE DE DEVELOPPEUR  <i className='fab fa-get-pocket' />  </text>
+
+                </div>
                 {/* formulaire */}
-               
-               
-                   {/* crud config */}
 
 
-                   <div className="main-header-content">
-                        <span className="header-title">PRESENTATION DE L'EQUIPE  ...</span>
-                    </div>
-                  <div className="gantt-config">
-                    <div className="gantt-container">
-                      <CrudTeamContext /> 
-                    </div>
-                    
+                {/* crud config */}
+
+
+                <div className="main-header-content">
+                  <span className="header-title">PRESENTATION DE L'EQUIPE  ...</span>
+                </div>
+                <div className="gantt-config">
+                  <div className="gantt-container">
+                    <CrudTeamContext />
                   </div>
 
+                </div>
 
-                   {/* Wbs config */}
 
-{/* 
+                {/* Wbs config */}
+
+                {/* 
                    <div className="main-header-content">
                         <span className="header-title">PLANIFICATION DU WBS ...</span>
                     </div>
@@ -134,9 +121,9 @@ class Home extends React.Component {
                     
                   </div> */}
 
-                   {/* Pert config */}
+                {/* Pert config */}
 
-{/* 
+                {/* 
                 <div className="main-header-content">
                         <span className="header-title">PLANIFICATION DU PERT  ...</span>
                     </div>
@@ -147,24 +134,34 @@ class Home extends React.Component {
                     
                   </div> */}
 
-                  {/* gantt config */}
+                {/* gantt config */}
 
 
-                      <div className="main-header-content">
-                        <span className="header-title">PLANIFICATION DU GANTT ...</span>
-                      </div>
+                <div className="main-header-content">
+                  <span className="header-title">PLANIFICATION DU GANTT ...</span>
+                </div>
                 <div className="gantt-config">
                   <div className="gantt-container">
-                      <Gantt />
+                    <Gantt />
                   </div>
-                  
-                </div>
-            </div> 
-            
 
-            
+                </div>
+
+                {/* crud config */}
+                <div className="gantt-config">
+
+                  <div className="gantt-container">
+                    <LogTeam />
+                    {/* <CrudTeamContext />  */}
+                  </div>
+
+                </div>
+              </div>
+
+
+
             </div>
-  
+
             {/* creat login interface */}
 
           </div>

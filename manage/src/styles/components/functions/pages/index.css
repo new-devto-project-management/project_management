@@ -1,11 +1,12 @@
 .index, .index1{
     /* min-height: 100vh; */
-    min-height: 100vh;
+    height: 100vh;
     min-width: 100vw;
     width: 100%;
     font-size: 1rem;
+    background: url("../../../../../public/assets/b.webm");
     /* background-image: url("../../../../public/assets/Data.mp4") center/cover fixed; */
-    position: absolute;
+    /* position: absolute; */
 
 
 }
@@ -15,16 +16,41 @@
     padding: 4rem;
     width: 80%;
     display: grid;
-    grid-template-rows: 40% 20% 40%;
+    grid-template-rows: 10% 80% 10%;
     border-radius: 20px;
     background:rgb(231, 223, 223);
     box-shadow: inset 2px 2px 7px 2px #222;
 
 }
+.main-index-content{
+  background: #eee;
+  border: 2rem solid red;
+}
+.logo{
+  background: linear-gradient(#ccc 10%, #113 90%);
+  visibility: visible;
+  opacity: 59%;
+  margin: 2rem 2px;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
 
 
 .index1{
     min-height: 30vh;
+}
+.header-title{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  min-width: 100%;
+  color: #000;
 }
 
 .index-content{

@@ -72,7 +72,7 @@ class Index1 extends React.Component {
 
                       <section className="entries">
                          <button className="fancy">
-                           <Link to="/Home" className="entries-title fancy">SAVE</Link>
+                           <Link to="../Home" className="entries-title fancy">SAVE</Link>
                           </button>
                        
                         <article className="chart-container">

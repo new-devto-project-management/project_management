@@ -78,7 +78,7 @@ class Index1_2 extends React.Component {
                       <div className="flex flex-content">
                       <section className="entries">
                       <button className="fancy">
-                          <header className="entries-title fancy">BEFORE</header>
+                          <Link to="/index1" className="entries-title fancy">BEFORE</Link>
                           </button>    
                         <article className="chart-container">
                           <p>Revennir en Arrière !</p>
@@ -89,7 +89,7 @@ class Index1_2 extends React.Component {
 
                       <section className="entries">
                          <button className="fancy">
-                           <header className="entries-title fancy">SAVE</header>
+                           <Link to="/Home" className="entries-title fancy">SAVE</Link>
                           </button>
                        
                         <article className="chart-container">
