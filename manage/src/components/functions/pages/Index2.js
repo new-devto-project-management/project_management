@@ -9,7 +9,7 @@ import Navigation from "../../Navigation";
 import "../../../styles/components/functions/pages/index.css";
 
 
-class Home extends React.Component {
+class Index1 extends React.Component {
  
  
   render() {
@@ -25,33 +25,15 @@ class Home extends React.Component {
                   <div className="main-header-content ">
 
                     <span className="header-title ">WELCOME ON OPEN PROJECT</span>
-                      <header className="entries-title  chart-container fancy" >PRESENTATION OF THE TEAMS </header>
-                
+                 
                   </div>
-                  {/*  */}
-                    {/* create CRUUD  */}
-                    <form className="index-content">
+                  <header className="entries-title  chart-container fancy" >OPEN RECENT PROJECT </header>
+                  {/* create CRUUD  */}
+                  <form className="index-content">
                     <div className="flex">
 
                         
                      <article>
-                        {/* respo */}
-                      <input type="text" placeholder=" projet...."/>
-                      <label>Maître d'œuvre </label>
-                     </article>
-
-                     <article >
-                      {/* client */}
-                      <input type="text" placeholder="...."/>
-                      <label> Maître d'ouvrage </label>
-                     </article>
-
-                     <article >
-                      {/* type de project */}
-                      <input type="text" placeholder="ENTRER LA STATEGIE DE DEVEELOPPEMENT ...."/>
-                      <label> STRATEGIE DE DEVELOPPEPEMENT </label>
-                     </article>
-                       <article>
                         {/* respo */}
                       <input type="text" placeholder="Entrer nom du responsable du projet...."/>
                       <label>Maître d'œuvre </label>
@@ -75,7 +57,8 @@ class Home extends React.Component {
                   </form>
 
                     {/* END CREATE  */}
-                      <div className="flex">
+                  {/*  */}
+                      <div className="flex flex-content">
                       <section className="entries">
                       <button className="fancy">
                           <header className="entries-title fancy">BEFORE</header>
@@ -116,5 +99,5 @@ class Home extends React.Component {
   }
 };
 
-export default Home;
+export default Index1;
 

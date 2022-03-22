@@ -2,7 +2,7 @@ import React from "react";
 import ReactDom from "react-dom";
 // import "./App.css";
 import { BrowserRouter as Router, Route , Redirect, Switch } from "react-router-dom";
-import Home from "./components/functions/Home";
+import Index1_2 from "./components/functions/pages/Index1_2";
 // import Files from "./components/functions/Files";
 import Taches from "./components/functions/Taches";
 import Ressources from "./components/functions/Ressource";
@@ -21,7 +21,7 @@ const App = () => {
           {/* <Home /> */}
           <Switch>
           {/* permet de matcher les éléments function */}
-            <Route path="/" exact component={Home} />
+            <Route path="/" exact component={Index1_2} />
             {/* <Route path="/files" component={Files} /> */}
             <Route path="/taches" component={Taches} />
             <Route path="/ressources" component={Ressources} />

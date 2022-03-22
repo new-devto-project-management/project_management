@@ -9,7 +9,7 @@ import Navigation from "../../Navigation";
 import "../../../styles/components/functions/pages/index.css";
 
 
-class Index1 extends React.Component {
+class Index1_2 extends React.Component {
  
  
   render() {
@@ -25,15 +25,33 @@ class Index1 extends React.Component {
                   <div className="main-header-content ">
 
                     <span className="header-title ">WELCOME ON OPEN PROJECT</span>
-                 
+                      <header className="entries-title  chart-container fancy" >PRESENTATION OF THE TEAMS </header>
+                
                   </div>
-                  <header className="entries-title  chart-container fancy" >OPEN NEW PROJECT </header>
-                  {/* create CRUUD  */}
-                  <form className="index-content">
+                  {/*  */}
+                    {/* create CRUUD  */}
+                    <form className="index-content">
                     <div className="flex">
 
                         
                      <article>
+                        {/* respo */}
+                      <input type="text" placeholder=" projet...."/>
+                      <label>Maître d'œuvre </label>
+                     </article>
+
+                     <article >
+                      {/* client */}
+                      <input type="text" placeholder="...."/>
+                      <label> Maître d'ouvrage </label>
+                     </article>
+
+                     <article >
+                      {/* type de project */}
+                      <input type="text" placeholder="ENTRER LA STATEGIE DE DEVEELOPPEMENT ...."/>
+                      <label> STRATEGIE DE DEVELOPPEPEMENT </label>
+                     </article>
+                       <article>
                         {/* respo */}
                       <input type="text" placeholder="Entrer nom du responsable du projet...."/>
                       <label>Maître d'œuvre </label>
@@ -57,7 +75,6 @@ class Index1 extends React.Component {
                   </form>
 
                     {/* END CREATE  */}
-                  {/*  */}
                       <div className="flex flex-content">
                       <section className="entries">
                       <button className="fancy">
@@ -99,5 +116,5 @@ class Index1 extends React.Component {
   }
 };
 
-export default Index1;
+export default Index1_2;
 

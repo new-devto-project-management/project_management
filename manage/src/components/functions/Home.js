@@ -7,7 +7,7 @@ import Navigation from "../Navigation";
 import AppSide from "./AppSide";
 import Index0 from "./pages/Index0";
 import Index1 from "./pages/Index1";
-import Index2 from "./pages/Index2";
+import Index2 from "./pages/Index1_2";
 import LogTeam from "../logs/LogTeam";
 
 import Gantt from "../logs/Gantt";

@@ -1,11 +1,27 @@
 .index, .index1{
-    min-height: 40vh;
+    /* min-height: 100vh; */
+    min-height: 100vh;
+    min-width: 100vw;
     width: 100%;
-    justify-content: center;
-    display: flex;
-    border-radius: 19%;
+    font-size: 1rem;
+    background: rgb(255, 255, 255);
+    position: absolute;
+
 
 }
+.main-index{
+    transform: translate(-0%,5%);
+    min-height: 90vh;
+    padding: 4rem;
+    width: 80%;
+    display: grid;
+    grid-template-rows: 40% 20% 40%;
+    border-radius: 20px;
+    background:rgb(231, 223, 223);
+    box-shadow: inset 2px 2px 7px 2px #222;
+
+}
+
 
 .index1{
     min-height: 30vh;
@@ -18,10 +34,24 @@
     min-height: 30vh;
     margin-bottom: 30rem;
 }
-
+.flex-content{
+   display: flex;
+   align-items: center;
+    justify-content: space-between;
+}
 .flex article{
     margin: 1.5rem;
 }
+.header-title{
+    font-size: 3rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 136, 255);
+    text-transform: capitalize;
+    text-shadow: 1px 2px 1px #777;
+  }
 
 .main-header.small canvas.cover {
   opacity: 0;
