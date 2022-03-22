@@ -1,9 +1,9 @@
 import React from "react";
 import { Navlink, Link } from "react-router-dom";
 import { render } from "react-dom";
-
+import data from '../../../../public/assets/Data.mp4';
 //  de mon home je vais chercher les autres elements composants
-import Navigation from "../../Navigation";
+// import Navigation from "../../Navigation";
 
 
 import "../../../styles/components/functions/pages/index.css";
@@ -19,7 +19,9 @@ class Index0 extends React.Component {
         <center className="index">
         {/* insertion component navigation  */}
             {/* <Navigation /> */}
-                  
+            <video className='videoTag' autoPlay loop muted>
+                <source src={data} type='video/mp4' />
+            </video>
                 <header className="main-header main-index">
                         {/* <canvas className="cover" id="sparks"></canvas> */}
                         <div className="main-header-content">
@@ -60,7 +62,7 @@ class Index0 extends React.Component {
       
                       <section className="entries">
                       <button className="fancy">
-                        <Link to="/src/components/functions/pages/Index1">OPEN RECENT PROJECT</Link>
+                        <Link to="/Index2">OPEN RECENT PROJECT</Link>
                           </button>
                         <article>
                         {/* i ahve bugs */}
