@@ -2,16 +2,17 @@
     /*min-height: 100vh;
     */min-width: 100%;
     /*width:50vw;
-    */height: 100vh;
+    /* height: 100vh; */
     font-size: 1rem;
     visibility: visible;
+    display: block;
     justify-content: center;
     align-items: center;
     opacity: 90%;
     /* background: #00ff99; */
     background: url("../../../../../public/assets/video.mp4") center/cover fixed;
-    position: absolute;
-    border: 2px solid red;
+    position: relative;
+    border: 2px solid rgba(0, 0, 0, 0.432);
 }
 .main-index{
     
@@ -26,6 +27,8 @@
     border-radius: 30px;
     justify-content: center;
     text-shadow: 0 5px 15px #000;
+    background: url("../../../../../public/assets/b.webm") center/cover fixed;
+
     /*background:rgb(248, 0, 0);
     box-shadow: inset 2px 2px 7px 2px #222; */
     
@@ -33,17 +36,22 @@
 .main-index-content{
   background: rgba(15, 0, 0, 0.473);
   color: #00ff99;
-  /* border: 2rem solid red; */
-  opacity: 100%;
+  /*border: 2rem solid red;
+  */opacity: 100%;
   justify-content: center;
   align-items: center;
   display: flex;
   visibility: visible;
+  border-radius: 20px  ;
+  -webkit-border-radius: 20px  ;
+  -moz-border-radius: 20px  ;
+  -ms-border-radius: 20px  ;
+  -o-border-radius: 20px  ;
 }
 .logo{
  
   visibility: visible;
-  opacity: 59%;
+  opacity: 89%;
   margin: 2rem 2px;
   animation-delay: 2s ;
   transition-delay: 2s;
