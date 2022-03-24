@@ -72,15 +72,13 @@ class Home extends React.Component {
               {/* menu */}
 
               <div className="home-section">
-                <div className="main-header-content">
-                  <span className="header-title">PLANIFICATION DU PROJET ...</span>
-                </div>
+             
                 {/* insert component presentation de l'equipe dev et attribytion des tâches  */}
                     {/* gantt config */}
 
 
                 <div className="main-header-content">
-                  <span className="header-title">PLANIFICATION DU GANTT ...</span>
+                  <span className="header-title">PLANIFICATION DU WBS & GANTT ...</span>
                 </div>
                 <div className="gantt-config">
                   <div className="gantt-container">
@@ -148,14 +146,13 @@ class Home extends React.Component {
                 
 
                 {/* crud config */}
-                <div className="gantt-config">
+                {/* <div className="gantt-config">
 
                   <div className="gantt-container">
                     <LogTeam />
-                    {/* <CrudTeamContext />  */}
                   </div>
 
-                </div>
+                </div> */}
               </div>
 
 

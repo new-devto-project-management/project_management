@@ -5,6 +5,8 @@ import { render } from "react-dom";
 //  de mon home je vais chercher les autres elements composants
 import Navigation from "../../Navigation";
 
+import CrudTeamContext from '../../posts/CrudContext';
+
 
 import "../../../styles/components/functions/pages/index.css";
 
@@ -30,49 +32,19 @@ class Index1_2 extends React.Component {
                   </div>
                   {/*  */}
                     {/* create CRUUD  */}
-                    <form className="index-content">
-                    <div className="flex">
-
-                        
-                     <article>
-                        {/* respo */}
-                      <input type="text" placeholder=" projet...."/>
-                      <label>Maître d'œuvre </label>
-                     </article>
-
-                     <article >
-                      {/* client */}
-                      <input type="text" placeholder="...."/>
-                      <label> Maître d'ouvrage </label>
-                     </article>
-
-                     <article >
-                      {/* type de project */}
-                      <input type="text" placeholder="ENTRER LA STATEGIE DE DEVEELOPPEMENT ...."/>
-                      <label> STRATEGIE DE DEVELOPPEPEMENT </label>
-                     </article>
-                       <article>
-                        {/* respo */}
-                      <input type="text" placeholder="Entrer nom du responsable du projet...."/>
-                      <label>Maître d'œuvre </label>
-                     </article>
-
-                     <article >
-                      {/* client */}
-                      <input type="text" placeholder="Entrer nom du client...."/>
-                      <label> Maître d'ouvrage </label>
-                     </article>
-
-                     <article >
-                      {/* type de project */}
-                      <input type="text" placeholder="type de projet...."/>
-                      <label> Type de projet </label>
-                     </article>
-
-                    </div>
+                   
+                  {/* crud config */}
 
 
-                  </form>
+                <div className="main-header-content">
+                  <span className="header-title">PRESENTATION DE L'EQUIPE  ...</span>
+                </div>
+                <div className="gantt-config">
+                  <div className="gantt-container">
+                    <CrudTeamContext />
+                  </div>
+
+                </div>
 
                     {/* END CREATE  */}
                       <div className="flex flex-content">

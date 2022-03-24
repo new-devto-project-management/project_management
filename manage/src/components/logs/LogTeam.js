@@ -38,13 +38,15 @@ class LogTeam extends React.Component {
     // const dev = "Présentation de l'équipe de Développeurs."
     return (
       <div className="containers">
-        <div className="logContent">
+        <div className="title">
         <h1>RESPONSABLES DU PROJET</h1>
               <span>Client && Managers</span>
+        </div>
+        <div className="logContent">
           <div className="presentation">
           
               {/* inscription */}
-              <form>
+              <form className="form">
                 <div className="Mou">
                   {/* propriétaire */}
                   <Tooltip
@@ -102,16 +104,12 @@ class LogTeam extends React.Component {
               
               </form>
           </div>
-          <div className="devops">
-              <form>
-             
-              </form>
-       
-          </div>
+          {/* <div className="devops">
+           
+          </div> */}
             <div className="devops">
               <form>
-            
-                  
+
                   <div className="chefDequipe">
                     {/* chefs d'"quipe" */}
                     <Tooltip
@@ -180,9 +178,9 @@ class LogTeam extends React.Component {
               
 
                 {/*  */}
-                <Tooltip content="Valider le formulaire" position="right">
+                {/* <Tooltip content="Valider le formulaire" position="right">
                   <button className="fancy">Confirmer</button>
-                </Tooltip>
+                </Tooltip> */}
               </form>
             </div>
             {/* <ClientForm onClientAdd={this.handelAdd} /> */}

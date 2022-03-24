@@ -26,6 +26,7 @@ const App = () => {
           <Switch>
           {/* permet de matcher les éléments function */}
             <Route path="/" exact component={Index0} />
+            <Route path="/Index0" exact component={Index0} />
             <Route path="/index1" component={Index1} />
             <Route path="/index1_2" component={Index1_2} />
             <Route path="/index2" component={Index2} />

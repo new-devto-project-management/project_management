@@ -12,7 +12,7 @@
     /* background: #00ff99; */
     background: url("../../../../../public/assets/video.mp4") center/cover fixed;
     position: relative;
-    border: 2px solid rgba(0, 0, 0, 0.432);
+    /* border: 2px solid rgba(0, 0, 0, 0.432); */
 }
 .main-index{
     

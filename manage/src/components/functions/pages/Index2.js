@@ -1,11 +1,9 @@
 import React from "react";
-import { Navlink, Link } from "react-router-dom";
-import { render } from "react-dom";
+import {  Link } from "react-router-dom";
+import { render  } from "react-dom";
+import { Tooltip, Button } from "@blueprintjs/core";
 
 //  de mon home je vais chercher les autres elements composants
-import Navigation from "../../Navigation";
-
-
 import "../../../styles/components/functions/pages/index.css";
 
 
@@ -31,34 +29,45 @@ class Index1 extends React.Component {
                   {/* create CRUUD  */}
                   <form className="index-content">
                     <div className="flex">
+                    <div className="chefDequipe">
+                    {/* chefs d'"quipe" */}
+                    <Tooltip
+                      content="personne physique chargée dans le cadre d'une mission définie,
+                                                            d'assumer la maîtrise du projet."
+                      position="right"
+                    >
+                      {/* c'est-à-dire de veiller à sa bonne réalisation dans les
+                                                            objectifs de technique, de coût et de délai. */}
+
+                      <input
+                        aria-label="personne physique chargée dans le cadre d'une mission définie,
+                                                            d'assumer la maîtrise du projet, c'est-à-dire de veiller à sa bonne réalisation dans les
+                                                            objectifs de technique, de coût et de délai."
+                        placeholder="chef de Projet..."
+                        required
+                        aria-required="true"
+                      />
+                    </Tooltip>
+                    <label>Chef de projet / Project Manager</label>
+                  </div>
 
                         
                      <article>
                         {/* respo */}
-                      <input type="text" placeholder="Entrer nom du responsable du projet...."/>
-                      <label>Maître d'œuvre </label>
-                     </article>
+                      <input type="text" placeholder="Entrer le nom du projet...."/>
+                      <label>Nom du projet</label>
 
-                     <article >
-                      {/* client */}
-                      <input type="text" placeholder="Entrer nom du client...."/>
-                      <label> Maître d'ouvrage </label>
-                     </article>
+                
 
-                     <article >
-                      {/* type de project */}
-                      <input type="text" placeholder="type de projet...."/>
-                      <label> Type de projet </label>
                      </article>
-
+                     <article>
+                        {/* respo */}
+                      <input type="password" placeholder="Entrer le mot d passe du projet...."/>
+                      <label>Password</label>
+                     </article>
                     </div>
-
-
-                  </form>
-
-                    {/* END CREATE  */}
-                  {/*  */}
-                      <div className="flex flex-content">
+                    {/*  */}
+                    <div className="flex flex-content">
                       <section className="entries">
                       <button className="fancy">
                           <Link to="/Index0" className="entries-title fancy">BEFORE</Link>
@@ -72,7 +81,7 @@ class Index1 extends React.Component {
 
                       <section className="entries">
                          <button className="fancy">
-                           <Link to="../Home" className="entries-title fancy">SAVE</Link>
+                           <Link to="/Home" className="entries-title fancy">SAVE</Link>
                           </button>
                        
                         <article className="chart-container">
@@ -85,6 +94,11 @@ class Index1 extends React.Component {
                     </div>
 
                   {/*  */}
+
+                  </form>
+
+                    {/* END CREATE  */}
+                  
                
                 </header>
   
