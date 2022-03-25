@@ -9,4 +9,9 @@
     text-decoration: none;
     /* background:rgba(107, 171, 132, 0.137); */
 }
-
+input{
+    color:rgb(213, 243, 243);
+    font-size: large;
+    font-weight: bold;
+    background: #222;
+}

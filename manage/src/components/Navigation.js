@@ -40,17 +40,17 @@ export default class Navigation extends Component {
                           <Link to="/index2" className="list-group-item">
                             Open recents Project
                           </Link>
-                          <Link className="list-group-item">
+                          <Link to="/Homee" className="list-group-item">
                             New File
                           </Link>
                         
-                          <Link className="list-group-item">
+                          <Link to="/Homee" className="list-group-item">
                             Save
                           </Link>
-                          <Link className="list-group-item">
+                          <Link to="/Homee" className="list-group-item">
                             Save As
                           </Link>
-                          <Link className="list-group-item">
+                          <Link to="/Homee" className="list-group-item">
                             Export 
                           </Link>
                         </ul>
@@ -61,13 +61,13 @@ export default class Navigation extends Component {
                 return (
               <div className="modals-group">
                 <ul className="list-group modals">
-                          <Link className="list-group-item">
+                          <Link to="/Gantt" className="list-group-item">
                           creact New Tasks
                           </Link>
-                          <Link className="list-group-item">
+                          <Link to="/Index2" className="list-group-item">
                             Open recents Project
                           </Link>
-                          <Link className="list-group-item">
+                          <Link to="/Home" className="list-group-item">
                             New File
                           </Link>
                         
@@ -79,13 +79,13 @@ export default class Navigation extends Component {
                 return (
               <div className="modals-group">
                 <ul className="list-group modals">
-                          <Link className="list-group-item">
+                          <Link to="/Gantt" className="list-group-item">
                             create New Tasks
                           </Link>
-                          <Link className="list-group-item">
+                          <Link to="/Gantt" className="list-group-item">
                             Read Tasks 
                           </Link>
-                          <Link className="list-group-item">
+                          <Link to="/Gantt" className="list-group-item">
                             Delete Tasks
                           </Link>
                         
@@ -97,13 +97,13 @@ export default class Navigation extends Component {
                 return (
               <div className="modals-group">
                 <ul className="list-group modals">
-                          <Link className="list-group-item">
+                          <Link to="/Gantt" className="list-group-item">
                             create Diagram
                           </Link>
-                          <Link className="list-group-item">
+                          <Link to="/Gantt" className="list-group-item">
                             Read pert
                           </Link>
-                          <Link className="list-group-item">
+                          <Link to="/Gantt" className="list-group-item">
                             Read WBS
                           </Link>
                         
@@ -121,7 +121,7 @@ export default class Navigation extends Component {
                           <Link className="list-group-item">
                             about 
                           </Link>
-                          <Link className="list-group-item">
+                          <Link to="/help" className="list-group-item">
                             helps
                           </Link>
                         
@@ -151,7 +151,7 @@ export default class Navigation extends Component {
                 <div className="open-project">
                   
                   {/* logo */}
-                    <Link exact ng-click="base.mainPage=false">
+                    <Link to="/Home" exact ng-click="base.mainPage=false">
                         <li className="nav-links current entries">
                         <span  class="page-title entries-title"><big>O</big>pen<strong> Project</strong></span>
                         </li>

@@ -55,7 +55,7 @@ class Index1 extends React.Component {
 
               <section className="entries">
                 <button className="fancy">
-                  <Link to="/Index1_2" className="entries-title fancy">SAVE</Link>
+                  <Link to="/Index1_2" className="entries-title fancy">SAVE && CONTINUE</Link>
                 </button>
 
                 <article className="chart-container">

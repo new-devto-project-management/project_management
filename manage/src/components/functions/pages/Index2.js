@@ -1,117 +1,87 @@
 import React from "react";
-import {  Link } from "react-router-dom";
-import { render  } from "react-dom";
+import { Link } from "react-router-dom";
+import { render } from "react-dom";
 import { Tooltip, Button } from "@blueprintjs/core";
-
+import LogProject from "../../logs/LogProject";
 //  de mon home je vais chercher les autres elements composants
 import "../../../styles/components/functions/pages/index.css";
+// import { Input } from "@material-ui/icons";
 
 
-class Index1 extends React.Component {
- 
- 
+class Index2 extends React.Component {
+
+
   render() {
-   
+
     return (
       <>
-        <div className="index1">
-        {/* insertion component navigation  */}
-            {/* <Navigation /> */}
-                  
-                <header className="main-header ">
-                  <canvas className="cover" id="sparks"></canvas>
-                  <div className="main-header-content ">
+        <div className="index">
+         
 
-                    <span className="header-title ">WELCOME ON OPEN PROJECT</span>
-                 
-                  </div>
-                  <header className="entries-title  chart-container fancy" >OPEN RECENT PROJECT </header>
-                  {/* create CRUUD  */}
-                  <form className="index-content">
-                    <div className="flex">
-                    <div className="chefDequipe">
-                    {/* chefs d'"quipe" */}
-                    <Tooltip
-                      content="personne physique chargée dans le cadre d'une mission définie,
-                                                            d'assumer la maîtrise du projet."
-                      position="right"
-                    >
-                      {/* c'est-à-dire de veiller à sa bonne réalisation dans les
-                                                            objectifs de technique, de coût et de délai. */}
+          <header className="main-header ">
+            <canvas className="cover" id="sparks"></canvas>
+            <div className="main-header-content ">
 
-                      <input
-                        aria-label="personne physique chargée dans le cadre d'une mission définie,
-                                                            d'assumer la maîtrise du projet, c'est-à-dire de veiller à sa bonne réalisation dans les
-                                                            objectifs de technique, de coût et de délai."
-                        placeholder="chef de Projet..."
-                        required
-                        aria-required="true"
-                      />
-                    </Tooltip>
-                    <label>Chef de projet / Project Manager</label>
-                  </div>
+              <span className="header-title ">WELCOME ON OPEN PROJECT</span>
+              <header className="entries-title  chart-container fancy" >PRESENTATION OF THE TEAMS </header>
 
-                        
-                     <article>
-                        {/* respo */}
-                      <input type="text" placeholder="Entrer le nom du projet...."/>
-                      <label>Nom du projet</label>
+            </div>
+            {/*  */}
+            {/* create CRUUD  */}
 
-                
+            {/* crud config */}
+            <div className="gantt-config">
+              <div className="gantt-container">
+                  <LogProject/>
+              </div>
+              <div className="main-header-content">
+            <div className="flex flex-content">
+              <section className="entries">
+                <button className="fancy">
+                  <Link to="/Index0" className="entries-title fancy">BEFORE</Link>
+                </button>
+                <article className="chart-container">
+                  <p>Revennir en Arrière !</p>
+                </article>
 
-                     </article>
-                     <article>
-                        {/* respo */}
-                      <input type="password" placeholder="Entrer le mot d passe du projet...."/>
-                      <label>Password</label>
-                     </article>
-                    </div>
-                    {/*  */}
-                    <div className="flex flex-content">
-                      <section className="entries">
-                      <button className="fancy">
-                          <Link to="/Index0" className="entries-title fancy">BEFORE</Link>
-                          </button>    
-                        <article className="chart-container">
-                          <p>Revennir en Arrière !</p>
-                        </article>
 
-                        
-                      </section>
+              </section>
 
-                      <section className="entries">
-                         <button className="fancy">
-                           <Link to="/Home" className="entries-title fancy">SAVE</Link>
-                          </button>
-                       
-                        <article className="chart-container">
-                          <p>Enregistrer !</p>
-                        </article>
-                        
+              <section className="entries">
+                <button className="fancy">
+                  <Link to="/Home" className="entries-title fancy">SAVE</Link>
+                </button>
 
-                      </section>
+                <article className="chart-container">
+                  <p>Enregistrer !</p>
+                </article>
 
-                    </div>
 
-                  {/*  */}
+              </section>
 
-                  </form>
+            </div>
+                {/* END CREATE  */}
 
-                    {/* END CREATE  */}
-                  
-               
-                </header>
-  
-               
-  
-               
-      {/* end header */}
-               
+
+            </div>
+
+            </div>
+
+            
+            {/*  */}
+
+          </header>
+
+
+
+
+          {/* end header */}
+
         </div>
       </>
     )
   }
 };
 
-export default Index1;
+export default Index2;
 

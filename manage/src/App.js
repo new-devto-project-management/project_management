@@ -8,14 +8,15 @@ import Index1_2 from "./components/functions/pages/Index1_2";
 import Index2 from "./components/functions/pages/Index2";
 
 import Home from "./components/functions/Home";
-// import Taches from "./components/functions/Taches";
-// import Ressources from "./components/functions/Ressource";
-// import Tools from "./components/functions/Tool";
-// import Settings from "./components/functions/Settings";
+
 import Help from "./components/functions/Help";
 import "./styles/styles.css";
+import LogTeam from "./components/logs/LogTeam";
+import Gantt from "./components/logs/Gantt";
+import CrudContext from "./components/posts/CrudContext";
+// import Gantt from "./components/logs/Gantt";
+// import Gantt from "./components/logs/Gantt";
 
-// import NotFound from "./pages/NotFound";
 
 
 const App = () => {
@@ -31,9 +32,10 @@ const App = () => {
             <Route path="/index1_2" component={Index1_2} />
             <Route path="/index2" component={Index2} />
             <Route path="/home" component={Home} />
-            {/* <Route path="/ressources" component={Ressources} />
-            <Route path="/tools" component={Tools} />
-            <Route path="/settings" component={Settings} /> */}
+            <Route path="/gantt" component={Gantt} />
+            <Route path="/crudContext" component={CrudContext} />
+            <Route path="/logteam" component={LogTeam} />
+           
             <Route path="/help" component={Help} />
 
             <Redirect to='/Home'/>

@@ -81,9 +81,7 @@ article{
   color: aliceblue;
   text-shadow:1px 2px 1px rgb(0, 0, 0);
 }
-.index1{
-    /* min-height: 30vh; */
-}
+
 .header-title{
   display: flex;
   justify-content: center;
@@ -103,6 +101,7 @@ article{
    display: flex;
    align-items: center;
     justify-content: space-between;
+    height:150px;
 }
 .flex article{
     margin: 1.5rem;

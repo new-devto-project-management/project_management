@@ -44,7 +44,6 @@ class Index1_2 extends React.Component {
                     <CrudTeamContext />
                   </div>
 
-                </div>
 
                     {/* END CREATE  */}
                       <div className="flex flex-content">
@@ -74,6 +73,7 @@ class Index1_2 extends React.Component {
                     </div>
 
                   {/*  */}
+                </div>
                
                 </header>
   
