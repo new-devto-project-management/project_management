@@ -1,5 +1,8 @@
 import React from "react";
+// import { Switch, Route } from "react-router-dom";
 import ReactDom from "react-dom";
+import AddUser from "./redux/pages/AddUser";
+import Server from "./redux/pages/Home";
 // import "./App.css";
 import { BrowserRouter as Router, Route , Redirect, Switch } from "react-router-dom";
 import Index0 from "./components/functions/pages/Index0";
@@ -10,10 +13,10 @@ import Index2 from "./components/functions/pages/Index2";
 import Home from "./components/functions/Home";
 
 import Help from "./components/functions/Help";
-import "./styles/styles.css";
 import LogTeam from "./components/logs/LogTeam";
 import Gantt from "./components/logs/Gantt";
 import CrudContext from "./components/posts/CrudContext";
+import "./styles/styles.css";
 // import Gantt from "./components/logs/Gantt";
 // import Gantt from "./components/logs/Gantt";
 
@@ -35,7 +38,8 @@ const App = () => {
             <Route path="/gantt" component={Gantt} />
             <Route path="/crudContext" component={CrudContext} />
             <Route path="/logteam" component={LogTeam} />
-           
+            <Route exact path="/Server" component={Server} />
+            <Route exact path="/addUser" component={AddUser} />
             <Route path="/help" component={Help} />
 
             <Redirect to='/Home'/>

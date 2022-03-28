@@ -42,7 +42,7 @@ class Home extends React.Component {
             <div className="main-header-content">
 
               {/* create CRUUD  */}
-              <span className="header-title">Welcome on Open Project"</span>
+              <span className="header-title">Welcome on Open Project</span>
               <p>Un projet open source destinée a la gestion de projet...</p>
               {/* <input type="text" placeholder="nom du projet.." />
               <button className="fancy">Confirmer</button> */}

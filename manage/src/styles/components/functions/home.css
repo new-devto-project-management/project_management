@@ -21,7 +21,7 @@
     border: 4px solid #ccc;
     /* height: 23vh; */
     width: 100%;
-    background: url(../../../../public/assets/video.mp4) center/cover fixed;
+    
     display: grid;
     grid-template-columns:4% 96%;
     float: right;
@@ -34,10 +34,10 @@
     -o-border-radius: 12px;
 }
 .side-bar{
-    position: static;
+    position: fixed;
     display: flexbox;
     align-items: center;
-    animation: alternate;
+    /* animation: alternate; */
     justify-content: center;
     min-width: 100%;
     /* border:5px solid #cf0404; */
@@ -348,9 +348,10 @@ a:hover {
   padding: 0 20px;
   font-size: 3em;
   font-weight: 900;
-  color: bisque;
-  text-shadow:1px 2px 1px  #eee;
+  color: rgb(0, 255, 242);
+  text-shadow:1px 2px 1px 3px #eee;
   margin-bottom: 40px;
+  /* font-weight: bold; */
   line-height: 1em;
 }
 
@@ -689,7 +690,7 @@ input.embedded:-ms-input-placeholder {
   /* overflow: auto; */
   height: 120vh;
 }
-
+/* 
 @media screen and (max-width: 960px) {
   .main-header .main-header-content{
     min-width: 100%;
@@ -711,4 +712,4 @@ input.embedded:-ms-input-placeholder {
     display: block;
    
   }
-}
+} */

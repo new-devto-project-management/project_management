@@ -5,7 +5,7 @@ import data from "./mock-data.json";
 import ReadOnlyRow from "../crud/ReadOnlyRow";
 import EditableRow from "../crud/EditableRow";
 
-const App = () => {
+const CrudContext = () => {
   const [contacts, setContacts] = useState(data);
   const [addFormData, setAddFormData] = useState({
     fullName: "",
@@ -182,4 +182,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default CrudContext;

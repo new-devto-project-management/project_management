@@ -24,7 +24,7 @@ class Index0 extends React.Component {
           <video className='videoTag' autoPlay loop muted>
                 <source src={'../../../../public/assets/Data.mp4'} type='video/mp4' />
             </video>
-          <header className=" main-index">
+          <header className="main-index">
             {/* <canvas className="cover" id="sparks"></canvas> */}
             <div className="main-header-content main-index-content">
 
