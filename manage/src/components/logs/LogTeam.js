@@ -47,8 +47,8 @@ const LogTeam = () => {
 
     setAddFormData(newFormData);
   };
-  
-  const handleEditFormChange = (event) => {
+
+  const handelEditFormChange = (event) => {
     event.preventDefault();
 
     const fieldName = event.target.getAttribute("name");
@@ -60,23 +60,23 @@ const LogTeam = () => {
     setEditFormData(newFormData);
   };
 
-  const handleAddFormSubmit = (event) => {
+  const handelAddFormSubmit = (event) => {
     event.preventDefault();
 
-  const newLogin = {
-    id: nanoid(),
-    nameProject: addFormData.nameProject,
-    nameClient: addFormData.nameClient,
-    respoProjet: addFormData.respoProjet,
-    chargerAffaire: addFormData.chargerAffaire,
-    chefProject: addFormData.chefProject,
-    respoPlanification: addFormData.respoPlanification,
-    respoDepartement: addFormData.respoDepartement,
-  };
+    const newLogin = {
+      id: nanoid(),
+      nameProject: addFormData.nameProject,
+      nameClient: addFormData.nameClient,
+      respoProjet: addFormData.respoProjet,
+      chargerAffaire: addFormData.chargerAffaire,
+      chefProject: addFormData.chefProject,
+      respoPlanification: addFormData.respoPlanification,
+      respoDepartement: addFormData.respoDepartement,
+    };
 
-  const newLogin = [...login, newLogin];
-  setLogin(newLogin);
-};
+    const newLogins = [...login, newLogin];
+    setLogin(newLogins);
+  };
 
   const handelEditFormSubmit = (event) => {
     event.preventDefault();
@@ -92,13 +92,13 @@ const LogTeam = () => {
       respoDepartement: editFormData.respoDepartement,
     };
 
-    const newLogin = [...login];
+    const newLogins = [...login];
 
     const index = login.findIndex((logins) => logins.id === editLoginId);
 
-    newLogin[index] = editedLogin;
+    newLogins[index] = editedLogin;
 
-    setLogin(newLogin);
+    setLogin(newLogins);
     setEditLoginId(null);
   };
 
@@ -124,9 +124,13 @@ const LogTeam = () => {
   };
 
   const handelDeleteClick = (loginId) => {
+    const newLogins = [...login];
+
     const index = login.findIndex((logins) => logins.id === loginId);
-    newLogin.splice(index, 1);
-    setLogin(this.newLogin);
+
+    newLogins.splice(index, 1);
+
+    setLogin(newLogins);
   };
 
 
@@ -152,217 +156,217 @@ const LogTeam = () => {
 
 
   // render() {
-    // const dev = "Présentation de l'équipe de Développeurs."
-    return (
-      <div className="containers app-container">
-        <form onSubmit={handleEditFormSubmit}>
-          <table>
-            <thead>
-              <tr>
-                <th>Name Project</th>
-                <th>Name Client</th>
-                <th>Responsable of projet</th>
-                <th>Charger d'Affaire</th>
-                <th>Chef of Project</th>
-                <th>Responsable Planification</th>
-                <th>Responsable Departement</th>
-              </tr>
-            </thead>
-            <tbody>
-              {login.map((logins) => (
-                <Fragment>
-                  {editContactId === contacts.id ? (
-                    <EditableRow
-                      editFormData={editFormData}
-                      handleEditFormChange={handleEditFormChange}
-                      handleCancelClick={handleCancelClick}
-                    />
-                  ) : (
-                    <ReadOnlyRow
-                      login={logins}
-                      handleEditClick={handleEditClick}
-                      handleDeleteClick={handleDeleteClick}
-                    />
-                  )}
-                </Fragment>
-              ))}
-            </tbody>
-          </table>
-        </form>
-        <div className="title">
-          <h1>RESPONSABLES DU PROJET</h1>
-          <span>Client && Managers</span>
+  // const dev = "Présentation de l'équipe de Développeurs."
+  return (
+    <div className="containers app-container">
+      <form onSubmit={ handelEditFormSubmit }>
+        <table>
+          <thead>
+            <tr>
+              <th>Name Project</th>
+              <th>Name Client</th>
+              <th>Responsable of projet</th>
+              <th>Charger d'Affaire</th>
+              <th>Chef of Project</th>
+              <th>Responsable Planification</th>
+              <th>Responsable Departement</th>
+            </tr>
+          </thead>
+          <tbody>
+            {login.map((logins) => (
+              <Fragment>
+                {editContactId === contacts.id ? (
+                  <EditableRow
+                    editFormData={editFormData}
+                    handelEditFormChange={handelEditFormChange}
+                    handelCancelClick={handelCancelClick}
+                  />
+                ) : (
+                  <ReadOnlyRow
+                    login={logins}
+                    handelEditClick={handelEditClick}
+                    handelDeleteClick={handelDeleteClick}
+                  />
+                )}
+              </Fragment>
+            ))}
+          </tbody>
+        </table>
+      </form>
+      <div className="title">
+        <h1>RESPONSABLES DU PROJET</h1>
+        <span>Client && Managers</span>
+      </div>
+      <div className="logContent">
+        <div className="presentation">
+
+          {/* inscription */}
+          <form onSubmit={this.handelEditFormSubmit} >
+            <div className="Mou">
+              {/* propriétaire */}
+              <Tooltip
+                content="nom du projet."
+                position="right"
+              >
+                <input
+                  aria-label="nom du projet."
+                  placeholder="Entrer le non du projet..."
+                  required="required"
+                  aria-required="true"
+                  onChange={handelAddFormChange}
+                />
+              </Tooltip>
+              <label>Maître d'ouvrage</label>
+              {/* <Tooltip content="" position='right'>
+
+                                    </Tooltip>                     */}
+            </div>
+            <div className="Mou">
+              {/* propriétaire */}
+              <Tooltip
+                content="Personne physique ou morale qui sera propriétaire de l'ouvrage réalisé."
+                position="right"
+              >
+                <input
+                  aria-label="Personne physique ou morale qui sera propriétaire de l'ouvrage réalisé."
+                  placeholder="non du Client..."
+                  required="required"
+                  aria-required="true"
+                  onChange={handelAddFormChange}
+                />
+              </Tooltip>
+              <label>Maître d'ouvrage</label>
+              {/* <Tooltip content="" position='right'>
+                                            
+                                    </Tooltip>                     */}
+            </div>
+
+            <div className="Moe">
+              {/* personne responnsable */}
+              <Tooltip
+                content="Personne physique ou morale qui réalise le travail pour le maître d'ouvrage."
+                position="right"
+              >
+                <input
+                  aria-label="Personne physique ou morale qui réalise le travail pour le maître d'ouvrage. "
+                  placeholder="Responsable du project..."
+                  required="required"
+                  aria-required="true"
+                  onChange={handelAddFormChange}
+                />
+              </Tooltip>
+              <label>Maître d'œuvre</label>
+            </div>
+
+            <div className="Ca">
+              {/* charger d'affaire */}
+              <Tooltip
+                content="Le
+                                    chargé d'affaires assure les contacts avec le maître d'ouvrage avant la conclusion du
+                                    contrat, pendant son déroulement et lors de son achèvement."
+                position="right"
+              >
+                <input
+                  aria-label="Le
+                                    chargé d'affaires assure les contacts avec le maître d'ouvrage avant la conclusion du
+                                    contrat, pendant son déroulement et lors de son achèvement."
+                  placeholder="chargé d'affaire..."
+                  required="required"
+                  aria-required="true"
+                  onChange={handelAddFormChange}
+                />
+              </Tooltip>
+              <label>Le chargé d'affaire / Porfolio manager</label>
+            </div>
+
+          </form>
         </div>
-        <div className="logContent">
-          <div className="presentation">
-
-            {/* inscription */}
-            <form onSubmit={this.handelEditFormSubmit} >
-              <div className="Mou">
-                {/* propriétaire */}
-                <Tooltip
-                  content="nom du projet."
-                  position="right"
-                >
-                  <input
-                    aria-label="nom du projet."
-                    placeholder="Entrer le non du projet..."
-                    required="required"
-                    aria-required="true"
-                    onChange={handelAddFormChange}
-                  />
-                </Tooltip>
-                <label>Maître d'ouvrage</label>
-                {/* <Tooltip content="" position='right'>
-                                            
-                                    </Tooltip>                     */}
-              </div>
-              <div className="Mou">
-                {/* propriétaire */}
-                <Tooltip
-                  content="Personne physique ou morale qui sera propriétaire de l'ouvrage réalisé."
-                  position="right"
-                >
-                  <input
-                    aria-label="Personne physique ou morale qui sera propriétaire de l'ouvrage réalisé."
-                    placeholder="non du Client..."
-                    required="required"
-                    aria-required="true"
-                    onChange={handelAddFormChange}
-                  />
-                </Tooltip>
-                <label>Maître d'ouvrage</label>
-                {/* <Tooltip content="" position='right'>
-                                            
-                                    </Tooltip>                     */}
-              </div>
-
-              <div className="Moe">
-                {/* personne responnsable */}
-                <Tooltip
-                  content="Personne physique ou morale qui réalise le travail pour le maître d'ouvrage."
-                  position="right"
-                >
-                  <input
-                    aria-label="Personne physique ou morale qui réalise le travail pour le maître d'ouvrage. "
-                    placeholder="Responsable du project..."
-                    required="required"
-                    aria-required="true"
-                    onChange={handelAddFormChange}
-                  />
-                </Tooltip>
-                <label>Maître d'œuvre</label>
-              </div>
-
-              <div className="Ca">
-                {/* charger d'affaire */}
-                <Tooltip
-                  content="Le
-                                    chargé d'affaires assure les contacts avec le maître d'ouvrage avant la conclusion du
-                                    contrat, pendant son déroulement et lors de son achèvement."
-                  position="right"
-                >
-                  <input
-                    aria-label="Le
-                                    chargé d'affaires assure les contacts avec le maître d'ouvrage avant la conclusion du
-                                    contrat, pendant son déroulement et lors de son achèvement."
-                    placeholder="chargé d'affaire..."
-                    required="required"
-                    aria-required="true"
-                    onChange={handelAddFormChange}
-                  />
-                </Tooltip>
-                <label>Le chargé d'affaire / Porfolio manager</label>
-              </div>
-
-            </form>
-          </div>
-          {/* <div className="devops">
+        {/* <div className="devops">
            
           </div> */}
-          <div className="devops">
-            <form onSubmit={handelEditFormSubmit}>
+        <div className="devops">
+          <form onSubmit={handelEditFormSubmit}>
 
-              <div className="chefDequipe">
-                {/* chefs d'"quipe" */}
-                <Tooltip
-                  content="personne physique chargée dans le cadre d'une mission définie,
+            <div className="chefDequipe">
+              {/* chefs d'"quipe" */}
+              <Tooltip
+                content="personne physique chargée dans le cadre d'une mission définie,
                                                             d'assumer la maîtrise du projet."
-                  position="right"
-                >
-                  {/* c'est-à-dire de veiller à sa bonne réalisation dans les
+                position="right"
+              >
+                {/* c'est-à-dire de veiller à sa bonne réalisation dans les
                                                             objectifs de technique, de coût et de délai. */}
 
-                  <input
-                    aria-label="personne physique chargée dans le cadre d'une mission définie,
+                <input
+                  aria-label="personne physique chargée dans le cadre d'une mission définie,
                                                             d'assumer la maîtrise du projet, c'est-à-dire de veiller à sa bonne réalisation dans les
                                                             objectifs de technique, de coût et de délai."
-                    placeholder="chef de Projet..."
-                    required="required"
-                    onChange={handelAddFormChange}
-                  />
-                </Tooltip>
-                <label>Chef de projet / Project Manager</label>
-              </div>
+                  placeholder="chef de Projet..."
+                  required="required"
+                  onChange={handelAddFormChange}
+                />
+              </Tooltip>
+              <label>Chef de projet / Project Manager</label>
+            </div>
 
-              <div className="resPlan">
-                {/* personne responnsable de la planification */}
-                <Tooltip
-                  content="Il identifie et organise les tâches, publie l'échéancier de chaque activité; ensuite, il met
+            <div className="resPlan">
+              {/* personne responnsable de la planification */}
+              <Tooltip
+                content="Il identifie et organise les tâches, publie l'échéancier de chaque activité; ensuite, il met
                                                         à jour le planning et calcule la probabilité que les délais soient maintenus."
-                  position="right"
-                >
-                  {/*  Souvent, le
+                position="right"
+              >
+                {/*  Souvent, le
                                                         chef de projet assume cette fonction. */}
 
-                  <input
-                    aria-label="Il identifie et organise les tâches, publie l'échéancier de chaque activité; ensuite, il met
+                <input
+                  aria-label="Il identifie et organise les tâches, publie l'échéancier de chaque activité; ensuite, il met
                                                         à jour le planning et calcule la probabilité que les délais soient maintenus. Souvent, le
                                                         chef de projet assume cette fonction. "
-                    placeholder="Responsable Planification..."
-                    required="required"
-                    aria-required="true"
-                    onChange={handelAddFormChange}
-                  />
-                </Tooltip>
-                <label>
-                  Responsable planification / Scope & Time Manager
-                </label>
-              </div>
+                  placeholder="Responsable Planification..."
+                  required="required"
+                  aria-required="true"
+                  onChange={handelAddFormChange}
+                />
+              </Tooltip>
+              <label>
+                Responsable planification / Scope & Time Manager
+              </label>
+            </div>
 
-              <div className="resDepart">
-                {/* personne responnsable de departement */}
-                <Tooltip
-                  content="le garant d'un des savoir-faire de l'entreprise. Il est sollicité par la chef de projet à
+            <div className="resDepart">
+              {/* personne responnsable de departement */}
+              <Tooltip
+                content="le garant d'un des savoir-faire de l'entreprise. Il est sollicité par la chef de projet à
                                                         qui il doit fournir les moyens en rapport avec son métier. "
-                  position="right"
-                >
-                  <input
-                    aria-label="le garant d'un des savoir-faire de l'entreprise. Il est sollicité par la chef de projet à
+                position="right"
+              >
+                <input
+                  aria-label="le garant d'un des savoir-faire de l'entreprise. Il est sollicité par la chef de projet à
                                                         qui il doit fournir les moyens en rapport avec son métier. "
-                    placeholder="Responsable de département..."
-                    required="required"
-                    aria-required="true"
-                    onChange={HandelAddFormChange}
-                  />
-                </Tooltip>
-                <label>
-                  Responsable de département / Team leader & HR Manager
-                </label>
-              </div>
+                  placeholder="Responsable de département..."
+                  required="required"
+                  aria-required="true"
+                  onChange={HandelAddFormChange}
+                />
+              </Tooltip>
+              <label>
+                Responsable de département / Team leader & HR Manager
+              </label>
+            </div>
 
 
-              {/*  */}
-              {/* <Tooltip content="Valider le formulaire" position="right">
+            {/*  */}
+            {/* <Tooltip content="Valider le formulaire" position="right">
                   <button className="fancy">Confirmer</button>
                 </Tooltip> */}
-            </form>
-          </div>
-          {/* <ClientForm onClientAdd={this.handelAdd} /> */}
-
+          </form>
         </div>
+        {/* <ClientForm onClientAdd={this.handelAdd} /> */}
+
       </div>
-    );
+    </div>
+  );
   // }
 }
 

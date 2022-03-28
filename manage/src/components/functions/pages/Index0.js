@@ -3,7 +3,7 @@ import { Navlink, Link } from "react-router-dom";
 import { render } from "react-dom";
 // import data from '../../../../public/assets/Data.mp4';
 // import data from "../../../../public/assets/Data.mp4";
-
+import video from "../../../../public/assets/video.mp4";
 //  de mon home je vais chercher les autres elements composants
 // import Navigation from "../../Navigation";
 
@@ -19,6 +19,22 @@ class Index0 extends React.Component {
     return (
       <>
         <center className="index">
+
+          <video autoPlay loop muted
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            width: "100%",
+            height: "100%",
+            zIndex: "-1",
+            objectFit: "cover",
+            transform: 'translate(-50% -50%)',
+
+            
+          }}>
+            <source src={video} type="video/mp4"/>
+          </video>
           {/* insertion component navigation  */}
           {/* <Navigation /> */}
           <video className='videoTag' autoPlay loop muted>
