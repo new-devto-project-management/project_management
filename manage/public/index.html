@@ -1,68 +1,89 @@
 <!DOCTYPE html>
-<html lang="Fr-fr">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
 
-<head>
-  <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=Open Project 0.1" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Web site for projects management created using create-react-app" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-  <link rel='stylesheet' href='https://unpkg.com/react-quill@1.0.0/dist/quill.core.css'>
-  <link rel='stylesheet' href='https://unpkg.com/react-quill@1.0.0/dist/quill.snow.css'>
-  <link rel='stylesheet' href='https://unpkg.com/react-quill@1.0.0/dist/quill.bubble.css'>
-  <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2022.1.119/styles/kendo.material-lime-dark.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,300;0,400;0,500;1,100;1,300;1,400&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.svg" />
-  <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.6.10/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.6.10/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.6.10/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.6.10/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.6.10/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.6.10/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.6.10/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.6.10/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.6.10/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.6.10/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
     -->
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-   <!-- Materialize CSS -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-   <!-- Materialize JS -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="message">
+      <h2>Welcome</h2>
+      <h1>Firebase Hosting Setup Complete</h1>
+      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
+      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    </div>
+    <p id="load">Firebase SDK Loading&hellip;</p>
 
-  <title>Open Project</title>
-</head>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
-<body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
-
-  <script src='https://unpkg.com/react@latest/umd/react.development.js'></script>
-  <script src='https://unpkg.com/react-dom@latest/umd/react-dom.development.js'></script>
-  <script src='https://unpkg.com/prop-types/prop-types.js'></script>
-  <script src='https://unpkg.com/react-quill@latest/dist/react-quill.js'></script>
-  <!-- <script src="https://kendo.cdn.telerik.com/2022.1.119/js/kendo.all.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/kendo-ui-core/2014.1.416/js/kendo.core.min.js"
-    integrity="sha512-BTGeW9KyGf217/nQ5S7BtsgTdDbBjACJN+Rgv78Y/GLVPXRdVhIyyXa4KsPsyTwTMC+Oa3nLfWFq71sqNEbkYw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/kendo-ui-core/2014.1.416/js/kendo.autocomplete.min.js"
-    integrity="sha512-UIrVNxIBmso+2+BARr5vo3hfjHwvB8bbWOdhkK7pMyYCGB2qG7NhREykVqHir59czt4XY1rcXUaAfhippw2UZQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/kendo-ui-core/2014.1.416/js/kendo.calendar.min.js"
-    integrity="sha512-7VWbpz+B1w4ZgYobOmOJX2IzJgmku6Ca7TNoE1Xdpvjo8ka9lURzq7IgjiXaQuhYM+YS/GkaCojuZieEI6Jq/g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout-kendo/0.10.0/knockout-kendo.min.js"
-    integrity="sha512-AGO5kNInIAcVTQ5jgHcMIFZUSm8OFY671KXTl9BuSvEwuq5JB3KL54dg5P6/AXXdT7OP9aAmv/3cordv8lSIUQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.umd.min.js"
-    integrity="sha512-dG5ZzvFUfkBdjYdJbsKdGGh8tOa9fv9wHmiChCFJYHRIW1XgfxN2cGzt2HaEPeunXqbAQXBOJvSBQpGOl0qikw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-bootstrap/2.1.2/react-bootstrap.min.js"
-    integrity="sha512-iGal688APZIWueX+ZIXLW4LBupO6XY79L94lwsZqks+e39x8ltyL/PWyj+e4BQQ9HXmxGo1o49HDa7Ew063nMw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</body>
-
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
 </html>

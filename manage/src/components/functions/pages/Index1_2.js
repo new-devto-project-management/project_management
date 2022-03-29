@@ -2,16 +2,13 @@ import React from "react";
 import { Navlink, Link } from "react-router-dom";
 import { render } from "react-dom";
 
-//  de mon home je vais chercher les autres elements composants
-import Navigation from "../../Navigation";
-
 import CrudTeamContext from '../../posts/CrudContext';
 
 
 import "../../../styles/components/functions/pages/index.css";
 
 
-class Index1_2 extends React.Component {
+class Index12 extends React.Component {
  
  
   render() {
@@ -88,5 +85,5 @@ class Index1_2 extends React.Component {
   }
 };
 
-export default Index1_2;
+export default Index12;
 

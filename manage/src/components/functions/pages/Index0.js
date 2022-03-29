@@ -1,12 +1,8 @@
 import React from "react";
 import { Navlink, Link } from "react-router-dom";
 import { render } from "react-dom";
-// import data from '../../../../public/assets/Data.mp4';
-// import data from "../../../../public/assets/Data.mp4";
-import video from "../../../../public/assets/video.mp4";
-//  de mon home je vais chercher les autres elements composants
-// import Navigation from "../../Navigation";
 
+import video from "../../../styles/assets/video.mp4";
 
 import "../../../styles/components/functions/pages/index.css";
 
@@ -31,15 +27,9 @@ class Index0 extends React.Component {
             objectFit: "cover",
             transform: 'translate(-50% -50%)',
 
-            
           }}>
             <source src={video} type="video/mp4"/>
           </video>
-          {/* insertion component navigation  */}
-          {/* <Navigation /> */}
-          <video className='videoTag' autoPlay loop muted>
-                <source src={'../../../../public/assets/Data.mp4'} type='video/mp4' />
-            </video>
           <header className="main-index">
             {/* <canvas className="cover" id="sparks"></canvas> */}
             <div className="main-header-content main-index-content">
