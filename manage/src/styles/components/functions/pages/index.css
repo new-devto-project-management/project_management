@@ -10,7 +10,7 @@
     align-items: center;
     opacity: 90%;
     /* background: #00ff99; */
-    background: url("../../../../../public/assets/video.mp4") center/cover fixed;
+    /* background: url("../../../../../public/assets/video.mp4") center/cover fixed; */
     position: relative;
     /* border: 2px solid rgba(0, 0, 0, 0.432); */
 }
@@ -27,7 +27,7 @@
     border-radius: 30px;
     justify-content: center;
     text-shadow: 0 5px 15px #000;
-    background: url("../../../../../public/assets/b.webm") center/cover fixed;
+    /* background: url("../../../../../public/assets/b.webm") center/cover fixed; */
 
     /*background:rgb(248, 0, 0);
     box-shadow: inset 2px 2px 7px 2px #222; */

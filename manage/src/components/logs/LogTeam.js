@@ -134,23 +134,23 @@ const LogTeam = () => {
   };
 
 
-  handelDelete = (id) => {
-    const clients = [...this.state.clients];
-    const index = clients.findIndex((client) => client.id === id);
+  // handelDelete = (id) => {
+  //   const clients = [...this.state.clients];
+  //   const index = clients.findIndex((client) => client.id === id);
 
-    clients.splice(index, 1);
+  //   clients.splice(index, 1);
 
-    this.setState({ clients });
-  };
+  //   this.setState({ clients });
+  // };
 
-  handelAdd = (client) => {
-    // faire une copie
-    const clients = [...this.state.clients];
-    clients.push({ client });
+  // handelAdd = (client) => {
+  //   // faire une copie
+  //   const clients = [...this.state.clients];
+  //   clients.push({ client });
 
-    // mise a jour de mon state
-    this.setState({ clients });
-  };
+  //   // mise a jour de mon state
+  //   this.setState({ clients });
+  // };
 
 
 
@@ -175,7 +175,7 @@ const LogTeam = () => {
           <tbody>
             {login.map((logins) => (
               <Fragment>
-                {editContactId === contacts.id ? (
+                {editLoginId === login.id ? (
                   <EditableRow
                     editFormData={editFormData}
                     handelEditFormChange={handelEditFormChange}
@@ -347,7 +347,7 @@ const LogTeam = () => {
                   placeholder="Responsable de département..."
                   required="required"
                   aria-required="true"
-                  onChange={HandelAddFormChange}
+                  onChange={handelAddFormChange}
                 />
               </Tooltip>
               <label>
