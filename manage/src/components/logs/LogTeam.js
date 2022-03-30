@@ -4,6 +4,7 @@ import ReactDom from "react-dom";
 import database from "../../database.json";
 import ReadOnlyRow from "../../redux/ReadOnlyRow.js";
 import EditableRow from "../../redux/EditableRow.js";
+import video from "../../styles/assets/video.mp4";
 
 // import ReactTooltip from 'react-tooltip';
 import "@blueprintjs/core/lib/css/blueprint.css";
@@ -36,7 +37,7 @@ const LogTeam = () => {
 
   const [editLoginId, setEditLoginId] = useState(null);
 
-  const handelAddFormChange = (event) => {
+  const handleAddFormChange = (event) => {
     event.preventDefault();
 
     const fieldName = event.target.getAttribute("name");
@@ -48,7 +49,7 @@ const LogTeam = () => {
     setAddFormData(newFormData);
   };
 
-  const handelEditFormChange = (event) => {
+  const handleEditFormChange = (event) => {
     event.preventDefault();
 
     const fieldName = event.target.getAttribute("name");
@@ -60,7 +61,7 @@ const LogTeam = () => {
     setEditFormData(newFormData);
   };
 
-  const handelAddFormSubmit = (event) => {
+  const handleAddFormSubmit = (event) => {
     event.preventDefault();
 
     const newLogin = {
@@ -78,7 +79,7 @@ const LogTeam = () => {
     setLogin(newLogins);
   };
 
-  const handelEditFormSubmit = (event) => {
+  const handleEditFormSubmit = (event) => {
     event.preventDefault();
 
     const editedLogin = {
@@ -102,7 +103,7 @@ const LogTeam = () => {
     setEditLoginId(null);
   };
 
-  const handelEditClick = (event, logins) => {
+  const handleEditClick = (event, logins) => {
     event.preventDefault();
     setEditLoginId(logins.id);
 
@@ -119,11 +120,11 @@ const LogTeam = () => {
     setEditFormData(formValues);
   };
 
-  const handelCancelClick = () => {
+  const handleCancelClick = () => {
     setEditLoginId(null);
   };
 
-  const handelDeleteClick = (loginId) => {
+  const handleDeleteClick = (loginId) => {
     const newLogins = [...login];
 
     const index = login.findIndex((logins) => logins.id === loginId);
@@ -159,7 +160,22 @@ const LogTeam = () => {
   // const dev = "Présentation de l'équipe de Développeurs."
   return (
     <div className="containers app-container">
-      <form onSubmit={ handelEditFormSubmit }>
+      <video autoPlay loop muted
+        style={{
+          position: "absolute",
+          top: "0%",
+          left: "0%",
+          right: "0%",
+          width: "100%",
+          height: "100%",
+          zIndex: "-1",
+          objectFit: "cover",
+          transform: 'translate(-50% -50%)',
+
+        }}>
+        <source src={video} type="video/mp4" />
+      </video>
+      <form onSubmit={handleEditFormSubmit}>
         <table>
           <thead>
             <tr>
@@ -178,14 +194,14 @@ const LogTeam = () => {
                 {editLoginId === login.id ? (
                   <EditableRow
                     editFormData={editFormData}
-                    handelEditFormChange={handelEditFormChange}
-                    handelCancelClick={handelCancelClick}
+                    handleEditFormChange={handleEditFormChange}
+                    handleCancelClick={handleCancelClick}
                   />
                 ) : (
                   <ReadOnlyRow
                     login={logins}
-                    handelEditClick={handelEditClick}
-                    handelDeleteClick={handelDeleteClick}
+                    handleEditClick={handleEditClick}
+                    handleDeleteClick={handleDeleteClick}
                   />
                 )}
               </Fragment>
@@ -201,7 +217,7 @@ const LogTeam = () => {
         <div className="presentation">
 
           {/* inscription */}
-          <form onSubmit={this.handelEditFormSubmit} >
+          <form onSubmit={this.handleAddFormSubmit} >
             <div className="Mou">
               {/* propriétaire */}
               <Tooltip
@@ -213,7 +229,7 @@ const LogTeam = () => {
                   placeholder="Entrer le non du projet..."
                   required="required"
                   aria-required="true"
-                  onChange={handelAddFormChange}
+                  onChange={handleAddFormChange}
                 />
               </Tooltip>
               <label>Maître d'ouvrage</label>
@@ -232,7 +248,7 @@ const LogTeam = () => {
                   placeholder="non du Client..."
                   required="required"
                   aria-required="true"
-                  onChange={handelAddFormChange}
+                  onChange={handleAddFormChange}
                 />
               </Tooltip>
               <label>Maître d'ouvrage</label>
@@ -252,7 +268,7 @@ const LogTeam = () => {
                   placeholder="Responsable du project..."
                   required="required"
                   aria-required="true"
-                  onChange={handelAddFormChange}
+                  onChange={handleAddFormChange}
                 />
               </Tooltip>
               <label>Maître d'œuvre</label>
@@ -273,7 +289,7 @@ const LogTeam = () => {
                   placeholder="chargé d'affaire..."
                   required="required"
                   aria-required="true"
-                  onChange={handelAddFormChange}
+                  onChange={handleAddFormChange}
                 />
               </Tooltip>
               <label>Le chargé d'affaire / Porfolio manager</label>
@@ -285,7 +301,7 @@ const LogTeam = () => {
            
           </div> */}
         <div className="devops">
-          <form onSubmit={handelEditFormSubmit}>
+          <form onSubmit={handleEditFormSubmit}>
 
             <div className="chefDequipe">
               {/* chefs d'"quipe" */}
@@ -303,7 +319,7 @@ const LogTeam = () => {
                                                             objectifs de technique, de coût et de délai."
                   placeholder="chef de Projet..."
                   required="required"
-                  onChange={handelAddFormChange}
+                  onChange={handleAddFormChange}
                 />
               </Tooltip>
               <label>Chef de projet / Project Manager</label>
@@ -326,7 +342,7 @@ const LogTeam = () => {
                   placeholder="Responsable Planification..."
                   required="required"
                   aria-required="true"
-                  onChange={handelAddFormChange}
+                  onChange={handleAddFormChange}
                 />
               </Tooltip>
               <label>
@@ -347,7 +363,7 @@ const LogTeam = () => {
                   placeholder="Responsable de département..."
                   required="required"
                   aria-required="true"
-                  onChange={handelAddFormChange}
+                  onChange={handleAddFormChange}
                 />
               </Tooltip>
               <label>

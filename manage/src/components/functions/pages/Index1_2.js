@@ -3,7 +3,7 @@ import { Navlink, Link } from "react-router-dom";
 import { render } from "react-dom";
 
 import CrudTeamContext from '../../posts/CrudContext';
-import video from "../../../styles/assets/video1.mp4";
+import video from "../../../styles/assets/videos.mp4";
 
 
 import "../../../styles/components/functions/pages/index.css";
@@ -62,7 +62,7 @@ class Index12 extends React.Component {
                       <section className="entries">
                       <button className="fancy">
                           <Link to="/index1" className="entries-title fancy">BEFORE</Link>
-                          </button>    
+                          </button>
                         <article className="chart-container">
                           <p>Revennir en Arrière !</p>
                         </article>

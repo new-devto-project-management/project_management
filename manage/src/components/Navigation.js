@@ -3,6 +3,7 @@ import { BrowserRouter as Router} from "react-router-dom";
 import Help from "./functions/Help";
 import { Link} from "react-router-dom";
 import "../styles/components/navigation.css";
+import { CenterFocusWeakSharp } from "@material-ui/icons";
 
 // import "../styles/components/Navigation.scss"
 
@@ -128,6 +129,17 @@ export default class Navigation extends Component {
                         </ul>
               </div>
             );
+
+            // help
+            case 'help' : 
+                return (
+              <div className="modals-group">
+                <CenterFocusWeakSharp className="list-group modals">
+                          lorem121
+                    </CenterFocusWeakSharp>
+              </div>
+            );
+
 
             
             

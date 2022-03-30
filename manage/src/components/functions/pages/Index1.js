@@ -38,7 +38,7 @@ class Index1 extends React.Component {
 
                 <div className="gantt-container">
                   <LogTeam />
-                  {/* <CrudTeamContext />  */}
+              
                 </div>
                     {/*  */}
             <div className="flex flex-content">

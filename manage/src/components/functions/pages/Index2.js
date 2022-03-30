@@ -41,7 +41,7 @@ class Index2 extends React.Component {
             <div className="main-header-content ">
 
               <span className="header-title ">WELCOME ON OPEN PROJECT</span>
-              <header className="entries-title  chart-container fancy" >PRESENTATION OF THE TEAMS </header>
+              {/* <header className="entries-title  chart-container fancy" >PRESENTATION OF THE TEAMS </header> */}
 
             </div>
             {/*  */}

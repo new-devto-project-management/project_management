@@ -39,8 +39,8 @@ class LogTeam extends React.Component {
     return (
       <div className="containers">
         <div className="title">
-          <h1>CONNEXION AU  PROJET</h1>
-          <span>Update && Create && Read && Delete</span>
+          <h1 >CONNEXION AU  PROJET</h1>
+          <span > Create && Read && Update && Delete</span>
         </div>
         <div className="logContent">
           <div className="devops">
@@ -56,6 +56,7 @@ class LogTeam extends React.Component {
                 >
                   <input
                     aria-label="Entrer le mot de passe. "
+                    
                     placeholder="Enter le passe ex: ' root '..."
                     required
                     aria-required="true"
