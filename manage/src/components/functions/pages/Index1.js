@@ -4,10 +4,13 @@ import { render } from "react-dom";
 
 //  de mon home je vais chercher les autres elements composants
 
-import LogTeam from "../../logs/LogTeam";
+import LogTeam from "../../posts/LogTeam";
+// import Crud from "../../posts/CrudContext";
+
 
 
 import "../../../styles/components/functions/pages/index.css";
+import video from "../../../styles/assets/video.mp4";
 
 
 class Index1 extends React.Component {
@@ -18,9 +21,22 @@ class Index1 extends React.Component {
     return (
       <>
         <div className="index1">
-          {/* insertion component navigation  */}
-          {/* <Navigation /> */}
+         <video autoPlay loop muted
+          style={{
+            position: "absolute",
+            top: "0%",
+            left: "0%",
+            right: "0%",
+            width: "100%",
+            height: "100%",
+            zIndex: "-1",
+            objectFit: "cover",
+            transform: 'translate(-50% -50%)',
 
+          }}>
+            <source src={video} type="video/mp4"/>
+          </video>
+          {/* space space  */}
           <header className="main-header ">
             <canvas className="cover" id="sparks"></canvas>
             <div className="main-header-content ">
@@ -37,10 +53,18 @@ class Index1 extends React.Component {
                 
 
                 <div className="gantt-container">
+                  {/* <Crud /> */}
                   <LogTeam />
-              
+         
                 </div>
                     {/*  */}
+
+              </div>
+
+
+
+            </form>
+
             <div className="flex flex-content">
               <section className="entries">
                 <button className="fancy">
@@ -68,13 +92,6 @@ class Index1 extends React.Component {
             </div>
 
             {/*  */}
-
-              </div>
-
-
-
-            </form>
-
             {/* END CREATE  */}
         
 

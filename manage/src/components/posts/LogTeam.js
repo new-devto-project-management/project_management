@@ -4,16 +4,17 @@ import ReactDom from "react-dom";
 import database from "../../database.json";
 import ReadOnlyRow from "../../redux/ReadOnlyRow.js";
 import EditableRow from "../../redux/EditableRow.js";
-import video from "../../styles/assets/video.mp4";
+// import video from "../../styles/assets/video.mp4";
 
 // import ReactTooltip from 'react-tooltip';
 import "@blueprintjs/core/lib/css/blueprint.css";
 import { Tooltip, Button } from "@blueprintjs/core";
 import "../../styles/components/logs/_logTeam.css";
+import { aliceblue } from "color-name";
 
 const LogTeam = () => {
 
-  const [login, setLogin] = useState(database);
+  const [logs, setLogs] = useState(database);
 
   const [addFormData, setAddFormData] = useState({
     nameProject: "",
@@ -35,7 +36,7 @@ const LogTeam = () => {
 
   });
 
-  const [editLoginId, setEditLoginId] = useState(null);
+  const [editLogId, setEditLogId] = useState(null);
 
   const handleAddFormChange = (event) => {
     event.preventDefault();
@@ -43,7 +44,7 @@ const LogTeam = () => {
     const fieldName = event.target.getAttribute("name");
     const fieldValue = event.target.value;
 
-    const newFormData = { ...editFormData };
+    const newFormData = { ...addFormData };
     newFormData[fieldName] = fieldValue;
 
     setAddFormData(newFormData);
@@ -64,7 +65,7 @@ const LogTeam = () => {
   const handleAddFormSubmit = (event) => {
     event.preventDefault();
 
-    const newLogin = {
+    const newLog = {
       id: nanoid(),
       nameProject: addFormData.nameProject,
       nameClient: addFormData.nameClient,
@@ -75,15 +76,15 @@ const LogTeam = () => {
       respoDepartement: addFormData.respoDepartement,
     };
 
-    const newLogins = [...login, newLogin];
-    setLogin(newLogins);
+    const newLogs = [...logs, newLog];
+    setLogs(newLogs);
   };
 
   const handleEditFormSubmit = (event) => {
     event.preventDefault();
 
-    const editedLogin = {
-      id: editLoginId,
+    const editedLog = {
+      id: editLogId,
       nameProject: editFormData.nameProject,
       nameClient: editFormData.nameClient,
       respoProjet: editFormData.respoProjet,
@@ -93,45 +94,45 @@ const LogTeam = () => {
       respoDepartement: editFormData.respoDepartement,
     };
 
-    const newLogins = [...login];
+    const newLogs = [...logs];
 
-    const index = login.findIndex((logins) => logins.id === editLoginId);
+    const index = logs.findIndex((log) => log.id === editLogId);
 
-    newLogins[index] = editedLogin;
+    newLogs[index] = editedLog;
 
-    setLogin(newLogins);
-    setEditLoginId(null);
+    setLogs(newLogs);
+    setEditLogId(null);
   };
 
-  const handleEditClick = (event, logins) => {
+  const handleEditClick = (event, log) => {
     event.preventDefault();
-    setEditLoginId(logins.id);
+    setEditLogId(log.id);
 
     const formValues = {
-      nameProject: logins.nameProject,
-      nameClient: logins.nameClient,
-      respoProjet: logins.respoProjet,
-      chargerAffaire: logins.chargerAffaire,
-      chefProject: logins.chefProject,
-      respoPlanification: logins.respoPlanification,
-      respoDepartement: logins.respoDepartement,
+      nameProject: log.nameProject,
+      nameClient: log.nameClient,
+      respoProjet: log.respoProjet,
+      chargerAffaire: log.chargerAffaire,
+      chefProject: log.chefProject,
+      respoPlanification: log.respoPlanification,
+      respoDepartement: log.respoDepartement,
 
     };
     setEditFormData(formValues);
   };
 
   const handleCancelClick = () => {
-    setEditLoginId(null);
+    setEditLogId(null);
   };
 
-  const handleDeleteClick = (loginId) => {
-    const newLogins = [...login];
+  const handleDeleteClick = (logId) => {
+    const newLogs = [...logs];
 
-    const index = login.findIndex((logins) => logins.id === loginId);
+    const index = logs.findIndex((log) => log.id === logId);
 
-    newLogins.splice(index, 1);
+    newLogs.splice(index, 1);
 
-    setLogin(newLogins);
+    setLogs(newLogs);
   };
 
 
@@ -159,56 +160,56 @@ const LogTeam = () => {
   // render() {
   // const dev = "Présentation de l'équipe de Développeurs."
   return (
-    <div className="containers app-container">
-      <video autoPlay loop muted
-        style={{
-          position: "absolute",
-          top: "0%",
-          left: "0%",
-          right: "0%",
-          width: "100%",
-          height: "100%",
-          zIndex: "-1",
-          objectFit: "cover",
-          transform: 'translate(-50% -50%)',
+    <div className="containers app-container ">
+      {/* bemol eureka  */}
+      <div className="form">
 
-        }}>
-        <source src={video} type="video/mp4" />
-      </video>
-      <form onSubmit={handleEditFormSubmit}>
-        <table>
-          <thead>
-            <tr>
-              <th>Name Project</th>
-              <th>Name Client</th>
-              <th>Responsable of projet</th>
-              <th>Charger d'Affaire</th>
-              <th>Chef of Project</th>
-              <th>Responsable Planification</th>
-              <th>Responsable Departement</th>
-            </tr>
-          </thead>
-          <tbody>
-            {login.map((logins) => (
-              <Fragment>
-                {editLoginId === login.id ? (
-                  <EditableRow
-                    editFormData={editFormData}
-                    handleEditFormChange={handleEditFormChange}
-                    handleCancelClick={handleCancelClick}
-                  />
-                ) : (
-                  <ReadOnlyRow
-                    login={logins}
-                    handleEditClick={handleEditClick}
-                    handleDeleteClick={handleDeleteClick}
-                  />
-                )}
-              </Fragment>
-            ))}
-          </tbody>
-        </table>
-      </form>
+        <form onSubmit={handleEditFormSubmit}>
+          <table style={{
+            color: "aliceblue",
+            fontSize: "1rem",
+            fontWeight: "bold",
+            // border: "2px solid aliceblue",
+            borderRadius: "20px",
+            boxShadow: "2px 3px 2px 2px azure"
+          }}>
+            <thead style={{
+              color: "#00ffd2"
+            }}>
+              <tr>
+                <th>Name Project</th>
+                <th>Name Client</th>
+                <th>Responsable of projet</th>
+                <th>Charger d'Affaire</th>
+                <th>Chef of Project</th>
+                <th>Responsable Planification</th>
+                <th>Responsable Departement</th>
+              </tr>
+            </thead>
+            <tbody>
+              {logs.map((log) => (
+                <Fragment>
+                  {editLogId === log.id ? (
+                    <EditableRow
+                      editFormData={editFormData}
+                      handleEditFormChange={handleEditFormChange}
+                      handleCancelClick={handleCancelClick}
+                    />
+                  ) : (
+                    <ReadOnlyRow
+                      log={log}
+                      handleEditClick={handleEditClick}
+                      handleDeleteClick={handleDeleteClick}
+                    />
+                  )}
+                </Fragment>
+              ))}
+            </tbody>
+          </table>
+        </form>
+
+      </div>
+      {/* bemol eureka  */}
       <div className="title">
         <h1>RESPONSABLES DU PROJET</h1>
         <span>Client && Managers</span>
@@ -217,7 +218,7 @@ const LogTeam = () => {
         <div className="presentation">
 
           {/* inscription */}
-          <form onSubmit={this.handleAddFormSubmit} >
+          <form onSubmit={handleAddFormSubmit} >
             <div className="Mou">
               {/* propriétaire */}
               <Tooltip
@@ -301,7 +302,7 @@ const LogTeam = () => {
            
           </div> */}
         <div className="devops">
-          <form onSubmit={handleEditFormSubmit}>
+          <form onSubmit={handleAddFormSubmit}>
 
             <div className="chefDequipe">
               {/* chefs d'"quipe" */}
@@ -379,7 +380,7 @@ const LogTeam = () => {
           </form>
         </div>
         {/* <ClientForm onClientAdd={this.handelAdd} /> */}
-
+        <button className="fancy" type="submit">Ajouter</button>
       </div>
     </div>
   );
