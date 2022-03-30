@@ -20,6 +20,9 @@
 }
 .title{
     margin: 2rem 5px;
+    color: aqua;
+    font-weight: bold;
+    text-shadow: 2px 3px 2px 3px #fff;
 
 }
 .logContent{

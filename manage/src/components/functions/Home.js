@@ -12,6 +12,8 @@ import Gantt from "../logs/Gantt";
 // import CrudContext from '../posts/CrudContext';
 import CrudTeamContext from '../posts/CrudContext';
 // import CrudPertContext from '../posts/CrudPertContext';
+import video from "../../styles/assets/Data.mp4";
+
 import '../../styles/components/logs/_MessageArea.css';
 import "../../styles/components/functions/home.css";
 
@@ -34,10 +36,41 @@ class Home extends React.Component {
     return (
       <>
         <div className="home">
+        
+          <video autoPlay loop muted
+          style={{
+            position: "absolute",
+            top: "0%",
+            left: "0%",
+            right: "0%",
+            width: "100%",
+            height: "100%",
+            zIndex: "-1",
+            objectFit: "cover",
+            transform: 'translate(-50% -50%)',
+
+          }}>
+            <source src={video} type="video/mp4"/>
+          </video>
           {/* insertion component navigation  */}
           <Navigation />
 
           <header className="main-header">
+            <video autoPlay loop muted
+          style={{
+            position: "absolute",
+            top: "0%",
+            left: "0%",
+            right: "0%",
+            width: "100%",
+            height: "100%",
+            zIndex: "-1",
+            objectFit: "cover",
+            transform: 'translate(-50% -50%)',
+
+          }}>
+            <source src={video} type="video/mp4"/>
+          </video>
             <canvas className="cover" id="sparks"></canvas>
             <div className="main-header-content">
 

@@ -34,6 +34,7 @@ const App = () => {
             <Route path="/index1" component={Index1} />
             <Route path="/index1_2" component={Index1_2} />
             <Route path="/index2" component={Index2} />
+            
             <Route path="/home" component={Home} />
             <Route path="/gantt" component={Gantt} />
             <Route path="/crudContext" component={CrudContext} />

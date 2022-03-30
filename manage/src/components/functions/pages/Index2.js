@@ -5,6 +5,8 @@ import { Tooltip, Button } from "@blueprintjs/core";
 import LogProject from "../../logs/LogProject";
 //  de mon home je vais chercher les autres elements composants
 import "../../../styles/components/functions/pages/index.css";
+import video from "../../../styles/assets/video.mp4";
+
 // import { Input } from "@material-ui/icons";
 
 
@@ -16,6 +18,22 @@ class Index2 extends React.Component {
     return (
       <>
         <div className="index">
+         <video autoPlay loop muted
+          style={{
+            position: "absolute",
+            top: "0%",
+            left: "0%",
+            right: "0%",
+            width: "100%",
+            height: "100%",
+            zIndex: "-1",
+            objectFit: "cover",
+            transform: 'translate(-50% -50%)',
+
+          }}>
+            <source src={video} type="video/mp4"/>
+          </video>
+          {/* space space  */}
          
 
           <header className="main-header ">

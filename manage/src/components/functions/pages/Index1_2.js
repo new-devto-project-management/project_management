@@ -3,6 +3,7 @@ import { Navlink, Link } from "react-router-dom";
 import { render } from "react-dom";
 
 import CrudTeamContext from '../../posts/CrudContext';
+import video from "../../../styles/assets/video1.mp4";
 
 
 import "../../../styles/components/functions/pages/index.css";
@@ -16,8 +17,22 @@ class Index12 extends React.Component {
     return (
       <>
         <div className="index1">
-        {/* insertion component navigation  */}
-            {/* <Navigation /> */}
+         <video autoPlay loop muted
+          style={{
+            position: "absolute",
+            top: "0%",
+            left: "0%",
+            right: "0%",
+            width: "100%",
+            height: "100%",
+            zIndex: "-1",
+            objectFit: "cover",
+            transform: 'translate(-50% -50%)',
+
+          }}>
+            <source src={video} type="video/mp4"/>
+          </video>
+      {/* space space  */}
                   
                 <header className="main-header ">
                   <canvas className="cover" id="sparks"></canvas>
