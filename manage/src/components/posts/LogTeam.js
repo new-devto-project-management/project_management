@@ -19,7 +19,7 @@ const LogTeam = () => {
   const [addFormData, setAddFormData] = useState({
     nameProject: "",
     nameClient: "",
-    respoProjet: "",
+    respoProject: "",
     chargerAffaire: "",
     chefProject: "",
     respoPlanification: "",
@@ -28,7 +28,7 @@ const LogTeam = () => {
   const [editFormData, setEditFormData] = useState({
     nameProject: "",
     nameClient: "",
-    respoProjet: "",
+    respoProject: "",
     chargerAffaire: "",
     chefProject: "",
     respoPlanification: "",
@@ -69,7 +69,7 @@ const LogTeam = () => {
       id: nanoid(),
       nameProject: addFormData.nameProject,
       nameClient: addFormData.nameClient,
-      respoProjet: addFormData.respoProjet,
+      respoProject: addFormData.respoProject,
       chargerAffaire: addFormData.chargerAffaire,
       chefProject: addFormData.chefProject,
       respoPlanification: addFormData.respoPlanification,
@@ -87,7 +87,7 @@ const LogTeam = () => {
       id: editLogId,
       nameProject: editFormData.nameProject,
       nameClient: editFormData.nameClient,
-      respoProjet: editFormData.respoProjet,
+      respoProject: editFormData.respoProject,
       chargerAffaire: editFormData.chargerAffaire,
       chefProject: editFormData.chefProject,
       respoPlanification: editFormData.respoPlanification,
@@ -111,7 +111,7 @@ const LogTeam = () => {
     const formValues = {
       nameProject: log.nameProject,
       nameClient: log.nameClient,
-      respoProjet: log.respoProjet,
+      respoProject: log.respoProject,
       chargerAffaire: log.chargerAffaire,
       chefProject: log.chefProject,
       respoPlanification: log.respoPlanification,
@@ -380,7 +380,7 @@ const LogTeam = () => {
           </form>
         </div>
         {/* <ClientForm onClientAdd={this.handelAdd} /> */}
-        <button className="fancy" type="submit">Ajouter</button>
+        {/* <button className="fancy" type="submit">Ajouter</button> */}
       </div>
     </div>
   );
