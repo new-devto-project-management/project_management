@@ -3,7 +3,7 @@ import { Navlink, Link } from "react-router-dom";
 import { render } from "react-dom";
 
 import CrudTeamContext from '../../posts/CrudContext';
-import video from "../../../styles/assets/videos.mp4";
+import video from "../../../styles/assets/video.mp4";
 
 
 import "../../../styles/components/functions/pages/index.css";

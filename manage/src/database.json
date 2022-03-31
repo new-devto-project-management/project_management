@@ -1,12 +1,12 @@
 [
     {
       "id": 1,
-      "nameProject": "Project management",
-      "nameClient": "Med",
-      "respoProject": "Dia",
-      "chargerAffaire": "Bah",
-      "chefProject": "Eureka",
-      "respoPlanification": "Levi",
-      "respoDepartement": "Stone"
+      "nameProject": "",
+      "nameClient": "",
+      "respoProject": "",
+      "chargerAffaire": "",
+      "chefProject": "",
+      "respoPlanification": "",
+      "respoDepartement": ""
     }
 ]

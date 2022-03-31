@@ -64,6 +64,7 @@ class Index1 extends React.Component {
 
 
             </form>
+            
 
             <div className="flex flex-content">
               <section className="entries">

@@ -176,7 +176,7 @@ const CrudContext = () => {
           placeholder="Enter an email..."
           onChange={handleAddFormChange}
         />
-        <button className="fancy" type="submit">Ajouter</button>
+        <button className="fancy" type="submit" onClick={handelAddFormChange}>Ajouter</button>
       </form>
     </div>
   );

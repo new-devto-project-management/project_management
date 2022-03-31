@@ -377,10 +377,10 @@ const LogTeam = () => {
             {/* <Tooltip content="Valider le formulaire" position="right">
                   <button className="fancy">Confirmer</button>
                 </Tooltip> */}
+            <button className="fancy" type="submit">Ajouter</button>
           </form>
         </div>
         {/* <ClientForm onClientAdd={this.handelAdd} /> */}
-        {/* <button className="fancy" type="submit">Ajouter</button> */}
       </div>
     </div>
   );
