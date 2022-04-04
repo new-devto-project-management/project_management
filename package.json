@@ -1,4 +1,5 @@
-{
+{   
+  "homepage": "http://openproman.github.io/project_management", 
   "name": "project_management",
   "version": "1.0.0",
   "description": "\"project management for school\"",
@@ -156,6 +157,9 @@
     "yallist": "^4.0.0"
   },
   "scripts": {
+    "predeply": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
     "test": "start"
   },
   "repository": {
