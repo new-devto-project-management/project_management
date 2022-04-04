@@ -315,9 +315,7 @@ const LogTeam = () => {
                                                             objectifs de technique, de coût et de délai. */}
 
                 <input
-                  aria-label="personne physique chargée dans le cadre d'une mission définie,
-                                                            d'assumer la maîtrise du projet, c'est-à-dire de veiller à sa bonne réalisation dans les
-                                                            objectifs de technique, de coût et de délai."
+                  aria-label="personne physique chargée dans le cadre d'une mission définie, d'assumer la maîtrise du projet."
                   placeholder="chef de Projet..."
                   required="required"
                   onChange={handleAddFormChange}
@@ -359,8 +357,8 @@ const LogTeam = () => {
                 position="right"
               >
                 <input
-                  aria-label="le garant d'un des savoir-faire de l'entreprise. Il est sollicité par la chef de projet à
-                                                        qui il doit fournir les moyens en rapport avec son métier. "
+                  aria-label="le garant d'un des savoir-faire de l'entreprise.
+                  Il est sollicité par la chef de projet à qui il doit fournir les moyens en rapport avec son métier. "
                   placeholder="Responsable de département..."
                   required="required"
                   aria-required="true"
@@ -369,6 +367,23 @@ const LogTeam = () => {
               </Tooltip>
               <label>
                 Responsable de département / Team leader & HR Manager
+              </label>
+              {/*  */}
+              <Tooltip
+                content="password of the project"
+                position="right"
+              >
+                <input
+                  aria-label="password"
+                  type="password"
+                  placeholder="Inserer un mot de passe..."
+                  required="required"
+                  aria-required="true"
+                  onChange={handleAddFormChange}
+                />
+              </Tooltip>
+              <label>
+                Mot de passe !
               </label>
             </div>
 
